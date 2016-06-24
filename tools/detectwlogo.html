@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="description" content="Calculate the costs and savings of online learning.">
+		<meta name="keywords" content="browser test, plugin test, browser, plugin, operating system, version, versions">
+		<title>Computer Readiness Test</title>
+
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+
+		<link href="css/styles.css" rel="stylesheet" />
+        <script>
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-65911246-1', 'auto');
+
+      ga('send', 'pageview');
+
+    </script>
+
+		<script src="script/jquery-1.11.3.min.js"></script>
+		<script src="script/modernizr.js"></script>
+		<script src="script/detectizr.js"></script>
+
+		<style type="text/css">
+			#results, #restart { display: none; }
+			#results { overflow-x: auto; }
+			table { margin-top: 20px; }
+			table tr td { padding: 5px 20px; max-width: 300px; min-width: 100px; }
+			table tr td.lg { min-width: 200px; }
+			table tr th { padding: 5px 15px; }
+			table tr:last-child td { border-bottom: none; }
+			.ctr { text-align: center; }
+			.notice p { margin: 30px 0; }
+		</style>
+
+		<script>
+			$(function() {
+				function fmtName(str) {
+				  return str.replace(/\w\S*/g, function(txt){
+				  	if (txt === "os") return "OS";
+				  	if (txt === "ie") return "Internet Explorer";
+				  	return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+				  });
+				}
+
+				function createRow(pluginName, img, description, version) {
+					var imgFound = '<img src="img/found.png" alt="plugin found" />';
+					var imgMissing = '<img src="img/notfound.png" alt="plugin not found" />';
+					return '<tr><td class="lg">' + pluginName + '</td><td class="ctr">' + (img ? imgFound : imgMissing) + '</td><td class="lg">' + fmtName(description) + '</td><td>' + version + '</td></tr>';
+				}
+
+				function getInfo(notFoundMsg) {
+					Detectizr.detect({detectScreen:false});
+					return {
+						os: { name: Detectizr.os.name, version: Detectizr.os.version },
+						browser: { name: Detectizr.browser.name, version: Detectizr.browser.version },
+						plugins: [
+							{ name: "Adobe PDF Reader", description: notFoundMsg, detected: false, version: notFoundMsg, searchTerms: ["PDF", "Acrobat"] },
+							{ name: "Flash / Shockwave", description: notFoundMsg, detected: false, version: notFoundMsg, searchTerms: ["Flash", "Shockwave"] },
+							{ name: "Oracle Java", description: notFoundMsg, detected: navigator.javaEnabled(), version: notFoundMsg, searchTerms: ["Java"] },
+							{ name: "Microsoft Silverlight", description: notFoundMsg, detected: false, version: notFoundMsg, searchTerms: ["Silverlight"] },
+							{ name: "Apple QuickTime", description: notFoundMsg, detected: false, version: notFoundMsg, searchTerms: ["QuickTime"] }
+						]
+					};
+				}
+
+				function getPluginIDBySearchTerm(term, data) {
+					var found = null;
+					$.each(data.plugins, function(pind, plugin){
+						for (ind in plugin.searchTerms) {
+							if (plugin.searchTerms[ind] == term) {
+								found = pind;
+							}
+						}
+					});
+					return found;
+				}
+
+				function getVersion(str) {
+					var getVer = str.match(/\d+(\.\d+)+/);
+					if (getVer && getVer[0]) {
+						return getVer[0];
+					}
+					return false;
+				}
+
+				$('#start').click(function() {
+					$(this).text('Restart Test');
+					$('#results tbody').empty();
+					var notFoundMsg = '-';
+					var data = getInfo(notFoundMsg);
+					var searchTerms = [];
+					var html, searchRegex;
+
+					$.map(data.plugins, function(v) {
+						searchTerms = v.searchTerms.concat(searchTerms);
+					});
+					searchRegex = new RegExp(searchTerms.join('|'), "i");
+
+					html += createRow("Operating System", (data.os.name ? true : false), (data.os.name ? data.os.name : 'Unavailable'), (data.os.version ? data.os.version : notFoundMsg));
+					
+					html += createRow("Browser", (data.browser.name ? true : false), (data.browser.name ? data.browser.name : 'Unavailable'), (data.browser.version ? data.browser.version : notFoundMsg));
+
+					if (navigator.plugins) {
+						$.each(navigator.plugins, function(num, plugin) {
+							var search = plugin.name.match(searchRegex);
+							var version;
+
+							if (plugin.hasOwnProperty('version')) {
+								version = plugin.version;
+							} else {
+								version = getVersion(plugin.description);
+								if (!version) {
+									version = getVersion(plugin.name);
+									if (!version) {
+										version = notFoundMsg;
+									}
+								}
+							}
+							
+							if (search) {
+								var pluginDataIndex = getPluginIDBySearchTerm(search[0], data);
+								data.plugins[pluginDataIndex].detected = true;
+								data.plugins[pluginDataIndex].version = version;
+								data.plugins[pluginDataIndex].description = plugin.description ? plugin.description : notFoundMsg;
+							}
+						});
+
+						$.each(data.plugins, function(i, plugin) {
+								html += createRow(plugin.name, plugin.detected, plugin.description, plugin.version);
+						});
+					}
+
+					$('#results tbody').append(html);
+					$('#results').show();
+				});
+			});
+		</script>
+
+	</head>
+	<body>
+		<div class="wrapper">
+      <div class="container">
+       
+        <div class="banner">
+          <div class="logo">
+            <img src="img/OEIHeader-Silver-2B.jpg" alt="California Community Colleges Logo" />
+          </div>
+        </div>
+
+        <div class="content">
+					<h2>Computer Readiness Test</h2>
+					<hr />
+					<p><b>The Computer Readiness Test will test your current browser for plugins and versions to help you better navigate our site.</b></p>
+					<p>To begin, hit the "Start" button below, once complete, the test will output the results.</p>
+					
+					<div class="control-container">
+						<button id="start" role="button" type="button" tabindex="1">Start Test</button>
+					</div>
+
+					<div id="results">
+						<table class="simple">
+							<thead>
+								<tr>
+									<th scope="col">Plugin</th>
+									<th scope="col" class="ctr">Detected</th>
+									<th scope="col">Description</th>
+									<th scope="col">Version</th>
+								</tr>
+							</thead>
+							<tbody></tbody>
+						</table>
+
+						<div class="notice">
+							<p>Keep in mind this tool attempts to detect what plugins installed in your current browser and may not always detect plugins properly. It is always best to verify you have properly installed each plugin according to the manufacturer:</p>
+							<ul>
+								<li><a href="https://get.adobe.com/reader/">Get the Adobe PDF Reader</a></li>
+								<li><a href="https://get.adobe.com/flashplayer/">Get the Adobe Flash Player</a></li>
+								<li><a href="https://java.com/en/download/">Get Oracle Java</a></li>
+								<li><a href="https://www.microsoft.com/getsilverlight/Get-Started/Install/Default.aspx">Get Microsoft Silverlight</a></li>
+								<li><a href="https://www.apple.com/quicktime/download/">Get Apple QuickTime Player</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="disclaimers">
+						<hr />
+						<img src="img/ccby-4.0.png" alt="Creative Commons License Logo" />
+                       
+                        <div><p><b>Creative Commons License Info:</b><br /><br />
+						© 2015 Chancellor's Office, California Community Colleges<br />
+						<a rel="license" href="https://creativecommons.org/licenses/by/4.0/"></a>This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_new" rel="license">Creative Commons Attribution 4.0 International License</a>.</p></div>
+	      	</div>
+
+					<div class="bottom-block"></div>
+					<div class="push"></div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div id="footer"></div>
+
+	</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cost Savings Calculator: OEI Online Readiness Tutorials</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:300' rel='stylesheet' type='text/css'>
+    <link href="../styles/main.css" rel="stylesheet" type="text/css">
+    <link href="../styles/module.css" rel="stylesheet" type="text/css">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+		<style>
+      #wrapper {
+        border-left: 2px solid #EEE;
+        border-right: 2px solid #EEE;
+      }
+  		li {
+    		margin-bottom: 1em;
+  		}
+  		input[type="text"] {
+    		width: 4em;
+    		font-size: 1em;
+  		}
+  		button {
+    		font-size: 1em;
+  		}
+  		button:hover {
+    		border: 2px solid #78aed9 !important;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6) !important;
+        outline: 0 none !important;
+  		}
+			#calculate { margin-right: 10px; }
+			#results { display: none; }
+			#results-note:focus {
+  			outline: none;
+			}
+			#totals { margin-top: 20px; }
+			.outputTotal { font-weight: bold; text-align: right; width: 100px; vertical-align: top; }
+			.totalTable { width: 100%; max-width: 600px; }
+		</style>
+
+		<script>
+
+			$(function() {
+
+				$('#clear').click(function() {
+					$('input[type="text"]').val('');
+				});
+
+				$('#calculate').click(function() {
+					var mileage = parseInt($('#mileage').val());
+					var mpg = parseInt($('#milesPerGallon').val());
+					var gas = parseFloat($('#costOfGas').val());
+					var transFees = parseFloat($('#otherTransportationFees').val());
+					var childcare = parseFloat(($('#childCare').val()));
+					var commute = parseInt($('#timeCommuting').val());
+					var labor = parseFloat($('#timePerHour').val());
+
+					var totalCommute = ((mileage / mpg) * gas) + transFees;
+					var totalTime = (commute / 60) * labor;
+					var dailyTotal = totalCommute + totalTime + childcare;
+
+					$('#commutingTotal').html('$' + (totalCommute > 0 ? totalCommute.toFixed(2) : '0.00'));
+					$('#childcareTotal').html('$' + (childcare > 0 ? childcare.toFixed(2) : '0.00'));
+					$('#personalTotal').html('$' + (totalTime > 0 ? totalTime.toFixed(2) : '0.00'));
+					$('#dailyTotal').html('$' + (dailyTotal > 0 ? dailyTotal.toFixed(2) : '0.00'));
+					$('#singleTotal').html('$' + (dailyTotal > 0 ? (dailyTotal * 15).toFixed(2) : '0.00'));
+					$('#doubleTotal').html('$' + (dailyTotal > 0 ? (dailyTotal * 30).toFixed(2) : '0.00'));
+					$('#results').show().attr('aria-hidden','false');
+					// place focus on first paragraph in results
+					$('#results-note').focus();
+				});
+
+			});
+
+		</script>
+
+
+  </head>
+  <body>
+    <div id="wrapper">
+      <header id="banner" role="banner">
+        <div class="logo">
+          <img src="../images/banner-silver.jpg" width="960" height="125" alt="California Community Colleges Online Education Initiative" />
+        </div>
+      </header>
+
+      <main class="content">
+
+				<h1>Online Cost Savings Calculator</h1>
+
+				<p>The Cost Savings Calculator shows how much money you can potentially save by taking online classes versus on-campus classes.</p>
+
+				<p>To use the Cost Savings Calculator, replace example numbers in each statement below with your own information. Once you have finished, click the Calculate button to get an estimate of how much you can potentially save by taking a class online!</p>
+
+				<ul>
+				  <li>
+				    <span role="presentation">I drive</span>
+						<input type="text" id="mileage" value="10" placeholder="10"
+						  aria-label="How many miles do you drive to and from campus for class each day?"/>
+						<span role="presentation">miles <strong>to and from</strong> campus for class each day.</span>
+          </li>
+
+          <li>
+            <span role="presentation">My vehicle can get</span>
+						<input type="text" id="milesPerGallon" value="25" placeholder="25"
+						  aria-label="How many miles per gallon or miles per charge does your vehicle get?"/>
+						<span role="presentation">miles per gallon / per charge (MPG/MPGe).</span>
+          </li>
+
+          <li>
+            <span role="presentation">It costs me $</span>
+						<input type="text" id="costOfGas" value="42.50" placeholder="42.50"
+						  aria-label="How much does it cost to fill up or charge your vehicle?"/>
+						<span role="presentation">to fill up / charge my vehicle.</span>
+          </li>
+
+					<li>
+					  <span role="presentation">Some other costs regarding my commute (such as parking fees, public transportation, etc.) cost me $</span>
+						<input type="text" id="otherTransportationFees" value="15.50" placeholder="15.50"
+						  aria-label="How much money per day do you spend on other commuting costs such as parking fees, publication transportation, etc.?" />
+						<span role="presentation">per day.</span>
+          </li>
+
+					<li>
+					  <span role="presentation">Child care costs me $</span>
+						<input type="text" id="childCare" value="30.00" placeholder="30.00"
+						  aria-label="How much does child care cost you per day?"/>
+						<span role="presentation">per day.</span>
+          </li>
+
+					<li>
+					  <span role="presentation">I spend</span>
+						<input type="text" id="timeCommuting" value="45" placeholder="45"
+						  aria-label="How many minutes do you spend commuting to and from campus per day?"/>
+						<span role="presentation">minutes commuting <b>to and from</b> campus per day.</span>
+          </li>
+
+					<li>
+					  <span role="presentation">My time is worth $</span>
+						<input type="text" id="timePerHour" value="30.00" placeholder="30.00"
+						  aria-label="How much money is your time worth per hour?" />
+						<span role="presentation">per hour.</span>
+          </li>
+				</ul>
+
+				<div class="control-container">
+				  <button id="calculate" type="button">Calculate</button>
+					<button id="clear" type="button">Clear</button>
+				</div>
+
+				<div id="results" aria-hidden="true">
+				  <p id="results-note" tabindex="-1"><i><b>Note:</b> The results shown below are just an estimate.</i></p>
+
+          <table id="category" class="totalTable">
+						<tr>
+						  <th scope="col">Description</th>
+							<th scope="col" class="outputTotal">Your Cost</th>
+						</tr>
+						<tr>
+						  <td>Your transportation costs</td>
+              <td id="commutingTotal" class="outputTotal">$0.00</td>
+						</tr>
+						<tr>
+						  <td>Your childcare costs</td>
+							<td id="childcareTotal" class="outputTotal">$0.00</td>
+						</tr>
+						<tr>
+						  <td>Your personal time cost</td>
+							<td id="personalTotal" class="outputTotal">$0.00</td>
+						</tr>
+				  </table>
+
+					<table id="totals" class="totalTable">
+						<tr>
+						  <th scope="col">Description</th>
+							<th scope="col" class="outputTotal">Your Cost</th>
+						</tr>
+						<tr>
+						  <td>Your daily cost for attending classes</td>
+							<td id="dailyTotal" class="outputTotal">$0.00</td>
+						</tr>
+						<tr>
+						  <td>Assuming a 15 week semester, meeting <b>once</b> per week</td>
+							<td id="singleTotal" class="outputTotal">$0.00</td>
+						</tr>
+						<tr>
+						  <td>Assuming a 15 week semester, meeting <b>twice</b> per week</td>
+							<td id="doubleTotal" class="outputTotal">$0.00</td>
+						</tr>
+				  </table>
+				</div><!-- #results -->
+
+      </main>
+
+      <footer role="contentinfo">
+        <img src="../images/ccby-4.0.png" alt="Creative Commons License Logo" />
+        <div>
+          <p><strong>Creative Commons License Info:</strong></p>
+          <p>&copy; 2015 Chancellor's Office, California Community Colleges<br />
+              <a rel="license" href="https://creativecommons.org/licenses/by/4.0/"></a>This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license">Creative Commons Attribution 4.0 International License</a>. They are available to everyone and may be repurposed to meet the unique needs of educational institutions.
+          </p>
+				</div>
+      </footer>
+
+    </div><!-- end #wrapper -->
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5H7M8X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5H7M8X');
+</script>
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-65911246-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+	</body>
+</html>

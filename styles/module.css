@@ -1,0 +1,62 @@
+/*
+ * CSS for the Online Education Initiative
+ *
+ */
+
+h2 {
+  font-size: 1.25em;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+nav ul li div a:first-child {
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 1px 1px 1px #CCC;
+  margin-top: 10px;
+  position: relative;
+  border: 1px solid transparent;
+}
+nav ul li div a:hover,
+nav ul li div a:focus {
+  border: 1px solid #27396c;
+  color: #27396c;
+}
+nav ul li div img {
+  margin: 10px 20px 0 20px;
+  float: left;
+}
+nav ul li div a {
+  display: block;
+  text-decoration: none;
+  color: #4c4c4c; /* was #999 */
+}
+nav ul li div a span {
+  padding: 1.5em 1.5em 1.5em 75px;
+  display: block;
+}
+.focus {
+  background-color: orange;
+}
+/*
+footer {
+  margin: 1em 0 2em;
+  padding: 1em 20px;
+  border-top: 1px solid #DDD;
+  color: #4c4c4c;
+  font-size: 0.8em;
+}
+footer img {
+  float: left;
+}
+footer div {
+  float: left;
+  padding-left: 1em;
+}
+footer div p {
+  margin: 0.15em 0 0.75em;
+}
+*/
+

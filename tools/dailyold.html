@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="description" content="Calculate the costs and savings of online learning.">
+		<meta name="keywords" content="time, time management, time balancing, timing, schedules, schedule">
+		<title>Daily Schedule Calculator</title>
+
+		<link href="css/styles.css" rel="stylesheet" />
+        <script>
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-65911246-1', 'auto');
+
+      ga('send', 'pageview');
+
+    </script>
+
+		<script src="script/jquery-1.11.3.min.js"></script>
+		<script src="script/pie.js"></script>
+
+		<style type="text/css">
+			label { float: right; }
+			#container { float: left; margin-top: 20px; background-color: #E0E0E0; border-radius: 10px; padding: 20px; border-width: 0 1px 1px 0; border-color: #CCC; border-style: solid; }
+			#results { float: left; width: 270px; height: 270px; position: relative; background-color: #FFF; border-radius: 10px; padding: 15px 0 0 15px; border-width: 0 1px 1px 0; border-color: #DDD; border-style: solid; }
+			#results #main-container { position: absolute; top: 0; left: 0; width: 285px; height: 285px;}
+			#results #main-container #value-container { display: table-cell; width: 285px; height: 285px; vertical-align: middle; }
+			#results #main-container #value-container #value { text-align: center; display: inline-block; width: 100%; }
+			#questions { float: left; margin: 10px 20px 20px 0; color: #999; }
+			#questions ul { padding: 0; margin: 0; list-style: none; }
+			#questions ul li { padding: 5px; margin: 0; text-align: left; clear: both; }
+			#questions ul li label { float: right; font-size: 12px; margin-right: 5px; padding-top: 2px; }
+			#questions ul li input { float: right; }
+			#label-hours { font-size: 40px; color: #3a97d1; }
+			#label-static { font-size: 18px; color: #BBB; }
+		</style>
+
+		<script>
+
+			$(function() {
+				var hours = 0;
+
+        $('#results').easyPieChart({
+          barColor: '#3a97d1',
+          trackColor: '#EEE',
+          size: 250,
+          lineWidth: 15,
+          lineCap: 'butt',
+          scaleColor: '#AAA',
+          scaleLength: 5,
+          animate: { duration: 500, enabled: true }
+        });
+
+        $('.inline-input').keyup(function() {
+        	var finalHours;
+        	hours = 0;
+        	$('.inline-input').each(function(){
+        		var val = $(this).val();
+        		if (val > 0) {
+        				hours += parseFloat(val);
+        		}
+        	});
+        	finalHours = ((hours / 24) * 100).toFixed(0);
+        	$('#results #value').html('<span id="label-hours">' + (24 - hours).toFixed(0) + '</span><br><span id="label-static">Hours Remaining</span>');	
+        	$('#results').data('easyPieChart').update(finalHours);
+        });
+			});
+
+		</script>
+
+	</head>
+	<body>
+		<div class="wrapper">
+      <div class="container">
+       
+        <div class="banner">
+          <div class="logo">
+            <img src="img/logo.png" alt="California Community Colleges Logo" />
+          </div>
+          <div class="header lucida">
+            <div class="main"><h1><span class="lg">C</span>ALIFORNIA <span class="lg">C</span>OMMUNITY <span class="lg">C</span>OLLEGES</h1></div>
+            <div class="sub"><h2><span class="lg">O</span>NLINE <span class="lg">E</span>DUCATION</h2></div>
+             <div class="supersub"><h2><span class="lg">I</span>NITIATIVE</h2></div>
+          </div>
+        </div>
+
+        <div class="content">
+					<h2>Daily Schedule Calculator</h2>
+					<hr />
+					<p><b>Use this tool below to review how you prioritize your time in a day.</b></p>
+					<p>Begin by filling out the statements below, while doing so, you will notice the impacts of your priorities on your daily schedule.</p>
+
+					<div id="container" style="margin-bottom: 20px;">
+						
+						<div id="questions">
+							<ul>
+								<li>
+									<input class="inline-input" type="text" id="classes" placeholder="0" size="5" tabindex="1" />
+									<label for="classes">Going to class</label>
+								</li>
+								
+								<li>
+									<input class="inline-input" type="text" id="studying" placeholder="0" size="5" tabindex="2" /> 
+									<label for="studying">Studying for class</label>
+								</li>
+								
+								<li>
+									<input class="inline-input" type="text" id="sleeping" placeholder="0" size="5" tabindex="3" /> 
+									<label for="sleeping">Sleeping</label>
+								</li>
+								
+								<li>
+									<input class="inline-input" type="text" id="exercising" placeholder="0" size="5" tabindex="4" /> 
+									<label for="exercising">Exercising or sports</label>
+								</li>
+								
+								<li>
+									<input class="inline-input" type="text" id="working" placeholder="0" size="5" tabindex="5" /> 
+									<label for="working">Working</label>
+								</li>
+								
+								<li>
+									<input class="inline-input" type="text" id="family" placeholder="0" size="5" tabindex="6" />
+									<label for="family">Spending time with family</label>
+								</li>
+								
+								<li>
+									<input class="inline-input" type="text" id="personal" placeholder="0" size="5" tabindex="7" /> 
+									<label for="personal">Personal care</label>
+								</li>
+
+								<li>
+									<input class="inline-input" type="text" id="dining" placeholder="0" size="5" tabindex="8" /> 
+									<label for="Dining">Dining</label>
+								</li>
+
+								<li>
+									<input class="inline-input" type="text" id="transportation" placeholder="0" size="5" tabindex="9" /> 
+									<label for="transportation">Time spent traveling</label>
+								</li>
+
+								<li>
+									<input class="inline-input" type="text" id="entertainment" placeholder="0" size="5" tabindex="10" /> 
+									<label for="entertainment">Entertainment</label>
+								</li>
+
+								<li>
+									<input class="inline-input" type="text" id="other" placeholder="0" size="5" tabindex="11" /> 
+									<label for="other">Other</label>
+								</li>
+							</ul>
+						</div>
+						
+						<div id="results">
+							<div id="main-container">
+								<div id="value-container">
+									<div id="value"><span class="label-static">Enter hours in the<br>fields to the left<br>to begin.</span></div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="disclaimers">
+						<hr />
+						<img src="img/ccby-4.0.png" alt="Creative Commons License Logo" />
+                       
+                        <div><p><b>Creative Commons License Info:</b><br /><br />
+						© 2015 Chancellor's Office, California Community Colleges<br />
+						<a rel="license" href="https://creativecommons.org/licenses/by/4.0/"></a>This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_new" rel="license">Creative Commons Attribution 4.0 International License</a>.</p></div>
+	      	</div>
+
+					<div class="bottom-block"></div>
+					<div class="push"></div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div id="footer"></div>
+
+	</body>
+</html>
