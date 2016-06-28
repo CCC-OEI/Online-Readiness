@@ -85,6 +85,9 @@ li.tab {
   float: left;
   display: inline;
 }
+#tabs div#panel-resources ul li {
+  margin-bottom: 0.5em;
+}
 li.tab,
 #tabs div#panel-resources a,
 #tabs div.able-transcript {
@@ -139,15 +142,21 @@ ul#tablist li.selected {
  *
  */
 .help-alert {
+  display: none; /* exposed dynamically */
   position:fixed;
   top: 50%;
   left: 50%;
   width: 30em;
-  height: 18em;
-  margin-top: -9em; /*set to a negative number 1/2 of your height*/
+  height: 4em;
+  margin-top: -2em; /*set to a negative number 1/2 of your height*/
   margin-left: -15em; /*set to a negative number 1/2 of your width*/
+  padding: 1em;
+  font-size: 1.1em;
+  font-weight: bold;
+  background-color: #FFC;
   border: 1px solid #ccc;
-  background-color: #f3f3f3;
+  box-shadow: 0 0 16px #262626;
+  z-index: 200000;
 }
 
 /*
