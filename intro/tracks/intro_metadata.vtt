@@ -1,0 +1,17 @@
+WEBVTT
+
+00:02:25.000 --> 00:05:01.800
+.myth-button
+PAUSE
+FOCUS:#myth1
+
+00:05:01.800 --> 00:05:02.550
+.myth-button
+#cost-calculator
+PAUSE
+FOCUS:#cost-calculator
+
+00:05:02.550 --> 00:10:26.199
+.myth-button
+PAUSE
+FOCUS:#myth1

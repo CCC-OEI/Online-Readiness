@@ -1,0 +1,510 @@
+If you're thinking about taking
+an online course, you already know
+
+that it will require some
+basic technological skills.
+
+And while you don't need
+to be a computer scientist
+
+to take a class online
+
+(unless maybe it's a
+class on computer science…)
+
+it would be good for you to have
+a really solid understanding
+
+of the basic technical skills
+you'll need to succeed.
+
+Understanding what these skills are
+up front will make things much easier
+
+for you as a student, which is
+why we've created this module.
+
+After completing it,
+you'll have an idea
+
+of what your online instructor
+might need you to know.
+
+This includes becoming familiar with:
+
+the hardware and software requirements
+of most online courses;
+
+the value of a fast
+Internet connection;
+
+how to locate and download the free plugins
+that your course might require;
+
+the basics of email;
+
+how to obtain tech support
+when you need it
+
+Students now are taking their online
+courses using a range of devices,
+
+from desktop and laptop computers
+to smartphones and tablets.
+
+You may choose to do your schoolwork
+on one or more of these gadgets.
+
+It's really about finding out which
+form of hardware best suits
+
+both your needs as a student and
+the requirements of the course.
+
+If you're going to buy a computer,
+select something reliable,
+
+and more importantly, make sure that
+you have access to a fast Internet connection.
+
+We recommend, but don't require,
+a broadband connection.
+
+If your computer isn't particularly reliable,
+or if you don't have a computer
+
+or other internet-capable device,
+don't worry.
+
+There are plenty of places where
+you can find computer access,
+
+and oftentimes for free:
+
+for instance, your local library
+or a computer lab on campus.
+
+Just make sure that the device
+you choose to work on is dependable
+
+and that the space you choose to work in
+is conducive to your study habits.
+
+Slow computers and poor internet connections
+can significantly increase the time it takes
+
+for you to access and complete the
+requirements for your online course,
+
+and the last thing you want to
+deal with all semester
+
+is Internet, hardware, or accessibility issues.
+
+There are some basics that your device
+will need to be equipped with
+
+in order to interact with your school's
+course management system (CMS) properly.
+
+For instance, you'll want to make sure that
+you have an up-to-date operating system.
+
+Your computer's operating system
+is the software that manages
+
+the programs and functions
+of your computer.
+
+For the courses you take here,
+you will be required to have
+
+one of the following operating systems:
+
+For PC, Windows 7 or higher;
+
+For Mac, OS 10.4 or higher.
+
+Your individual course may also
+have its own hardware requirements.
+
+Check with your instructor
+or take a look at your syllabus
+
+to see if there is anything else
+you might need for your course.
+
+Some of these common hardware requirements
+might include:
+
+A printer;
+
+A headset;
+
+Speakers;
+
+A web cam.
+
+Another factor that you'll want to keep an
+eye out for is whether your course or CMS
+
+requires a particular browser
+for viewing internet content.
+
+Some content does not display properly or
+particular functions may not perform adequately
+
+in certain browsers;
+
+however, if you view the same content
+or page in a different browser,
+
+it will look and work perfectly.
+
+So make sure that if your instructor asks you
+to use a particular browser
+
+when completing a certain task,
+you follow his or her instructions.
+
+This may seem like a pain,
+especially if there is a certain browser
+
+that you prefer using when online,
+but trust us&mdash;it's all about compatibility.
+
+It is always a good idea to
+have several browsers installed
+
+on your machine when possible.
+
+That way you have a few
+options to choose from
+
+if you run into any problems.
+
+Some popular browsers that will work
+with your school's CMS include:
+
+Apple's Safari;
+
+Google Chrome;
+
+Mozilla Firefox;
+
+Internet Explorer.
+
+These browsers should work fine
+with your school's CMS, but again,
+
+they may not all work well with
+particular resources or applications
+
+that your instructor may need you
+to access for certain assignments.
+
+If there are any compatibility issues
+you need to be aware of,
+
+your instructor will let you know
+which browser to use
+
+for the most reliable experience.
+
+In addition to having a browser
+to view online content,
+
+sometimes your course will require
+you to install one or more
+
+of the following plugins so that you
+can view other media
+
+that the browser alone
+may not be able to handle:
+
+like animations, sound clips,
+PDFs, or any number of other things.
+
+Some common plug-ins you may
+need to install could include:
+
+Java, Adobe Reader,
+Adobe Flash Player,
+
+Windows Media Player, Quicktime,
+Microsoft Silverlight.
+
+These are free applications you can
+download from the internet,
+
+and your instructor
+(or even your computer)
+
+will let you know when
+you need a particular plug-in
+
+in order to view something.
+
+You will also definitely need
+an email account,
+
+if you don't already have one.
+
+Lots of schools provide free email
+accounts for registered students
+
+and some insist that you use this account
+for any school-related emails.
+
+Take a look at your school's email policy
+and figure this out before you sign up
+
+for any online course, because this
+will be one of the chief ways
+
+that you will communicate with your
+instructors and classmates.
+
+Your instructor will probably state
+in his or her syllabus
+
+what the preferred means of communication will be
+for the term.
+
+And if you're not required to use
+a school email account,
+
+you can use one you've already set up,
+
+or set up a new one with a free email service
+like Gmail or Yahoo.
+
+In fact, even if you have an old email account,
+
+you may want to make a new one that reflects
+your status as a college student.
+
+If you were an instructor, which of these
+would you rather receive a student email from?
+
+jrodriguez@gmail.com or
+badboipunk4958@hotmail.com?
+
+Now it's time to talk technical difficulties.
+Here's the bad news:
+
+during the course of your studies,
+
+you're bound to have an issue with
+your computer hardware or software.
+
+But let's face it.
+That would probably be true
+
+if you were taking a course in
+a traditional classroom as well.
+
+We suppose it's just another facet
+of the modern condition.
+
+The good news is that most technical problems
+are relatively easy to solve,
+
+and if you're really struggling
+with a technical issue,
+
+you can always count on your program's
+tech support team.
+
+After all, your program is here to support you.
+We want you to be able to resolve your tech issues quickly
+
+so that you can get back
+to your online studies.
+
+Most of the issues you might encounter
+when taking a course online
+
+don't require a complicated fix
+from tech support.
+
+In fact you should be able
+to solve most problems yourself,
+
+and some may be so simple that
+they seem borderline ridiculous.
+
+Bear with us while we go through
+some of the most frequent issues.
+
+Some of these troubleshooting suggestions
+we're about to give you
+
+are really, really obvious.
+Like, embarrassingly so.
+
+But you'd be surprised at how often these
+"obvious" solutions are overlooked.
+
+Try some of these quick fixes if you
+experience common hardware issues.
+
+Check your computer cables and connections
+to make sure a cable or connection
+
+has not loosened or come unplugged.
+
+Sometimes things shift around
+without you noticing,
+
+and it's an easy place to start.
+
+If your computer is plugged into a surge protector
+(which it should be, if possible!)
+
+make sure that the surge protector
+is turned on.
+
+It's often a good idea to reset the surge
+protector by turning it off and on,
+
+just in case this is the source of your problem.
+
+If you are using a laptop, Netbook,
+notebook, or tablet,
+
+it is a good idea to check your
+battery status often while you work.
+
+You can generally move your mouse over
+(or click on) the battery icon
+
+shown on your screen and it will tell you
+just how much battery life is left.
+
+If the device will not turn on at all,
+try plugging it in and charge it
+
+for a few minutes before trying again.
+
+Some devices have a battery indicator
+on the outside of the device as well,
+
+usually near or on the battery itself.
+
+If your computer monitor is blank,
+make sure it is plugged in,
+
+connected to the computer,
+and turned on.
+
+Next, check the brightness control,
+generally located on the monitor or keyboard.
+
+If you have no sound on your computer,
+check the volume control for your computer
+
+to see if it is turned up high enough.
+
+Some applications (and some plug-ins)
+have their own volume controls as well.
+
+Make sure you check both places
+to resolve any sound issues.
+
+If you're using speakers, make sure
+they are plugged in, turned on,
+
+and properly connected to the audio port.
+
+It can be helpful to test your system's sound
+by plugging headphones into the audio port
+
+on your computer to see if
+you can hear anything that way.
+
+If trying one of these "easy fixes"
+does not solve your issue,
+
+save your work and try
+restarting your computer.
+
+Surprisingly, this troubleshooting
+technique often works best!
+
+One last way to find a solution is to simply
+conduct an Internet search for your issue.
+
+With billions of computer and Internet
+users around the world,
+
+chances are that someone has had
+the same problem you're having,
+
+and that someone else
+has posted a solution.
+
+The Internet is full of these kinds
+of resources,
+
+from companies' official troubleshooting pages
+to community help forums.
+
+You'll often be able to pretty easily
+find the solution you're looking for.
+
+Here is some important advice:
+
+when attempting to solve a
+technical problem on your computer,
+
+keep track of any messages
+your computer displays,
+
+and the steps you've taken
+in your attempt to fix it.
+
+If the problem is really complicated,
+you might need to explain to tech support
+
+everything you've done
+to try to fix it on your own.
+
+If none of these strategies work, however,
+ don't hesitate to contact
+
+your school's tech support team.
+Write down their phone number
+
+(if you've lost internet connectivity,
+you won't be able to look it up online!),
+
+and call if you need some assistance.
+
+Remember, they're here to support you
+and your studies.
+
+They'll do their best to help you
+quickly find a solution to any issues they can.
+
+Well done!
+
+You have successfully completed
+the Getting Tech Ready module
+
+and we hope you are feeling
+a bit more comfortable
+
+with some of the technology you will
+be using to take your online course!
+
+For additional information,
+
+make sure you check with the IT department
+at your local school.
+
+They will be able to provide you with
+the valuable resources and instructive guidance
+
+you need to become a tech savvy student!

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Instructional Support: OEI Online Readiness Tutorials</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../../styles/story.css" rel="stylesheet" type="text/css">
+
+    <!-- Dependencies for Able Player -->
+    <script src="../../ableplayer/thirdparty/modernizr.custom.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="../../ableplayer/thirdparty/js.cookie.js"></script>
+
+    <!-- Able Player CSS -->
+    <link rel="stylesheet" href="../../ableplayer/build/ableplayer.min.css" type="text/css"/>
+
+    <!-- Able Player JavaScript -->
+    <script src="../../ableplayer/build/ableplayer.js"></script>
+
+    <!-- Tab Panel JavaScript -->
+    <script src="../../scripts/tabs.js"></script>
+
+    <!-- CSS for hidden blocks on content in this example -->
+    <style>
+      div#video-wrapper {
+        position: relative;
+        /* width and height will be added dynamically via oei.js */
+      }
+    </style>
+
+    <!-- Custom JavaScript for this module -->
+    <script>
+      var module, chapter, mobile, currentTab, video, player, button;
+      module = 'instructional';
+      chapter = null;
+      mobile = null;
+      currentTab = null;
+      $(document).ready(function() {
+        $video = $('#video1');
+        player = new AblePlayer($video);
+      });
+    </script>
+
+    <!-- Misc. OEI JavaScript -->
+    <script src="../../scripts/oei.js"></script>
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <header role="banner">
+        <div class="logo"><!-- only visible if printed; otherwise branding provided within the video -->
+          <img src="../../images/banner-silver.jpg" width="960" height="125" alt="California Community Colleges Online Education Initiative" />
+        </div>
+        <h1>Instructional Support</h1>
+        <div class="module-duration"> - about 5 minutes</div>
+      </header>
+
+      <main role="main">
+
+        <div id="tabs-wrapper">
+
+          <div id="tabs" class="tabpanel">
+            <!-- hamburger menu; not currently shown or used but here if needed -->
+            <button id="mobile-menu" type="button" aria-controls="tablist" aria-expanded="false" aria-haspopup aria-label="Open menu">
+              <img src="../../images/menu-white.png" role="presentation" alt="">
+            </button>
+            <ul id="tablist" role="tablist">
+              <li id="tab-menu" class="tab selected" aria-controls="panel-menu" aria-selected="true" role="tab" tabindex="0">Menu</li>
+              <li id="tab-transcript" class="tab" aria-controls="panel-transcript" role="tab" aria-selected="false" tabindex="-1">Transcript</li>
+              <li id="tab-resources" class="tab" aria-controls="panel-resources" role="tab" aria-selected="false" tabindex="-1">Resources</li>
+              <li id="tab-help" class="tab" aria-controls="panel-help" role="tab" aria-selected="false" tabindex="-1">Help</li>
+              <!-- Video tab is only visible on narrow screens where tabs and video don't fit side by side -->
+              <li id="tab-video" class="tab" aria-controls="content" role="tab" aria-selected="false" tabindex="-1">Video</li>
+            </ul>
+
+            <!-- Chapters (Menu) -->
+            <div id="panel-menu" class="panel" aria-labelledby="tab-menu" role="tabpanel"></div>
+
+            <!-- Transcript -->
+            <div id="panel-transcript" class="panel" aria-labelledby="tab-transcript" role="tabpanel">
+              <div class="able-transcript-area" tabindex="-1">
+                <div class="able-window-toolbar able-white-controls">
+                </div>
+                <div class="able-transcript">
+                  <div lang="en" class="able-transcript-container">
+                    <h2 class="visibly-hidden">Transcript</h2>
+
+                <!-- begin transcript content -->
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="13.4" data-end="54.5">How Do You Define Success?</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="13.92" data-end="18.29">How do you define success?
+Well, that depends on you. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="18.29" data-end="22.09">You might think that "success"
+is earning an associate's degree, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="22.09" data-end="25.27">or that it is transferring
+to a four-year university. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="25.27" data-end="27.67">Or maybe it means receiving
+a certificate of completion </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="27.67" data-end="31.1">or finishing some skill-based training. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="31.1" data-end="34.64">You could think about different
+degrees of success, too. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="34.64" data-end="36.82">Maybe you would be unhappy
+with anything less than an A </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="36.82" data-end="41.25">in a course, or maybe it depends
+on the difficulty of the subject. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="41.25" data-end="45.66">Maybe, as long as you pass with a C,
+you're perfectly content. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="45.66" data-end="48.78">But no matter how you
+personally define success, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="48.78" data-end="54.4">you probably wouldn't consider it
+to be earning a D or lower grade in a class. </span></div>
+
+
+
+
+
+
+
+
+
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="54.5" data-end="199.833">Achieving Success in the Classroom</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="55.489" data-end="60.85">So if most students consider passing a class
+to be the minimum requirement for "success," </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="60.85" data-end="63.85">and most students want to be
+successful in their courses, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="63.85" data-end="68.729">why aren't more college students
+consistently successful in the classroom? </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="68.729" data-end="70.63">We often hear students saying: </span></div>
+
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="70.63" data-end="73.409"><span class="able-unspoken">(Maria)</span> I just can't do it! </span></div>
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="73.409" data-end="75.58"><span class="able-unspoken">(Trevor)</span> I'm not good at math. </span></div>
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="75.58" data-end="77.979"><span class="able-unspoken">(Daniel)</span> I guess college isn't for me… </span></div>
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="77.979" data-end="79.96"><span class="able-unspoken">(Katelyn)</span> I'm not smart enough. </span></div>
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="79.96" data-end="81.64"><span class="able-unspoken">(Narrator)</span> Hey, guys? </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="81.64" data-end="86.869">Lucky for you the research is VERY clear about
+why students experience difficulty in, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="86.869" data-end="91.81">and even fail, college courses, and it
+usually has nothing to do with intellect. </span></div>
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="91.81" data-end="93.34"><span class="able-unspoken">(Maria)</span> But what is it? </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="93.34" data-end="98.56">What sorts of things should I do
+to be successful in any given course? </span></div>
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="98.56" data-end="104.28"><span class="able-unspoken">(Narrator)</span> Learn how to take
+effective notes in class; </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="104.28" data-end="108.429">Review the text and your
+reading notes prior to class; </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="108.429" data-end="113.1">Participate in class discussion
+and maybe even join a study group; </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="113.1" data-end="116.939">Go to office hours and ask
+your instructor questions; </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="116.939" data-end="120.549">Give yourself enough time to research,
+write, and edit your essays </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="120.549" data-end="123.119">in manageable stages; </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="123.119" data-end="128.22">Take advantage of online or on-campus
+academic support resources; </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="128.22" data-end="130.6">Spend sufficient time studying. </span></div>
+
+
+
+
+
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="130.6" data-end="132.51"><span class="able-unspoken">(Narrator)</span> So, Katelyn, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="132.51" data-end="134.04">you said that the class
+you're taking right now </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="134.04" data-end="135.26">is making you feel like </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="135.26" data-end="137.71">you're not smart enough
+for college. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="137.71" data-end="140.4">Let me ask you a question:
+When do you study? </span></div>
+
+
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="140.4" data-end="141.83"><span class="able-unspoken">(Katelyn)</span> When I can. </span></div>
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="141.83" data-end="142.93"><span class="able-unspoken">(Narrator)</span> Now, Trevor, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="142.93" data-end="144.75">you said that you're
+not good at math. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="144.75" data-end="147.67">Who do you study with in order
+to improve your math skills? </span></div>
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="147.67" data-end="150.95"><span class="able-unspoken">(Trevor)</span> Well, really just by myself... </span></div>
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="150.95" data-end="154.15"><span class="able-unspoken">(Narrator)</span> So there are two problems here
+that both Katelyn and Trevor have pointed </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="154.15" data-end="154.84">out. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="154.84" data-end="159.709">Katelyn, you need to make time to study
+by creating a regular study schedule, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="159.709" data-end="162.93">and make sure that it
+is enough time as well. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="162.93" data-end="166.349">Most college success experts agree
+that students should study </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="166.349" data-end="170.65">two hours outside of class
+for every hour inside of class. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="170.65" data-end="173.87">So create a regular study schedule
+that reflects this advice, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="173.87" data-end="176.299">and only break from it if an extreme
+situation prevents you from it! </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="176.299" data-end="180.489">Trevor, why rely on only your own
+knowledge, notes, and skills? </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="180.489" data-end="183.489">Try studying with another student
+from your math class, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="183.489" data-end="187.86">especially if you feel like
+it isn't your strongest subject. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="187.86" data-end="190.15">Studying in a group will give
+every group member a chance </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="190.15" data-end="193.84">to ask questions
+and talk about concepts. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="193.84" data-end="195.439">Add a tutor to your study group, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="195.439" data-end="199.5">and you'll really be able
+to notice a positive difference! </span></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="199.833" data-end="232.2">Academic Support Resources</span></div>
+<div class="able-transcript-block">
+  <span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="200.37" data-end="202.06">Every California community college </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp able-highlight" data-start="202.06" data-end="205.17">has a Learning Center, Tutorial Center,
+or Writing Center </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="205.17" data-end="210.189">that hires instructors and qualified
+students to provide academic support. </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="210.189" data-end="215.379">The tutoring is free, but the strategies
+and knowledge you gain will be invaluable. </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="215.379" data-end="218.29">Your tutors have taken the class
+you are currently enrolled in, </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="218.29" data-end="220.799">and they are trained to
+get the best out of you. </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="220.799" data-end="225.29">If you're taking an Online
+Education Initiative (OEI) course, </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="225.29" data-end="229.099">you'll find a link to OEI's online tutoring
+inside your course </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="229.099" data-end="232.78">or within your course management system. </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="232.78" data-end="234.709">Let's recap. </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="234.709" data-end="237.29">Students struggle in college
+NOT because of intellect. </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="237.29" data-end="245.37">It is because of time management, organization,
+and lack of quality study time. </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="245.37" data-end="248.489">But the good news is,
+there are ways to combat this, </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="248.489" data-end="253.969">specifically by doing things like
+creating a regular study schedule, </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="253.969" data-end="258.65">studying in groups, and utilizing
+your school's academic resources </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="258.65" data-end="262.62">such as a Tutoring Center,
+instructor office hours, </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="262.62" data-end="264.32">or any available online help. </span>
+</div>
+
+                <!-- end transcript content -->
+                </div><!-- end .able-transcript-container -->
+                </div><!-- end .able-transcript -->
+              </div><!-- end .able-transcript-area-->
+            </div><!-- end #panel-transcript -->
+
+            <!-- Resources -->
+            <div id="panel-resources" class="panel" aria-labelledby="tab-resources" role="tabpanel">
+              <h2 class="visibly-hidden">Resources</h2>
+              <ul>
+                <li><a href="../../tools/daily-schedule.html">Daily Schedule Calculator</a></li>
+                <li><a href="../../tools/study-schedule.html">Study Schedule</a></li>
+              </ul>
+            </div>
+
+            <!-- Help -->
+            <div id="panel-help" class="panel" aria-labelledby="tab-help" role="tabpanel">
+              <h2 class="visibly-hidden">Help</h2>
+              <div id="help-iphone">
+                <strong>Note to iPhone Users:</strong>
+                The iPhone plays all videos in its own full-screen video player.
+                Therefore the interactive features of these tutorials don't work.
+                If the narrator invites you to select items or enter content on the video,
+                just ignore those invitations and continue watching the video,
+                or switch to a desktop or laptop computer to play these tutorials
+                in full interactive mode.
+              </div>
+              <div id="help-keyboard">
+                <p>This website can be operated entirely with keyboard.</p>
+                <h2>Keyboard Shortcuts</h2>
+                <ul>
+                  <li>Press the <strong>Tab key</strong> to navigate to tabs and buttons on the media player.</li>
+                  <li>Use <strong>arrow keys</strong> to move forward and backward through the tabs.</li>
+                  <li>When a tab has focus, use the <strong>Tab key</strong> to enter that tab panel and access its content.</li>
+                  <li>On the Transcript tab, press the <strong>Tab key</strong> until the transcript has focus, then use <strong>up/down arrow keys</strong> to scroll through the transcript.</li>
+                  <li>When the video is playing, the transcript automatically scrolls if the <strong>"Auto Scroll" check box</strong> is checked. To disable this feature so you can scroll manually, uncheck the checkbox.</li>
+                  <li>Use <strong>Space</strong> or <strong>Enter</strong> to select a chapter, follow a link, or click a button on the media player.</li>
+                </ul>
+                <p>For help using the media player, click the Preferences button on the player's controller: <span id="icon-preferences-example"><img src="../../ableplayer/button-icons/white/preferences.png" alt="picture of Preferences button"></span></p>
+              </div>
+            </div>
+
+          </div><!-- #tabs -->
+        </div><!-- end #tabs-wrapper -->
+
+        <div id="content">
+          <div id="video-wrapper">
+            <video id="video1" preload="auto" width="720" height="540"
+              data-transcript-src="panel-transcript"
+              data-root-path="../../ableplayer"
+              data-chapters-div="panel-menu"
+              data-use-chapters-button="false"
+              data-chapters-title="Menu"
+              data-captions-position="below"
+              data-use-descriptions-button="false"
+              data-allow-fullscreen="false"
+              data-meta-type="selector"
+              data-seekbar-scope="chapter"
+            >
+              <source type="video/mp4" src="../media/instructional.mp4"/>
+              <source type="video/ogg" src="../media/instructional.ogv"/>
+              <track kind="captions" src="../tracks/instructional_captions_en.vtt" srclang="en" label="English captions"/>
+              <track kind="chapters" src="../tracks/instructional_chapters_en.vtt"/>
+            </video>
+          </div><!-- end #video-wrapper -->
+        </div><!-- end #content -->
+
+      </main>
+
+    </div><!-- end #wrapper -->
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5H7M8X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5H7M8X');
+</script>
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-65911246-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+</body>
+</html>

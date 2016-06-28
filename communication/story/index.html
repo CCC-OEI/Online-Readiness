@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Communication Skills for Online Learning: OEI Online Readiness Tutorials</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../../styles/story.css" rel="stylesheet" type="text/css">
+
+    <!-- Dependencies for Able Player -->
+    <script src="../../ableplayer/thirdparty/modernizr.custom.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="../../ableplayer/thirdparty/js.cookie.js"></script>
+
+    <!-- Able Player CSS -->
+    <link rel="stylesheet" href="../../ableplayer/build/ableplayer.min.css" type="text/css"/>
+
+    <!-- Able Player JavaScript -->
+    <script src="../../ableplayer/build/ableplayer.js"></script>
+
+    <!-- Tab Panel JavaScript -->
+    <script src="../../scripts/tabs.js"></script>
+
+    <!-- CSS for hidden blocks on content in this example -->
+    <style>
+      div#video-wrapper {
+        position: relative;
+        /* width and height will be added dynamically via oei.js */
+      }
+      div.question {
+        display: none;
+      }
+      div[role="radio"],
+      button.continue {
+        position: absolute;
+        outline: none !important;
+        background-color: transparent;
+        z-index: 10000;
+      }
+      div[role="radio"] {
+        border: medium solid #A49D8C;
+        border-radius: 50%;
+        background-color: transparent;
+        width: 3%;
+        height: 4%;
+      }
+      div#radio1a:focus,
+      div[role="radio"]:hover,
+      div[role="radio"]:focus {
+        outline: medium solid #C00 !important;
+        cursor: pointer;
+      }
+      div[role="radio"][aria-checked="true"] {
+        background-color: #9CF;
+      }
+      button.submit {
+        position: absolute;
+        color: #FFFFFF;
+        background-color: #5F5143;
+        border: medium solid #fcf6df;
+        border-radius: 7px;
+        outline: none !important;
+        z-index: 10000;
+        left: 15%;
+        bottom: 3%;
+        height: 8.5%;
+        font-size: 20px;
+        font-weight: bold;
+        width: 21.5%;
+      }
+      button.continue {
+        display: none;
+        border: medium solid transparent;
+        left: 41%;
+        width: 18.25%;
+        height: 7%;
+      }
+      button#continue1 {
+        top: 71%;
+      }
+      button#continue2 {
+        top: 82.812%;
+      }
+      button#continue3 {
+        top: 71%;
+      }
+      button#continue4 {
+        top: 71%;
+      }
+      button.submit:hover,
+      button.submit:focus,
+      button.continue:hover,
+      button.continue:focus {
+        border: medium solid #8B3B14 !important;
+        cursor: pointer;
+      }
+      button::-moz-focus-inner {
+        border: 0px solid transparent;
+      }
+      div#radio1a {
+        top: 58.75%;
+        left: 4.65%;
+      }
+      div#radio1b {
+        top: 66.75%;
+        left: 4.65%;
+      }
+      div#radio2a {
+        top: 61.148%;
+        left: 4.65%;
+      }
+      div#radio2b {
+        top: 74.4%;
+        left: 4.65%;
+      }
+      div#radio3a {
+        top: 61%;
+        left: 4.65%;
+      }
+      div#radio3b {
+        top: 70.7%;
+        left: 4.65%;
+      }
+    </style>
+
+    <!-- Custom JavaScript for this module -->
+    <script>
+      var module, chapter, mobile, currentTab, video, player, button, points, score;
+      module = 'communication';
+      chapter = null;
+      mobile = null;
+      currentTab = null;
+      points = [];
+      score = 0;
+      $(document).ready(function() {
+        $video = $('#video1');
+        player = new AblePlayer($video);
+      });
+    </script>
+    <script src="../scripts/communication.js"></script>
+
+    <!-- Misc. OEI JavaScript -->
+    <script src="../../scripts/oei.js"></script>
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <header role="banner">
+        <div class="logo"><!-- only visible if printed; otherwise branding provided within the video -->
+          <img src="../../images/banner-silver.jpg" width="960" height="125" alt="California Community Colleges Online Education Initiative" />
+        </div>
+        <h1>Communication Skills for Online Learning</h1>
+        <div class="module-duration"> - about 13 minutes</div>
+      </header>
+
+      <main role="main">
+
+        <div id="tabs-wrapper">
+
+          <div id="tabs" class="tabpanel">
+            <!-- hamburger menu; not currently shown or used but here if needed -->
+            <button id="mobile-menu" type="button" aria-controls="tablist" aria-expanded="false" aria-haspopup aria-label="Open menu">
+              <img src="../../images/menu-white.png" role="presentation" alt="">
+            </button>
+            <ul id="tablist" role="tablist">
+              <li id="tab-menu" class="tab selected" aria-controls="panel-menu" aria-selected="true" role="tab" tabindex="0">Menu</li>
+              <li id="tab-transcript" class="tab" aria-controls="panel-transcript" role="tab" aria-selected="false" tabindex="-1">Transcript</li>
+              <li id="tab-resources" class="tab" aria-controls="panel-resources" role="tab" aria-selected="false" tabindex="-1">Resources</li>
+              <li id="tab-help" class="tab" aria-controls="panel-help" role="tab" aria-selected="false" tabindex="-1">Help</li>
+              <!-- Video tab is only visible on narrow screens where tabs and video don't fit side by side -->
+              <li id="tab-video" class="tab" aria-controls="content" role="tab" aria-selected="false" tabindex="-1">Video</li>
+            </ul>
+
+            <!-- Chapters (Menu) -->
+            <div id="panel-menu" class="panel" aria-labelledby="tab-menu" role="tabpanel"></div>
+
+            <!-- Transcript -->
+            <div id="panel-transcript" class="panel" aria-labelledby="tab-transcript" role="tabpanel">
+              <div class="able-transcript-area" tabindex="-1">
+                <div class="able-window-toolbar able-white-controls">
+                </div>
+                <div class="able-transcript">
+                  <div lang="en" class="able-transcript-container">
+                    <h2 class="visibly-hidden">Transcript</h2>
+
+                <!-- begin transcript content -->
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="11.5" data-end="59.8">Good Communication</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="12.21" data-end="17.02">Good communication skills are
+essential in your online course. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="17.02" data-end="20.79">There are many different ways
+you'll communicate with your instructor </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="20.79" data-end="23.29">and other students in your class, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="23.29" data-end="26.68">so we've created this module
+to introduce you to common terms </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="26.68" data-end="28.96">you'll need to know
+and familiarize you </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="28.96" data-end="30.61">with some concepts
+that we hope </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="30.61" data-end="34.2">will lead you to
+success in your class. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="34.2" data-end="36.81">Our job in this module
+is to teach you: </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="36.81" data-end="38.63">the vocabulary that may be used </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="38.63" data-end="41.98">to describe communication
+in your online class; </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="41.98" data-end="47.39">how communication is different for you
+as a student when you're learning online, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="47.39" data-end="52.879">some of the advantages and disadvantages
+of academic online communication; </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="52.879" data-end="59.64">and how to become an effective
+communicator in your online course. </span></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="59.8" data-end="123.967">Definitions</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="60" data-end="63.71">Let's begin with a few definitions. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="63.71" data-end="66.81">First let's talk about the
+two types of communication </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="66.81" data-end="70">that can be used
+in an online class. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="70" data-end="75.36">Asynchronous communication is when you,
+your classmates, and your instructor </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="75.36" data-end="77.479">participate in online discussions </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="77.479" data-end="81.68">at different times,
+rather than in real time. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="81.68" data-end="85.369">So if you send your instructor
+a question via email, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="85.369" data-end="87.89">participate in an
+online discussion forum, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="87.89" data-end="90.409">or post to a blog
+for your class, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="90.409" data-end="94.07">you are communicating
+asynchronously. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="94.07" data-end="97.02">Synchronous communication
+happens in real time, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="97.02" data-end="99.93">like having a class discussion
+in a traditional setting </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="99.93" data-end="102.469">or talking to a teacher
+after class. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="102.469" data-end="107.899">But you can communicate synchronously
+in an online environment too, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="107.899" data-end="109.799">through the use of tools like: </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="109.799" data-end="111.039">online chat; </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="111.039" data-end="115.829">internet voice or video calling systems
+like Skype or Google Hang-outs; </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="115.829" data-end="118.939">or through the use of web-based
+video conferencing software </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="118.939" data-end="123.2">like WebEx, Zoom, or Collaborate. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="123.2" data-end="130.11">The discussion board, also known as
+a discussion forum or message board, </span></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="123.967" data-end="168.5">Discussion Boards</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="130.11" data-end="134.82">is one of the most popular features
+in a Course Management System, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="134.82" data-end="139.97">and it's one place where your asynchronous
+classroom discussions can occur. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="139.97" data-end="143.61">Your instructor may post
+the first message (or prompt) </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="143.61" data-end="147.12">and ask students to reply
+to their initial post, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="147.12" data-end="150.94">or they may choose to allow students
+to post a topic (or thread) </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="150.94" data-end="155.64">and engage the class in the
+online conversation that way. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="155.64" data-end="158">Both methods are equally effective, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="158" data-end="161.28">and discussions in your online courses
+are likely to vary, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="161.28" data-end="163.84">just like your discussions in a
+traditional class can differ </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="163.84" data-end="168.19">depending on your instructor
+and their personal teaching style. </span></div>
+
+
+
+
+
+
+
+
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="168.5" data-end="229.767">Blogs</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="169.19" data-end="173.69">Think of a blog as a
+website journal or diary. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="173.69" data-end="177.87">Blogs are usually run by an
+individual or a small group. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="177.87" data-end="179.45">Entries are made periodically </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="179.45" data-end="182.95">and typically displayed
+in reverse chronological order </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="182.95" data-end="186.34">so the most recent post
+will appear first. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="186.34" data-end="187.34">Most blogs are set up </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="187.34" data-end="191.34">to allow readers to post
+comments below each entry, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="191.34" data-end="195.23">and it is often just as informative
+to read the comments and criticisms </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="195.23" data-end="199.51">of fellow readers as it is
+to read the initial blog post. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="199.51" data-end="204.79">Some instructors may require you to post
+or review blogs during your online course, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="204.79" data-end="207.81">and they can be a useful
+source of information. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="207.81" data-end="212.6">Keep in mind, though, that blogs are
+typically personal communication platforms, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="212.6" data-end="216.91">so be sure to double-check facts or
+information you might find on a blog </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="216.91" data-end="221.29">with a verified source before
+using it in your research. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="221.29" data-end="222.55">Now that we've
+talked a little bit </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="222.55" data-end="225.95">about different kinds of
+asynchronous communication, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="225.95" data-end="229.4">let's talk about some forms
+of synchronous communication. </span></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="229.767" data-end="258.267">Chat</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="230.4" data-end="234.09">Many course management systems
+have a text-based chat feature </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="234.09" data-end="237.15">that will allow you to
+exchange messages with others </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="237.15" data-end="240.63">who are online at
+the same time as you. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="240.63" data-end="242.84">Sometimes instructors will use
+the chat feature </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="242.84" data-end="246.76">as a way to hold office hours
+or a study session. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="246.76" data-end="251.71">Because chat happens in real time, there
+is a sense of immediate gratification. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="251.71" data-end="255.01">You don't have to wait several hours (or more) for a response </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="255.01" data-end="258.19">like you might have to with email. </span></div>
+
+
+
+
+
+
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="258.267" data-end="285.967">Video Calls</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="258.69" data-end="262.25">Skype is a free software application
+that will enable you to make </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="262.25" data-end="265.63">voice and video phone calls
+over the Internet. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="265.63" data-end="270.389">Once you download, register, and
+install the software for Skype, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="270.389" data-end="274.03">you'll probably want to plug in a
+headset or a microphone and speakers </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="274.03" data-end="277.74">so that you can hear others and
+they can hear you more clearly. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="277.74" data-end="280.219">If you are using video,
+you'll need a web cam, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="280.219" data-end="282.229">but many newer computers and laptops </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="282.229" data-end="285.55">now include this as part
+of their standard equipment. </span></div>
+
+
+
+
+
+
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="285.967" data-end="324.267">Video Conferencing</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="286.55" data-end="291.52">Video Conferencing software applications
+like Zoom, Collaborate, or WebEx </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="291.52" data-end="295.08">are designed to support
+larger groups than Skype. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="295.08" data-end="296.96">They can provide
+a virtual experience </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="296.96" data-end="301.05">that closely replicates
+an on-campus classroom. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="301.05" data-end="304.96">Many videoconferencing applications
+include useful features like: </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="304.96" data-end="306.84">the ability to share desktops; </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="306.84" data-end="309.09">the ability to share files; </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="309.09" data-end="310.569">online chat windows; </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="310.569" data-end="311.84">virtual white boards; </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="311.84" data-end="315.52">and break-out rooms
+for small group work. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="315.52" data-end="319.27">So your computer can truly become
+a window into a live classroom </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="319.27" data-end="322.18">where students and instructors
+can interact and collaborate </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="322.18" data-end="323.889">at the same time. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="323.889" data-end="330.59">Finally, "netiquette", which is the correct
+or acceptable way to communicate online. </span></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="324.267" data-end="359">Netiquette</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="330.59" data-end="333.659">It's the code of online etiquette
+you should abide by, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="333.659" data-end="338.28">especially when in an academic
+or professional setting. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="338.28" data-end="342.55">This goes for both synchronous
+and asynchronous communication. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="342.55" data-end="346.68">Netiquette includes respectful behavior,
+appropriate language, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="346.68" data-end="350.159">and an acknowledgement of other
+people's privacy interests. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="350.159" data-end="353.759">Remember, your classroom discussions
+should be much more formal </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="353.759" data-end="356.219">than the type of discussions
+you may have with your friends </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="356.219" data-end="357.99">on Facebook or Twitter. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="357.99" data-end="362.919">Now that we've covered
+some of the basic terminology, </span></div>
+
+
+
+
+
+
+
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="359" data-end="671.267">Student Q &amp; A</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="362.919" data-end="366.49">let's start digging a little deeper
+into these topics. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="366.49" data-end="370.8">Here are some typical questions
+that students have about communicating online. </span></div>
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="370.8" data-end="375.55"><span class="able-unspoken">(Student 1)</span> Ok, so you've told us
+about the differences between </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="375.55" data-end="381.099">synchronous and asynchronous communication.
+But what does this mean for me? </span></div>
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="381.099" data-end="385.8"><span class="able-unspoken">(Narrator)</span> Online class communication
+often takes place asynchronously </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="385.8" data-end="389.08">rather than in real time,
+giving you a chance to </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="389.08" data-end="391.659">research, write,
+and edit your answers, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="391.659" data-end="395.24">instead of being put "on the spot"
+during class. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="395.24" data-end="398.4">Think of this as an opportunity
+for you to really reflect </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="398.4" data-end="403.61">and compose your thoughts carefully
+before you make a response. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="403.61" data-end="408.719">Synchronous sessions are similar to what
+you experience in your traditional classes. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="408.719" data-end="411.11">Discussions can often
+be more lively this way, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="411.11" data-end="412.419">because interactions are immediate </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="412.419" data-end="416.06">since everyone is in the virtual room
+at the same time. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="416.06" data-end="419.08">They can also help an online class
+bond more quickly, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="419.08" data-end="420.669">if used early in the semester. </span></div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="420.669" data-end="425.86"><span class="able-unspoken">(Student 2)</span> Will my online
+communications be permanent? </span></div>
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="425.86" data-end="430.219"><span class="able-unspoken">(Narrator)</span> Yes--when you communicate
+asynchronously online, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="430.219" data-end="433.409">you create a permanent record
+of your words. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="433.409" data-end="436.259">All of your electronic
+communication will be dated, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="436.259" data-end="439.93">and because of this it can be
+easily organized, stored and reviewed </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="439.93" data-end="443.909">(usually for grading purposes)
+at a later date. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="443.909" data-end="446.259">Because your words are enduring,
+it is a good idea </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="446.259" data-end="450.409">to compose your electronic communications
+carefully before posting. </span></div>
+
+
+
+
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="450.409" data-end="457.349"><span class="able-unspoken">(Student 3)</span> I generally feel more comfortable
+talking online than in person. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="457.349" data-end="461.84">Is online communication easier than
+face-to-face communication in a classroom, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="461.84" data-end="462.249">too? </span></div>
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="462.249" data-end="464.029"><span class="able-unspoken">(Narrator)</span> It can be. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="464.029" data-end="468.059">When you communicate through email,
+private messages, a discussion board, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="468.059" data-end="471.199">or a blog,
+you're somewhat anonymous. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="471.199" data-end="473.229">Your instructor and classmates
+may not know </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="473.229" data-end="479.289">your age, gender, race, ethnicity,
+or other physical characteristics. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="479.289" data-end="482.999">Some students find that this environment
+gives them extra confidence </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="482.999" data-end="484.909">if they are normally shy
+or tongue-tied </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="484.909" data-end="488.389">in front of instructors
+or other students. </span></div>
+
+
+
+
+
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="488.389" data-end="493.58"><span class="able-unspoken">(Student 4)</span> This isn't really a question,
+but more of a concern. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="493.58" data-end="496.029">I'm worried that there will be more
+potential for misunderstanding </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="496.029" data-end="498.539">when I'm communicating online
+than when I'm communicating </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="498.539" data-end="499.43">face-to-face. </span></div>
+
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="499.43" data-end="502.449"><span class="able-unspoken">(Narrator)</span> This is a valid concern. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="502.449" data-end="505.479">Because the teacher and your classmates
+cannot see your body language </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="505.479" data-end="510.18">or hear your voice, written words
+can sometimes be misinterpreted. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="510.18" data-end="513.02">Review your written communications
+in an online course carefully </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="513.02" data-end="516.3">before posting and try to remove
+any language that could be </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="516.3" data-end="518.909">interpreted as offensive
+or inappropriate. </span></div>
+
+
+
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="518.909" data-end="523.729"><span class="able-unspoken">(Student 5)</span> Can I make friends
+in an online course? </span></div>
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="523.729" data-end="526.06"><span class="able-unspoken">(Narrator)</span> Absolutely! </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="526.06" data-end="528.64">If you're normally reserved
+in front of other people, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="528.64" data-end="530.5">an online environment can
+make it feel like </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="530.5" data-end="533.84">you can express your ideas
+more freely. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="533.84" data-end="537">Discussion boards and blogs often
+create a real sense of community </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="537" data-end="540.43">as you respond to your instructor's
+and other students' posts, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="540.43" data-end="542.31">and they respond to yours. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="542.31" data-end="546.98">In an online course everyone has a chance
+ (and is expected) to speak. </span></div>
+
+
+
+
+
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="546.98" data-end="551.46"><span class="able-unspoken">(Student 6)</span> I get that email and
+discussion boards will be important, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="551.46" data-end="554.46">but will any of my online course
+communication be synchronous? </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="554.46" data-end="557.88">I thought that I would be able to do
+all of my online work on my own schedule. </span></div>
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="557.88" data-end="561.34"><span class="able-unspoken">(Narrator)</span> It depends on the course,
+but it is likely! </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="561.34" data-end="564.89">Many online instructors
+use online chat, Skype, and </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="564.89" data-end="569.26">videoconferencing tools like Zoom,
+Collaborate, or WebEx. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="569.26" data-end="571.12">It will also provide a nice contrast </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="571.12" data-end="574.77">to the asynchronous communication
+you'll be doing in your course, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="574.77" data-end="577.32">because it presents an opportunity
+to be more interactive. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="577.32" data-end="580.31">You'll want to check your syllabus
+early on </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="580.31" data-end="583.4">to see if your instructor has scheduled
+any synchronous sessions </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="583.4" data-end="587.71">for your online course,
+and make note of those dates and times. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="587.71" data-end="591.06">As we already pointed out,
+these will take place in real time, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="591.06" data-end="592.87">and you don't want to miss class! </span></div>
+
+
+
+
+
+
+
+
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="592.87" data-end="595.02"><span class="able-unspoken">(Student 7)</span> Can you give me some tips </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="595.02" data-end="597.92">for writing effectively in an
+online educational environment? </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="597.92" data-end="601.42">I don't want to get started
+on the wrong foot. </span></div>
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="601.42" data-end="603.36"><span class="able-unspoken">(Narrator)</span> If you can write well, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="603.36" data-end="606.96">you'll already have an advantage
+in an online course: </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="606.96" data-end="610.08">effective writing is essential
+to your success. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="610.08" data-end="614.39">But we do have some more suggestions
+that you should find helpful: </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="614.39" data-end="618.93">Always proof your writing for spelling,
+grammar, or punctuation errors. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="618.93" data-end="621.31">Keep your posts concise. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="621.31" data-end="624.43">Avoid slang and offensive language. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="624.43" data-end="629.41">Look for opportunities to collaborate
+with other students in the course. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="629.41" data-end="633.1">If you find you've written a negative comment,
+try reframing it in a way </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="633.1" data-end="636.7">that is more conducive
+for creating discussion. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="636.7" data-end="639.82">It's ok to disagree with someone,
+but being disagreeable </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="639.82" data-end="641.74">or making personal attacks is not. </span></div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="641.74" data-end="648.16"><span class="able-unspoken">(Student 8)</span> Ok, so how do I go about writing
+a respectful and respectable discussion post? </span></div>
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="648.16" data-end="651.91"><span class="able-unspoken">(Narrator)</span> First, make sure that you read
+your instructor's directions </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="651.91" data-end="654.14">and follow them carefully. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="654.14" data-end="657.54">This is the most basic way of showing
+respect for your instructor </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="657.54" data-end="659.8">and the others in the classroom. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="659.8" data-end="662.91">Second, take your time before you respond </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="662.91" data-end="666.88">when your online instructor posts
+topical questions to a discussion board, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="666.88" data-end="670.86">and he or she is requesting
+your informed response. </span></div>
+
+
+
+
+
+
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="671.267" data-end="937.533">Email Netiquette</span></div>
+<div class="able-transcript-block">
+  <span class="able-transcript-seekpoint able-transcript-caption" data-start="671.86" data-end="676.72">In this last section we'll review a term
+we introduced earlier in the module, </span>
+  <span class="able-transcript-seekpoint able-transcript-caption" data-start="676.72" data-end="680.57">"netiquette", and extend this
+to include email etiquette, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="680.57" data-end="684.79">a particularly important part
+of taking almost any class today, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="684.79" data-end="687.94">whether it's online or face-to-face. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="687.94" data-end="692.56">Just as a reminder, "netiquette" is the
+correct or acceptable code of conduct </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="692.56" data-end="697.25">for communicating online.
+Here's your challenge: </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="697.25" data-end="699.61">Based on the tips we've
+talked about today, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="699.61" data-end="703.01">help Brittany compose an email
+to her history professor </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="703.01" data-end="706.04">asking when the midterm
+will take place. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="706.04" data-end="711.11">At each step you'll be presented
+with two choices of sentences or phrases. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="711.11" data-end="721.26">Simply select the choice
+you think is best. </span></div>
+
+
+<div class="able-transcript-block">
+  <p>
+  <span class="able-transcript-seekpoint able-transcript-caption" data-start="887.95" data-end="891.03">Before you leave we want to
+leave you with one final, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="891.03" data-end="892.92">feline acronym that
+will help you remember </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="892.92" data-end="897.44">three important aspects
+of email etiquette: <strong>RAR!</strong> </span>
+  </p>
+  <p>
+<span class="able-transcript-seekpoint able-transcript-caption" data-start="897.44" data-end="900.03"><strong>R: Respond.</strong> </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="900.03" data-end="903.1">Respond to email and private messages
+in a timely manner; </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="903.1" data-end="905">don't let more than two days elapse </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="905" data-end="908.76">before replying to your instructor
+or another student. </span>
+  </p>
+  <p>
+<span class="able-transcript-seekpoint able-transcript-caption" data-start="908.76" data-end="910.94"><strong>A: Attach.</strong> </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="910.94" data-end="913.49">If you've included an attachment
+with your email, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="913.49" data-end="916.64">mention it in the body of the email.
+Then double-check </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="916.64" data-end="920.6">that you actually included the
+attachment before you hit "send." </span>
+  </p>
+  <p>
+<span class="able-transcript-seekpoint able-transcript-caption" data-start="920.6" data-end="922.85"><strong>R: Re-read.</strong> </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="922.85" data-end="924.8">This goes for emails, as well as </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="924.8" data-end="928.14">any other written text
+you submit in your course. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="928.14" data-end="931.16">One of the biggest advantages
+of taking an online class </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="931.16" data-end="933.42">is that you can really
+take your time to think about </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="933.42" data-end="937.4">and formulate your responses
+before you deliver them. </span>
+  </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="937.533" data-end="952">Conclusion</span></div>
+<div class="able-transcript-block">
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="938.4" data-end="942.04">You're now ready to take on any
+online communication challenges </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="942.04" data-end="944.57">you may encounter in your course. </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="944.57" data-end="949.5">Congratulations on finishing
+the Online Communication Skills module, </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="949.5" data-end="950.8">and don't forget to RAR! </span>
+</div>
+                <!-- end transcript content -->
+                </div><!-- end .able-transcript-container -->
+                </div><!-- end .able-transcript -->
+              </div><!-- end .able-transcript-area-->
+            </div><!-- end #panel-transcript -->
+
+            <!-- Resources -->
+            <div id="panel-resources" class="panel" aria-labelledby="tab-resources" role="tabpanel">
+              <h2 class="visibly-hidden">Resources</h2>
+              <ul>
+                <li><a href="https://www.skype.com/en/">Skype</a></li>
+                <li><a href="https://hangouts.google.com/">Google Hangouts</a></li>
+                <li><a href="https://zoom.us/">Zoom</a></li>
+                <li><a href="https://www.webex.com/">WebEx</a></li>
+                <li><a href="https://www.cccconfer.org/">CCC Confer</a></li>
+              </ul>
+            </div>
+
+            <!-- Help -->
+            <div id="panel-help" class="panel" aria-labelledby="tab-help" role="tabpanel">
+              <h2 class="visibly-hidden">Help</h2>
+              <div id="help-iphone">
+                <strong>Note to iPhone Users:</strong>
+                The iPhone plays all videos in its own full-screen video player.
+                Therefore the interactive features of these tutorials don't work.
+                If the narrator invites you to select items or enter content on the video,
+                just ignore those invitations and continue watching the video,
+                or switch to a desktop or laptop computer to play these tutorials
+                in full interactive mode.
+              </div>
+              <div id="help-keyboard">
+                <p>This website can be operated entirely with keyboard.</p>
+                <h2>Keyboard Shortcuts</h2>
+                <ul>
+                  <li>Press the <strong>Tab key</strong> to navigate to tabs and buttons on the media player.</li>
+                  <li>Use <strong>arrow keys</strong> to move forward and backward through the tabs.</li>
+                  <li>When a tab has focus, use the <strong>Tab key</strong> to enter that tab panel and access its content.</li>
+                  <li>On the Transcript tab, press the <strong>Tab key</strong> until the transcript has focus, then use <strong>up/down arrow keys</strong> to scroll through the transcript.</li>
+                  <li>When the video is playing, the transcript automatically scrolls if the <strong>"Auto Scroll" check box</strong> is checked. To disable this feature so you can scroll manually, uncheck the checkbox.</li>
+                  <li>Use <strong>Space</strong> or <strong>Enter</strong> to select a chapter, follow a link, or click a button on the media player.</li>
+                </ul>
+                <p>For help using the media player, click the Preferences button on the player's controller: <span id="icon-preferences-example"><img src="../../ableplayer/button-icons/white/preferences.png" alt="picture of Preferences button"></span></p>
+              </div>
+            </div>
+
+          </div><!-- #tabs -->
+        </div><!-- end #tabs-wrapper -->
+
+        <div id="content">
+          <div id="video-wrapper">
+            <video id="video1" preload="auto" width="720" height="540"
+              data-transcript-src="panel-transcript"
+              data-root-path="../../ableplayer"
+              data-chapters-div="panel-menu"
+              data-use-chapters-button="false"
+              data-chapters-title="Menu"
+              data-captions-position="below"
+              data-use-descriptions-button="false"
+              data-allow-fullscreen="false"
+              data-meta-type="selector"
+              data-seekbar-scope="chapter"
+            >
+              <source type="video/mp4" src="../media/communication.mp4"/>
+              <source type="video/ogg" src="../media/communication.ogv"/>
+              <track kind="captions" src="../tracks/communication_captions_en.vtt" srclang="en" label="English captions"/>
+              <track kind="chapters" src="../tracks/communication_chapters_en.vtt"/>
+              <track kind="descriptions" src="../tracks/communication_descriptions_en.vtt"/>
+              <track kind="metadata" src="../tracks/communication_metadata.vtt"/>
+            </video>
+            <!-- metadata content -->
+            <div class="question" id="question1">
+              <div role="radiogroup" aria-label="The salutation">
+                <div role="radio" aria-label="Dear Professor Kennedy," name="radio1" id="radio1a" tabindex="0" aria-checked="false"></div>
+                <div role="radio" aria-label="Hi," name="radio1" id="radio1b" tabindex="0" aria-checked="false"></div>
+              </div>
+              <button class="submit" id="submit1">SUBMIT</button>
+            </div>
+            <div class="question" id="question2">
+              <div role="radiogroup" aria-label="The question/concern">
+                <div role="radio" aria-label="I hope you're well. I was wondering: do we have a date set for the midterm?" name="radio2" id="radio2a" tabindex="0" aria-checked="false"></div>
+                <div role="radio" aria-label="do u kno when the midterm will b? thx" name="radio2" id="radio2b" tabindex="0" aria-checked="false"></div>
+              </div>
+              <button class="submit" id="submit2">SUBMIT</button>
+            </div>
+            <div class="question" id="question3">
+              <div role="radiogroup" aria-label="The wrap-up and sign-off">
+                <div role="radio" aria-label="Thanks so much for your help! Sincerely, Brittany" name="radio3" id="radio3a" tabindex="0" aria-checked="false"></div>
+                <div role="radio" aria-label="THANKS SO MUCH!!!!!!!!!!" name="radio3" id="radio3b" tabindex="0" aria-checked="false"></div>
+              </div>
+              <button class="submit" id="submit3">SUBMIT</button>
+            </div>
+            <button class="continue" id="continue1" aria-label="Continue"></button>
+            <button class="continue" id="continue2" aria-label="Continue"></button>
+            <button class="continue" id="continue3" aria-label="Continue"></button>
+            <button class="continue" id="continue4" aria-label="Continue"></button>
+
+          </div><!-- end #video-wrapper -->
+        </div><!-- end #content -->
+
+      </main>
+
+    </div><!-- end #wrapper -->
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5H7M8X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5H7M8X');
+</script>
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-65911246-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+</body>
+</html>

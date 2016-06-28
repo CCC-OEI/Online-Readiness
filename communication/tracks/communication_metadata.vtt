@@ -1,0 +1,70 @@
+WEBVTT
+
+00:11:54.000 --> 00:12:00.000
+#question1
+PAUSE
+FOCUS:#radio1a
+
+00:12:00.000 --> 00:12:15.000
+#continue1
+FOCUS:#continue1
+
+00:12:15.000 --> 00:12:20.000
+#continue1
+PAUSE
+FOCUS:#continue1
+
+00:12:20.000 --> 00:12:34.000
+#continue1
+FOCUS:#continue1
+
+00:12:34.000 --> 00:12:35.000
+#continue1
+PAUSE
+FOCUS:#continue1
+
+00:12:35.000 --> 00:12:38.000
+#question2
+PAUSE
+FOCUS:#radio2a
+
+00:12:38.000 --> 00:12:59.000
+#continue2
+FOCUS:#continue2
+
+00:12:59.000 --> 00:13:04.000
+#continue2
+PAUSE
+FOCUS:#continue2
+
+00:13:05.000 --> 00:13:26.000
+#continue2
+FOCUS:#continue2
+
+00:13:26.000 --> 00:13:30.000
+#continue2
+PAUSE
+FOCUS:#continue2
+
+00:13:30.000 --> 00:13:32.000
+#question3
+PAUSE
+FOCUS:#radio2a
+
+00:13:32.000 --> 00:13:44.000
+#continue3
+FOCUS:#continue3
+
+00:13:44.000 --> 00:13:45.000
+#continue3
+PAUSE
+FOCUS:#continue3
+
+00:13:45.000 --> 00:13:57.000
+#continue3
+FOCUS:#continue3
+
+00:13:57.000 --> 00:14:00.000
+#continue3
+PAUSE
+FOCUS:#continue3
