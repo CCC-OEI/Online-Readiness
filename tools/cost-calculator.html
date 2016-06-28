@@ -7,6 +7,7 @@
     <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:300' rel='stylesheet' type='text/css'>
     <link href="../styles/main.css" rel="stylesheet" type="text/css">
     <link href="../styles/module.css" rel="stylesheet" type="text/css">
+    <link href="../styles/tools.css" rel="stylesheet" type="text/css">
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
@@ -30,19 +31,35 @@
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6) !important;
         outline: 0 none !important;
   		}
-			#calculate { margin-right: 10px; }
-			#results { display: none; }
+			#calculate {
+  			margin-right: 10px;
+  		}
+			#results {
+  			display: none;
+  		}
 			#results-note:focus {
   			outline: none;
 			}
-			#totals { margin-top: 20px; }
-			.outputTotal { font-weight: bold; text-align: right; width: 100px; vertical-align: top; }
-			.totalTable { width: 100%; max-width: 600px; }
+			#totals {
+  			margin-top: 20px;
+  		}
+  		#results th {
+    		color: #666;
+  		}
+			.outputTotal {
+  			font-weight: bold;
+  			text-align: right;
+  			width: 100px;
+  			vertical-align: top;
+  		}
+			.totalTable {
+  			width: 100%;
+  			max-width: 600px;
+  		}
 		</style>
 
 		<script>
-
-			$(function() {
+      $(document).on('ready',function() {
 
 				$('#clear').click(function() {
 					$('input[type="text"]').val('');
@@ -72,8 +89,7 @@
 					$('#results-note').focus();
 				});
 
-			});
-
+      });
 		</script>
 
 
@@ -90,7 +106,7 @@
 
 				<h1>Online Cost Savings Calculator</h1>
 
-				<p>The Cost Savings Calculator shows how much money you can potentially save by taking online classes versus on-campus classes.</p>
+				<p class="intro">The Cost Savings Calculator shows how much money you can potentially save by taking online classes versus on-campus classes.</p>
 
 				<p>To use the Cost Savings Calculator, replace example numbers in each statement below with your own information. Once you have finished, click the Calculate button to get an estimate of how much you can potentially save by taking a class online!</p>
 

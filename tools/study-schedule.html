@@ -1,64 +1,142 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Study Schedule: OEI Online Readiness Tutorials</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<meta name="description" content="Calculate the costs and savings of online learning.">
 		<meta name="keywords" content="time, time management, time balancing, timing, schedules, schedule">
-		<title>Study Schedule</title>
-<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:300' rel='stylesheet' type='text/css'>
+    <link href="../styles/main.css" rel="stylesheet" type="text/css">
+    <link href="../styles/module.css" rel="stylesheet" type="text/css">
+    <link href="../styles/tools.css" rel="stylesheet" type="text/css">
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
-		<link href="css/styles.css" rel="stylesheet" />
-        <script>
+    <!-- scripts used in this application -->
+		<script src="scripts/colorpicker.js"></script>
 
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-65911246-1', 'auto');
-
-      ga('send', 'pageview');
-
-    </script>
-
-		<script src="script/jquery-1.11.3.min.js"></script>
-		<script src="script/colorpicker.js"></script>
-
-		<style type="text/css">
-			body.printing { background: #FFF; }
-			.hide, #print-back, #errors, #footer.printing, .push.printing, .button-block.printing { display: none; }
-			#print-back { float: right; margin-top: 5px; }
-			#addrow { margin-right: 5px; }
-			.disabled-text { background: #F5F5F5; }
-			.disabled-text td input { color: #CCC; }
-			.simplecolorpicker { border: 1px solid #999 !important; }
-			#results { margin-top: 20px; }
-			#results tr th { width: 100px; min-width: 100px; max-width: 100px; white-space: nowrap; font-size: 13px; }
-			#results tr td { width: 100px; min-width: 100px; max-width: 100px; white-space: nowrap; text-align: center; }
-			#results td.empty, 
-			#results th.empty { text-align: right; padding-right: 20px; width: 70px; min-width: 70px; max-width: 70px; font-size: 10px; }
-			#results-container { overflow-x: auto; }
-			.bg2 { background: #F5F5F5; }
-			.bg1 { background: #FFF; }
-			.stripeColor { color: #999; }
-			#errors { padding: 10px 20px; margin: 20px 0; background: #ffdddd; border: 1px solid #ffa0a0; color: #7c1f1f; }
-			.cell { height: 30px; min-height: 30px; max-height: 30px; }
-			#results-container { position: relative; }
-			.event-item { position: absolute; text-align: center; opacity: 0.6; padding-top: 5px; }
-			.control-container { margin: 15px 0;}
-			#questions tr th { white-space: nowrap;  }
-			#questions-container { overflow-x: auto; }
+		<style>
+      #wrapper {
+        border-left: 2px solid #EEE;
+        border-right: 2px solid #EEE;
+      }
+  		li {
+    		margin-bottom: 1em;
+  		}
+  		input[type="text"] {
+    		width: 4em;
+    		font-size: 1em;
+  		}
+  		button {
+    		font-size: 1em;
+  		}
+  		button:hover {
+    		border: 2px solid #78aed9 !important;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6) !important;
+        outline: 0 none !important;
+  		}
+      /* original style */
+			body.printing {
+  			background: #FFF;
+  		}
+			.hide,
+			#print-back,
+			#errors,
+			#footer.printing,
+			.push.printing,
+			.button-block.printing {
+  			display: none;
+  		}
+			#print-back {
+  			float: right;
+  			margin-top: 5px;
+  		}
+			#addrow {
+  			margin-right: 5px;
+  		}
+			.disabled-text {
+  			background: #F5F5F5;
+  		}
+			.disabled-text td input {
+  			color: #CCC;
+  		}
+			.simplecolorpicker {
+  			border: 1px solid #999 !important;
+  		}
+			#results {
+  			margin-top: 20px;
+  		}
+			#results tr th {
+  			width: 100px;
+  			min-width: 100px;
+  			max-width: 100px;
+  			white-space: nowrap;
+  			font-size: 13px;
+  		}
+			#results tr td {
+  			width: 100px;
+  			min-width: 100px;
+  			max-width: 100px;
+  			white-space: nowrap;
+  			text-align: center;
+  		}
+			#results td.empty,
+			#results th.empty {
+  			text-align: right;
+  			padding-right: 20px;
+  			width: 70px;
+  			min-width: 70px;
+  			max-width: 70px;
+  			font-size: 10px;
+  		}
+			#results-container {
+  			overflow-x: auto;
+  		}
+			.bg2 {
+  			background: #F5F5F5;
+  		}
+			.bg1 {
+  			background: #FFF;
+  		}
+			.stripeColor {
+  			color: #999;
+  		}
+			#errors {
+  			padding: 10px 20px;
+  			margin: 20px 0;
+  			background: #ffdddd;
+  			border: 1px solid #ffa0a0;
+  			color: #7c1f1f;
+  		}
+			.cell {
+  			height: 30px;
+  			min-height: 30px;
+  			max-height: 30px;
+  		}
+			#results-container {
+  			position: relative;
+  		}
+			.event-item {
+  		  position: absolute;
+  			text-align: center;
+        opacity: 0.6;
+  			padding-top: 5px;
+  		}
+			.control-container {
+  			margin: 15px 0;
+  		}
+			#questions tr th {
+  			white-space: nowrap;
+  		}
+			#questions-container {
+  			overflow-x: auto;
+  		}
 		</style>
 
 		<script>
-			$(function() {
+      $(document).on('ready',function() {
+
 				var table = $('#results tbody');
 				var colors = { "Green": "#7cdb74", "Bold blue": "#aae2ff", "Blue": "#a4bdfc", "Turquoise": "#86ecef", "Light Green": "#d0f9cc", "Bold Green": "#70ff63", "Yellow": "#fbd75b", "Orange": "#ffddbf", "Red": "#ffdddd", "Bold Red": "#f9a4a4", "Purple": "#dbadff", "Gray": "#e1e1e1" };
 				var time = ["7:00 AM", "7:30 AM", "8:00 AM", "8:30 AM", "9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM", "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", "2:00 PM", "2:30 PM", "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM", "5:00 PM", "5:30 PM", "6:00 PM", "6:30 PM", "7:00 PM", "7:30 PM", "8:00 PM", "8:30 PM", "9:00 PM", "9:30 PM", "10:00 PM"];
@@ -111,7 +189,7 @@
 
 				function createColorPicker(id, example) {
 					var colorPick = '<select id="' + id + '"' + (example ? ' disabled' : '') + '>';
-					
+
 					for(name in colors) {
 						colorPick += '<option value="' + colors[name] + '"' + (name === "Blue" ? ' selected' : '') + '>' + name + '</option>';
 					}
@@ -132,7 +210,7 @@
 
 					return select + '</select>';
 				}
-					  
+
 				function createRow(example) {
 					$('#questions').append('<tr' + (example ? ' class="disabled-text"' : '') + '><td><input type="text" id="row-' + rowCount + '-course"' + (example ? ' value="SCI 101" disabled' : '') + ' /></td><td class="ctr"><input type="checkbox" value="1" name="row-' + rowCount + '-day[]" id="row-' + rowCount + '-mon"' + (example ? ' disabled' : '') + ' /><label for="row-' + rowCount + '-mon" class="hide">Row ' + rowCount + ' checkbox for Monday</label></td><td class="ctr"><input type="checkbox" name="row-' + rowCount + '-day[]" value="2" id="row-' + rowCount + '-tue"' + (example ? ' disabled checked' : '') + ' /><label for="row-' + rowCount + '-tue" class="hide">Row ' + rowCount + ' checkbox for Tuesday</label></td><td class="ctr"><input type="checkbox" name="row-' + rowCount + '-day[]" value="3" id="row-' + rowCount + '-wed"' + (example ? ' disabled' : '') + ' /><label for="row-' + rowCount + '-wed" class="hide">Row ' + rowCount + ' checkbox for Wednesday</label></td><td class="ctr"><input type="checkbox" name="row-' + rowCount + '-day[]" value="4" id="row-' + rowCount + '-thu"' + (example ? ' disabled checked' : '') + ' /><label for="row-' + rowCount + '-thu" class="hide">Row ' + rowCount + ' checkbox for Thursday</label></td><td class="ctr"><input type="checkbox" name="row-' + rowCount + '-day[]" value="5" id="row-' + rowCount + '-fri"' + (example ? ' disabled' : '') + ' /><label for="row-' + rowCount + '-fri" class="hide">Row ' + rowCount + ' checkbox for Friday</label></td><td>' + createTimeDropdown('row-' + rowCount + '-start', example, "start") + '</td><td>' + createTimeDropdown('row-' + rowCount + '-end', example, "end") + '</td><td class="ctr">' + createColorPicker('row-' + rowCount + '-color', example) + '</td></tr>');
 					$('#row-' + rowCount + '-color').simplecolorpicker({ picker: true });
@@ -196,14 +274,14 @@
 						var timeDiff = evt.end - evt.start;
 						var height = (unitHeight * timeDiff) - 12;
 						var top = startPadHeight + (evt.start * unitHeight) + 1;
-						
+
 						$.each(evt.days, function(dayIndex, day) {
 							var left = startPadWidth + ((day - 1) * unitWidth);
-							
+
 							html += '<div class="event-item" style="top: ' + top + 'px; left: ' + left + 'px; height: ' + height + 'px; width: ' + width + 'px; background: ' + evt.color + '; z-index: ' + num + '; border: 3px solid ' + ColorLuminance(evt.color, -0.2) + ';">' + evt.course + '</div>';
 							console.log(html);
-						}); 
-						
+						});
+
 					});
 
 					elem.prepend(html);
@@ -255,58 +333,61 @@
 				$('#addrow').click(function() {
 					createRow();
 				});
-			});
 
+			});
 		</script>
 
-	</head>
-	<body>
-		<div class="wrapper">
-      <div class="container">
-       
-        <div class="banner print-hide">
-          <div class="logo">
-            <img src="img/OEIHeader-Silver-2B.jpg" alt="California Community Colleges Logo" />
-          </div>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header id="banner" role="banner">
+        <div class="logo">
+          <img src="../images/banner-silver.jpg" width="960" height="125" alt="California Community Colleges Online Education Initiative" />
         </div>
+      </header>
 
-        <div class="content">
-					<button class="print-show" id="print-back" role="button" type="button">Go Back</button>
-					<h2>Study Schedule</h2>
+      <main class="content">
+
+					<button class="print-show" id="print-back" type="button">Go Back</button>
+					<h1>Study Schedule</h1>
 					<hr />
-					
+
 					<div class="print-hide">
-						<p><b>Use this tool to create a printable class/study schedule to help you plan your time during the week.</b></p>
+						<p class="intro">Use this tool to create a printable class/study schedule to help you plan your time during the week.</p>
+
 						<p>Add your courses and study times to the first column, select the appropriate days of the week, enter start and end times and select a color to color-code items in your chart.</p>
-						<p>As you fill out each row your schedule will populate. Add additional rows as you need them.   The first row is used as an example and will not be added to your schedule.</p>
+
+						<p>As you fill out each row your schedule will populate. Add additional rows as you need them. The first row is used as an example and will not be added to your schedule.</p>
+
 						<p>Once you have entered all of your information click "Print Schedule" to produce a hard copy for reference.</p>
+
 					</div>
 
 					<div class="print-hide">
 						<div id="errors"></div>
-						
+
 						<div id="questions-container">
 							<table id="questions" class="simple">
 								<thead>
 									<tr>
-										<th role="col">Course</th>
-										<th class="ctr" role="col">Mon</th>
-										<th class="ctr" role="col">Tue</th>
-										<th class="ctr" role="col">Wed</th>
-										<th class="ctr" role="col">Thu</th>
-										<th class="ctr" role="col">Fri</th>
-										<th role="col">Start Time</th>
-										<th role="col">End Time</th>
-										<th class="ctr" role="col">Color</th>
-									<tr>
+										<th scope="col">Course</th>
+										<th class="ctr" scope="col">Mon</th>
+										<th class="ctr" scope="col">Tue</th>
+										<th class="ctr" scope="col">Wed</th>
+										<th class="ctr" scope="col">Thu</th>
+										<th class="ctr" scope="col">Fri</th>
+										<th scope="col">Start Time</th>
+										<th scope="col">End Time</th>
+										<th class="ctr" scope="col">Color</th>
+									</tr>
 								</thead>
 								<tbody></tbody>
 							</table>
 						</div>
 
 						<div class="control-container">
-							<button id="addrow" role="button" type="button">Add Row</button>
-							<button id="print" role="button" type="button">Print Schedule</button>
+							<button id="addrow" type="button">Add Row</button>
+							<button id="print" type="button">Print Schedule</button>
 						</div>
 
 						<hr />
@@ -317,33 +398,51 @@
 							<thead>
 								<tr>
 									<th class="empty"></th>
-									<th class="ctr" role="col">Monday</th>
-									<th class="ctr" role="col">Tuesday</th>
-									<th class="ctr" role="col">Wednesday</th>
-									<th class="ctr" role="col">Thursday</th>
-									<th class="ctr" role="col">Friday</th>
-								<tr>
+									<th class="ctr" scope="col">Monday</th>
+									<th class="ctr" scope="col">Tuesday</th>
+									<th class="ctr" scope="col">Wednesday</th>
+									<th class="ctr" scope="col">Thursday</th>
+									<th class="ctr" scope="col">Friday</th>
+								</tr>
 							</thead>
 							<tbody></tbody>
 						</table>
 					</div>
 
-					<div class="disclaimers print-hide">
-						<hr />
-						<img src="img/ccby-4.0.png" alt="Creative Commons License Logo" />
-                       
-                        <div><p><b>Creative Commons License Info:</b><br /><br />
-						© 2015 Chancellor's Office, California Community Colleges<br />
-						<a rel="license" href="https://creativecommons.org/licenses/by/4.0/"></a>This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_new" rel="license">Creative Commons Attribution 4.0 International License</a>.</p></div>
-	      	</div>
+      </main>
 
-					<div class="bottom-block"></div>
-					<div class="push"></div>
-	      </div>
-	    </div>
-	  </div>
+      <footer role="contentinfo">
+        <img src="../images/ccby-4.0.png" alt="Creative Commons License Logo" />
+        <div>
+          <p><strong>Creative Commons License Info:</strong></p>
+          <p>&copy; 2015 Chancellor's Office, California Community Colleges<br />
+              <a rel="license" href="https://creativecommons.org/licenses/by/4.0/"></a>This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license">Creative Commons Attribution 4.0 International License</a>. They are available to everyone and may be repurposed to meet the unique needs of educational institutions.
+          </p>
+				</div>
+      </footer>
 
-	  <div id="footer"></div>
+    </div><!-- end #wrapper -->
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5H7M8X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5H7M8X');
+</script>
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-65911246-1', 'auto');
+ga('send', 'pageview');
+</script>
+
 
 	</body>
 </html>
