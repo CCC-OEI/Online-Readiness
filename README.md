@@ -3,7 +3,7 @@ This repository contains the source files for the *Online Readiness Tutorials*, 
 
 ## To Download the Tutorials 
 
-The downloadable version includes all media and other source files necessary to provide a fully accessible, interactive experience for students. The current release (or any prior releases) can be downloaded from the [Releases](releases) page in either .zip or tar.gz format. 
+The downloadable version includes all media and other source files necessary to provide a fully accessible, interactive experience for students. The current release (or any prior releases) can be downloaded from the [Releases](https://github.com/CCC-OEI/Online-Readiness/releases) page in either .zip or tar.gz format. 
 
 After downloading and unzipping the files on your local computer, all files can be viewed locally except the multimedia version of each module, which must be played on a web server.  
 
@@ -13,6 +13,5 @@ These works are copyright 2016 by the California Community Colleges Chancellor's
 
 ## We welcome your feedback and contributions! 
 
-Please share bug reports, feature requests, questions, or suggestions for new content via GitHub's [Issues](issues) tracker. 
-We also welcome contributions! If you make changes to the tool or content, please consider sharing your changes via a pull request.
+Please share bug reports, feature requests, questions, or suggestions for new content via GitHub's [Issues](https://github.com/CCC-OEI/Online-Readiness/issues) tracker. We also welcome contributions! If you make changes to the tool or content, please consider sharing your changes via a pull request.
 
