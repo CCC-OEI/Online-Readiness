@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Organizing for Online Success: OEI Online Readiness Tutorials</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../../../styles/story.css" rel="stylesheet" type="text/css">
+
+    <!-- Dependencies for Able Player -->
+    <script src="../../../ableplayer/thirdparty/modernizr.custom.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="../../../ableplayer/thirdparty/js.cookie.js"></script>
+
+    <!-- Able Player CSS -->
+    <link rel="stylesheet" href="../../../ableplayer/build/ableplayer.min.css" type="text/css"/>
+
+    <!-- Able Player JavaScript -->
+    <script src="../../../ableplayer/build/ableplayer.js"></script>
+
+    <!-- Tab Panel JavaScript -->
+    <script src="../../../scripts/tabs.js"></script>
+
+    <!-- CSS for hidden blocks on content in this example -->
+    <style>
+      div#video-wrapper {
+        position: relative;
+        /* width and height will be added dynamically via oei.js */
+      }
+      button.tip-button {
+        display: none;
+        position: absolute;
+        border: thin dashed #000;
+        outline: none !important;
+        background-color: transparent;
+        z-index: 10000;
+        height: 7.5%;
+        width: 5.4%;
+        top: 82.5%;
+      }
+      button::-moz-focus-inner {
+        border: 0px solid transparent;
+      }
+      button.tip-button:hover,
+      button.tip-button:focus {
+        border: medium solid #8B3B14;
+      }
+      button#tip1 {
+        left: 0.5%;
+      }
+      button#tip2 {
+        left: 8.5%;
+      }
+      button#tip3 {
+        left: 16.7%;
+      }
+      button#tip4 {
+        left: 24.75%;
+      }
+      button#tip5 {
+        left: 33.15%;
+      }
+      button#tip6 {
+        left: 61.2%;
+      }
+      button#tip7 {
+        left: 69.5%;
+      }
+      button#tip8 {
+        left: 77.6%;
+      }
+      button#tip9 {
+        left: 86%;
+      }
+      button#tip10 {
+        left: 94%;
+      }
+    </style>
+
+    <!-- Custom JavaScript for this module -->
+    <script>
+      var module, chapter, mobile, currentTab, video, player, button;
+      module = 'organizing';
+      chapter = null;
+      mobile = null;
+      currentTab = null;
+      $(document).ready(function() {
+        $video = $('#video1');
+        player = new AblePlayer($video);
+        // handle clickable hotspots
+        $('.tip-button').on('click',function() {
+          button = $(this).attr('id');
+          if (button === 'tip1') {
+            player.seekToChapter('3a');
+          }
+          else if (button === 'tip2') {
+            player.seekToChapter('3b');
+          }
+          else if (button === 'tip3') {
+            player.seekToChapter('5a');
+          }
+          else if (button === 'tip4') {
+            player.seekToChapter('5b');
+          }
+          else if (button === 'tip5') {
+            player.seekToChapter('5c');
+          }
+          else if (button === 'tip6') {
+            player.seekToChapter('5d');
+          }
+          else if (button === 'tip7') {
+            player.seekToChapter('5e');
+          }
+          else if (button === 'tip8') {
+            player.seekToChapter('6a');
+          }
+          else if (button === 'tip9') {
+            player.seekToChapter('6b');
+          }
+          else if (button === 'tip10') {
+            player.seekToChapter('6c');
+          }
+          player.playMedia();
+        });
+      });
+    </script>
+
+    <!-- Misc. OEI JavaScript -->
+    <script src="../../../scripts/oei.js"></script>
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <header role="banner">
+        <div class="logo"><!-- only visible if printed; otherwise branding provided within the video -->
+          <img src="../../../images/banner-silver.jpg" width="960" height="125" alt="California Community Colleges Online Education Initiative" />
+        </div>
+        <h1>Organizing for Online Success</h1>
+        <div class="module-duration"> - about 12 minutes</div>
+      </header>
+
+      <main role="main">
+
+        <div id="tabs-wrapper">
+
+          <div id="tabs" class="tabpanel">
+            <!-- hamburger menu; not currently shown or used but here if needed -->
+            <button id="mobile-menu" type="button" aria-controls="tablist" aria-expanded="false" aria-haspopup aria-label="Open menu">
+              <img src="../../../images/menu-white.png" role="presentation" alt="">
+            </button>
+            <ul id="tablist" role="tablist">
+              <li id="tab-menu" class="tab selected" aria-controls="panel-menu" aria-selected="true" role="tab" tabindex="0">Menu</li>
+              <li id="tab-transcript" class="tab" aria-controls="panel-transcript" role="tab" aria-selected="false" tabindex="-1">Transcript</li>
+              <li id="tab-resources" class="tab" aria-controls="panel-resources" role="tab" aria-selected="false" tabindex="-1">Resources</li>
+              <li id="tab-help" class="tab" aria-controls="panel-help" role="tab" aria-selected="false" tabindex="-1">Help</li>
+              <!-- Video tab is only visible on narrow screens where tabs and video don't fit side by side -->
+              <li id="tab-video" class="tab" aria-controls="content" role="tab" aria-selected="false" tabindex="-1">Video</li>
+            </ul>
+
+            <!-- Chapters (Menu) -->
+            <div id="panel-menu" class="panel" aria-labelledby="tab-menu" role="tabpanel"></div>
+
+            <!-- Transcript -->
+            <div id="panel-transcript" class="panel" aria-labelledby="tab-transcript" role="tabpanel">
+              <div class="able-transcript-area" tabindex="-1">
+                <div class="able-window-toolbar able-white-controls">
+                </div>
+                <div class="able-transcript">
+                  <div lang="en" class="able-transcript-container">
+                    <h2 class="visibly-hidden">Transcript</h2>
+
+                <!-- begin transcript content -->
+
+<div class="able-transcript-chapter-heading"><span data-end="75.5" data-start="13.3" class="able-transcript-seekpoint">Introduction</span></div><div class="able-transcript-block"><span data-end="17.21" data-start="14.75" class="able-transcript-seekpoint able-transcript-caption"><span class="able-unspoken">(Host)</span> Hi, I'm Melissa, and today
+I'm going to help you </span><span data-end="21.22" data-start="17.21" class="able-transcript-seekpoint able-transcript-caption">learn how to organize
+for online learning success! </span><span data-end="24.16" data-start="21.22" class="able-transcript-seekpoint able-transcript-caption">If you're taking a course on campus,
+you'll meet with your instructor </span><span data-end="28.43" data-start="24.16" class="able-transcript-seekpoint able-transcript-caption">and the other students in your class
+at least once a week. </span><span data-end="31.92" data-start="28.43" class="able-transcript-seekpoint able-transcript-caption">In this traditional environment,
+you will be reminded multiple times </span><span data-end="33.26" data-start="31.92" class="able-transcript-seekpoint able-transcript-caption">when assignments are due. </span><span data-end="37.87" data-start="33.26" class="able-transcript-seekpoint able-transcript-caption">In an online environment, however,
+it's up to you to remind yourself. </span><span data-end="41.33" data-start="37.87" class="able-transcript-seekpoint able-transcript-caption">Luckily, there are a lot of tools
+out there to help you get started. </span><span data-end="44.14" data-start="41.33" class="able-transcript-seekpoint able-transcript-caption">But first it's important to get organized. </span><span data-end="46.8" data-start="44.14" class="able-transcript-seekpoint able-transcript-caption">In this module,
+we'll talk about how to: </span><span data-end="49.579" data-start="46.8" class="able-transcript-seekpoint able-transcript-caption">organize your physical study space, </span><span data-end="51.76" data-start="49.579" class="able-transcript-seekpoint able-transcript-caption">organize your course materials, and </span><span data-end="57.879" data-start="51.76" class="able-transcript-seekpoint able-transcript-caption">develop a scheduling system that will help
+you turn all of your coursework in on time. </span><span data-end="62.02" data-start="57.879" class="able-transcript-seekpoint able-transcript-caption">But before we start I want to draw your
+attention to the bottom of the screen, </span><span data-end="65.759" data-start="62.02" class="able-transcript-seekpoint able-transcript-caption">where you will see a section
+labeled Helpful Tips. </span><span data-end="69.11" data-start="65.759" class="able-transcript-seekpoint able-transcript-caption">Throughout the module we will reveal
+valuable tips and tricks </span><span data-end="73.149" data-start="69.11" class="able-transcript-seekpoint able-transcript-caption">to help you organize yourself,
+your space and your time. </span><span data-end="77.96" data-start="73.149" class="able-transcript-seekpoint able-transcript-caption">You'll want to check each of these out
+as they appear! </span></div>
+
+
+<div class="able-transcript-chapter-heading"><span data-end="185.6" data-start="75.5" class="able-transcript-seekpoint">Organize Your Environment</span></div><div class="able-transcript-block"><span data-end="81.119" data-start="77.96" class="able-transcript-seekpoint able-transcript-caption">So what does it take to be organized? </span><span data-end="83.52" data-start="81.119" class="able-transcript-seekpoint able-transcript-caption">Take control of your physical space. </span><span data-end="86.56" data-start="83.52" class="able-transcript-seekpoint able-transcript-caption">When are you most productive?
+In what kind of set-up? </span><span data-end="88.93" data-start="86.56" class="able-transcript-seekpoint able-transcript-caption">Everyone's preferences will be different, </span><span data-end="91.75" data-start="88.93" class="able-transcript-seekpoint able-transcript-caption">but once you've answered
+these questions for yourself, </span><span data-end="96.29" data-start="91.75" class="able-transcript-seekpoint able-transcript-caption">create a place where your priority
+can be concentrating on schoolwork. </span><span data-end="100.07" data-start="96.29" class="able-transcript-seekpoint able-transcript-caption">First, identify what time of day
+you are most productive. </span><span data-end="102.52" data-start="100.07" class="able-transcript-seekpoint able-transcript-caption">Are you most alert and fresh
+in the morning? </span><span data-end="105.22" data-start="102.52" class="able-transcript-seekpoint able-transcript-caption">Do you prefer to work at night,
+when you've gotten other things </span><span data-end="108.81" data-start="105.22" class="able-transcript-seekpoint able-transcript-caption">you need to accomplish during
+the day already done? </span><span data-end="113.02" data-start="108.81" class="able-transcript-seekpoint able-transcript-caption">Or is there some other time of day
+that works best for your studies? </span><span data-end="115.54" data-start="113.02" class="able-transcript-seekpoint able-transcript-caption">It can really help to set up
+some kind of schedule, </span><span data-end="118.17" data-start="115.54" class="able-transcript-seekpoint able-transcript-caption">so you know when you will be
+sitting down to accomplish </span><span data-end="120.85" data-start="118.17" class="able-transcript-seekpoint able-transcript-caption">the requirements for your course. </span><span data-end="126.35" data-start="120.85" class="able-transcript-seekpoint able-transcript-caption">Second, decide where to study.
+Some people prefer to work at home; </span><span data-end="129.91" data-start="126.35" class="able-transcript-seekpoint able-transcript-caption">others find that setting
+too tempting or distracting. </span><span data-end="134.29" data-start="129.91" class="able-transcript-seekpoint able-transcript-caption">Some prefer the quiet of a library
+while others appreciate the background activity </span><span data-end="136.81" data-start="134.29" class="able-transcript-seekpoint able-transcript-caption">they find at a café. </span><span data-end="140.959" data-start="136.81" class="able-transcript-seekpoint able-transcript-caption">Make sure you have a plan B location in case
+your first location doesn't work out </span><span data-end="142.709" data-start="140.959" class="able-transcript-seekpoint able-transcript-caption">on a given day. </span><span data-end="145.01" data-start="142.709" class="able-transcript-seekpoint able-transcript-caption">Maybe someone in your home
+is having company over, </span><span data-end="148.2" data-start="145.01" class="able-transcript-seekpoint able-transcript-caption">or there isn't any more seating
+available at Starbucks. </span><span data-end="151.599" data-start="148.2" class="able-transcript-seekpoint able-transcript-caption">But at the end of the day, it's like
+the ancient Greek saying goes: </span><span data-end="152.84" data-start="151.599" class="able-transcript-seekpoint able-transcript-caption">"Know thyself." </span><span data-end="158.11" data-start="152.84" class="able-transcript-seekpoint able-transcript-caption">Third, what conditions will enable you
+to concentrate and learn most effectively </span><span data-end="159.91" data-start="158.11" class="able-transcript-seekpoint able-transcript-caption">within your study space? </span><span data-end="164.16" data-start="159.91" class="able-transcript-seekpoint able-transcript-caption">Your motivation can be influenced
+by the noise level, temperature, and light </span><span data-end="165.76" data-start="164.16" class="able-transcript-seekpoint able-transcript-caption">in the place you choose. </span><span data-end="170.629" data-start="165.76" class="able-transcript-seekpoint able-transcript-caption">So bring a sweater...
+Well, maybe not that one! </span><span data-end="173.879" data-start="170.629" class="able-transcript-seekpoint able-transcript-caption">Pack some headphones,
+or do anything else </span><span data-end="178.4" data-start="173.879" class="able-transcript-seekpoint able-transcript-caption">that will allow you to tailor your
+environment to your personal preferences. </span><span data-end="181.81" data-start="178.4" class="able-transcript-seekpoint able-transcript-caption">Once you find what works best for you,
+you can make the adjustments you need </span><span data-end="183.04" data-start="181.81" class="able-transcript-seekpoint able-transcript-caption">to be comfortable and get
+to work! </span></div>
+
+
+
+
+<div class="able-transcript-chapter-heading"><span data-end="202.4" data-start="185.6" class="able-transcript-seekpoint">Tipster Tip #1 - Know your constraints</span></div><div class="able-transcript-block"><span data-end="232.88" data-start="185.28" class="able-transcript-seekpoint able-transcript-caption">Know your constraints. </span></div>
+<div class="able-transcript-block"><span data-end="230.42" data-start="187.28" class="able-transcript-seekpoint able-transcript-caption">Is your employer ok with you studying
+at work during lunch and on breaks? </span><span data-end="230.92" data-start="191.42" class="able-transcript-seekpoint able-transcript-caption">Can you use your work computer
+for your classes? </span><span data-end="231.09" data-start="193.92" class="able-transcript-seekpoint able-transcript-caption">Ask, don't assume. </span><span data-end="231.59" data-start="195.09" class="able-transcript-seekpoint able-transcript-caption">You don't want to step
+on your employer's toes </span><span data-end="232.09" data-start="197.59" class="able-transcript-seekpoint able-transcript-caption">or paint yourself into a corner
+with your schoolwork </span><span data-end="232.48" data-start="200.09" class="able-transcript-seekpoint able-transcript-caption">by presuming that it's fine with them. </span></div>
+
+
+
+<div class="able-transcript-chapter-heading"><span data-end="231.667" data-start="202.4" class="able-transcript-seekpoint">Tipster Tip #2 - Find a plug!</span></div><div class="able-transcript-block"><span data-end="204.23" data-start="202.86" class="able-transcript-seekpoint able-transcript-caption">Know where you can plug in. </span><span data-end="207.489" data-start="204.23" class="able-transcript-seekpoint able-transcript-caption">Identify several places with
+free wireless Internet. </span><span data-end="210.489" data-start="207.489" class="able-transcript-seekpoint able-transcript-caption">That way, if one network is down,
+you will have an alternative location </span><span data-end="215.72" data-start="210.489" class="able-transcript-seekpoint able-transcript-caption">for getting assignments in on time.
+This doesn't only go for wireless either. </span><span data-end="219.59" data-start="215.72" class="able-transcript-seekpoint able-transcript-caption">Electrical outlets can become hot real estate
+if others have the same idea as you. </span><span data-end="222.489" data-start="219.59" class="able-transcript-seekpoint able-transcript-caption">If you're planning to be at
+a given location for a long time, </span><span data-end="225.48" data-start="222.489" class="able-transcript-seekpoint able-transcript-caption">be aware of the availability
+of electrical outlets. </span><span data-end="227.33" data-start="225.48" class="able-transcript-seekpoint able-transcript-caption">The last thing you want
+is for your device to die </span><span data-end="230.28" data-start="227.33" class="able-transcript-seekpoint able-transcript-caption">in the middle of a study session
+or while you are working on an assignment. </span></div>
+
+
+<div class="able-transcript-chapter-heading"><span data-end="284" data-start="231.667" class="able-transcript-seekpoint">Organize Your Course Materials</span></div><div class="able-transcript-block"><span data-end="236.849" data-start="232.48" class="able-transcript-seekpoint able-transcript-caption"><span class="able-unspoken">(Host)</span> The second element you will have
+to organize is your course materials. </span><span data-end="240.78" data-start="236.849" class="able-transcript-seekpoint able-transcript-caption">You may prefer working with hard copies
+that you can print out and write on, </span><span data-end="245.209" data-start="240.78" class="able-transcript-seekpoint able-transcript-caption">or you may appreciate the ease and
+flexibility that comes with working digitally. </span><span data-end="249.89" data-start="245.209" class="able-transcript-seekpoint able-transcript-caption">Most students use a combination of both,
+depending on the course or a given assignment. </span><span data-end="253.709" data-start="249.89" class="able-transcript-seekpoint able-transcript-caption">But both require you to set up a
+reliable and convenient system </span><span data-end="256.599" data-start="253.709" class="able-transcript-seekpoint able-transcript-caption">so you can stay on top
+of your work. </span></div>
+
+
+
+
+
+<div class="able-transcript-block"><span data-end="260.25" data-start="256.599" class="able-transcript-seekpoint able-transcript-caption">If you like to work with "hard" (or physical, printed) copies, </span><span data-end="263.08" data-start="260.25" class="able-transcript-seekpoint able-transcript-caption">find a place where you can keep
+all of your school materials: </span><span data-end="268.26" data-start="263.08" class="able-transcript-seekpoint able-transcript-caption">books, notes, assignments,
+binders, and a calendar. </span><span data-end="270.479" data-start="268.26" class="able-transcript-seekpoint able-transcript-caption">Keep a stash of basic office supplies: </span><span data-end="276.66" data-start="270.479" class="able-transcript-seekpoint able-transcript-caption">pens, highlighters, paper, a stapler,
+binders, folders, index cards </span><span data-end="279.28" data-start="276.66" class="able-transcript-seekpoint able-transcript-caption">or any other study aids you might need. </span><span data-end="282.57" data-start="279.28" class="able-transcript-seekpoint able-transcript-caption">Who doesn't enjoy shopping for school supplies? </span><span data-end="284" data-start="282.57" class="able-transcript-seekpoint able-transcript-caption">Who doesn't enjoy shopping for school supplies? </span></div>
+
+
+
+<div class="able-transcript-chapter-heading"><span data-end="390.2" data-start="284" class="able-transcript-seekpoint">Create an Organizational Style</span></div><div class="able-transcript-block"><span data-end="288.37" data-start="285.37" class="able-transcript-seekpoint able-transcript-caption">Create an organizational style that works
+for you. </span><span data-end="291.09" data-start="288.37" class="able-transcript-seekpoint able-transcript-caption">The internet can be really helpful here. </span><span data-end="295.77" data-start="291.09" class="able-transcript-seekpoint able-transcript-caption">A quick Google search or a few minutes
+on a visual bookmark site like Pinterest </span><span data-end="299.889" data-start="295.77" class="able-transcript-seekpoint able-transcript-caption">might give you some helpful tips and ideas
+that could actually make a practical task </span><span data-end="301.37" data-start="299.889" class="able-transcript-seekpoint able-transcript-caption">like organizing </span><span data-end="305.28" data-start="301.37" class="able-transcript-seekpoint able-transcript-caption">exciting and - dare we say? - enjoyable. </span><span data-end="309.15" data-start="305.28" class="able-transcript-seekpoint able-transcript-caption">If, on the other hand, you prefer the ease
+and convenience </span><span data-end="312.19" data-start="309.15" class="able-transcript-seekpoint able-transcript-caption">that comes with an electronic
+- or digital - system, </span><span data-end="315.43" data-start="312.19" class="able-transcript-seekpoint able-transcript-caption">you still have many options for
+how to organize your materials. </span><span data-end="320.419" data-start="315.43" class="able-transcript-seekpoint able-transcript-caption">Again, you'll still want to have a "place"
+where you can store and find your materials. </span><span data-end="323.009" data-start="320.419" class="able-transcript-seekpoint able-transcript-caption">Which device will you keep your materials
+on? </span><span data-end="324.78" data-start="323.009" class="able-transcript-seekpoint able-transcript-caption">Where will you store your back ups? </span><span data-end="329.87" data-start="324.78" class="able-transcript-seekpoint able-transcript-caption">If you're saving your files on different devices,
+you may find yourself wasting a lot of time </span><span data-end="332.6" data-start="329.87" class="able-transcript-seekpoint able-transcript-caption">trying to locate a particular document. </span><span data-end="337.18" data-start="332.6" class="able-transcript-seekpoint able-transcript-caption">Avoid this by creating an electronic
+organizational system that works well for </span><span data-end="338.06" data-start="337.18" class="able-transcript-seekpoint able-transcript-caption">you. </span><span data-end="341.389" data-start="338.06" class="able-transcript-seekpoint able-transcript-caption">You may want to store files
+on your own personal computer, </span><span data-end="345.16" data-start="341.389" class="able-transcript-seekpoint able-transcript-caption">or you may want to take advantage
+of publicly-available computers </span><span data-end="348.13" data-start="345.16" class="able-transcript-seekpoint able-transcript-caption">and store your work
+on a removable hard drive. </span></div>
+
+
+
+<div class="able-transcript-block"><span data-end="351.71" data-start="348.13" class="able-transcript-seekpoint able-transcript-caption">Any of these hardware options (or combinations of them)</span> <span data-end="353.229" data-start="351.71" class="able-transcript-seekpoint able-transcript-caption">should work just fine. </span><span data-end="358.32" data-start="353.229" class="able-transcript-seekpoint able-transcript-caption">Another option is to keep your files
+in the "cloud," or in online storage. </span><span data-end="361.449" data-start="358.32" class="able-transcript-seekpoint able-transcript-caption">This may mean emailing yourself
+copies of assignments </span><span data-end="366.43" data-start="361.449" class="able-transcript-seekpoint able-transcript-caption">or tapping into the free resources
+offered by cloud-based services. </span><span data-end="370.49" data-start="366.43" class="able-transcript-seekpoint able-transcript-caption">If your files are saved in the cloud,
+you will be able to access them from anywhere, </span><span data-end="373.169" data-start="370.49" class="able-transcript-seekpoint able-transcript-caption">as long as you have access to the Internet. </span><span data-end="376.87" data-start="373.169" class="able-transcript-seekpoint able-transcript-caption">Some examples of cloud-based
+storage services include: </span><span data-end="385.65" data-start="376.87" class="able-transcript-seekpoint able-transcript-caption">iCloud, Box, Dropbox, Amazon CloudDrive,
+Google Drive, Evernote. </span></div>
+
+
+
+<div class="able-transcript-chapter-heading"><span data-end="409.767" data-start="390.2" class="able-transcript-seekpoint">Tipster Tip #3 - Cloud services</span></div><div class="able-transcript-block"><span data-end="393.759" data-start="390.25" class="able-transcript-seekpoint able-transcript-caption">You'll want to check
+cloud-services websites for their latest information </span>
+<span data-end="396.94" data-start="393.759" class="able-transcript-seekpoint able-transcript-caption">on their capacity  (how much space they'll give you for free), </span><span data-end="399.91" data-start="396.94" class="able-transcript-seekpoint able-transcript-caption">compatibility (what browsers they support best),</span><span data-end="401.25" data-start="399.91" class="able-transcript-seekpoint able-transcript-caption">do they have an app?&gt;, </span><span data-end="405.94" data-start="401.25" class="able-transcript-seekpoint able-transcript-caption">and features (which one offers the services
+you'd value the most for your schoolwork).</span> <span data-end="408.78" data-start="405.94" class="able-transcript-seekpoint able-transcript-caption">Shop around—
+not all services are created equal! </span></div>
+
+<div class="able-transcript-chapter-heading"><span data-end="438.733" data-start="409.767" class="able-transcript-seekpoint">Tipster Tip #4 - Organize e-learning</span></div><div class="able-transcript-block"><span data-end="413.3" data-start="409.78" class="able-transcript-seekpoint able-transcript-caption">Decide how to
+organize your electronic course materials, </span><span data-end="415.99" data-start="413.3" class="able-transcript-seekpoint able-transcript-caption">including those you download
+and those you create. </span><span data-end="417.669" data-start="415.99" class="able-transcript-seekpoint able-transcript-caption">For example, you might create: </span><span data-end="419.63" data-start="417.669" class="able-transcript-seekpoint able-transcript-caption">One folder for each of your courses; </span><span data-end="424.11" data-start="419.63" class="able-transcript-seekpoint able-transcript-caption">One sub-folder for each week of each course,
+using a naming convention that includes </span><span data-end="430.49" data-start="424.11" class="able-transcript-seekpoint able-transcript-caption">the dates of each week.
+For example, Wk1_Sept01-08. </span><span data-end="433.44" data-start="430.49" class="able-transcript-seekpoint able-transcript-caption">Within each weekly sub-folders,
+you could create another level </span><span data-end="437.61" data-start="433.44" class="able-transcript-seekpoint able-transcript-caption">of sub-folders divided into "readings,"
+"resources," "assignments," etc. </span></div>
+
+
+<div class="able-transcript-chapter-heading"><span data-end="446.733" data-start="438.733" class="able-transcript-seekpoint">Tipster Tip #5 - Naming your files</span></div><div class="able-transcript-block"><span data-end="440.66" data-start="438.75" class="able-transcript-seekpoint able-transcript-caption">Create descriptive file names </span><span data-end="443.44" data-start="440.66" class="able-transcript-seekpoint able-transcript-caption">so you don't have to open files
+to know what is in it: </span><span data-end="446.59" data-start="443.44" class="able-transcript-seekpoint able-transcript-caption">for example, the course title
+and assignment name. </span></div>
+
+
+<div class="able-transcript-chapter-heading"><span data-end="469" data-start="446.733" class="able-transcript-seekpoint">Tipster Tip #6 - Version control</span></div><div class="able-transcript-block"><span data-end="449.61" data-start="446.79" class="able-transcript-seekpoint able-transcript-caption">Develop a version control system </span><span data-end="453.27" data-start="449.61" class="able-transcript-seekpoint able-transcript-caption">for when you go back and
+revise a file you already saved. </span><span data-end="466.69" data-start="453.27" class="able-transcript-seekpoint able-transcript-caption">Some people use v1, v2,
+while others use
+the date. </span></div>
+
+
+<div class="able-transcript-chapter-heading"><span data-end="488.5" data-start="469" class="able-transcript-seekpoint">Tipster Tip #7 - Back up your files!</span></div><div class="able-transcript-block"><span data-end="472.11" data-start="469.69" class="able-transcript-seekpoint able-transcript-caption">Keep at least one
+backup for each of your files, </span><span data-end="475.93" data-start="472.11" class="able-transcript-seekpoint able-transcript-caption">and store them in a different place
+than where you usually access them. </span><span data-end="479" data-start="475.93" class="able-transcript-seekpoint able-transcript-caption">So if you save your files
+on your personal laptop, </span><span data-end="482.46" data-start="479" class="able-transcript-seekpoint able-transcript-caption">save them also in the cloud
+or on an external hard drive. </span><span data-end="486.06" data-start="482.46" class="able-transcript-seekpoint able-transcript-caption">That way, if - knock on wood -
+your computer crashes, </span><span data-end="488.22" data-start="486.06" class="able-transcript-seekpoint able-transcript-caption">you won't lose all of your work. </span></div>
+
+
+<div class="able-transcript-chapter-heading"><span data-end="522.933" data-start="488.5" class="able-transcript-seekpoint">Organize Your Time</span></div><div class="able-transcript-block"><span data-end="492.389" data-start="488.52" class="able-transcript-seekpoint able-transcript-caption"><span class="able-unspoken">(Host)</span> The last thing you'll
+need to organize is your time. </span><span data-end="495.729" data-start="492.389" class="able-transcript-seekpoint able-transcript-caption">The first thing you'll want to do
+when you sign up for an online class </span><span data-end="498.02" data-start="495.729" class="able-transcript-seekpoint able-transcript-caption">is to read the syllabus - thoroughly! - </span><span data-end="502.06" data-start="498.02" class="able-transcript-seekpoint able-transcript-caption">and familiarize yourself with class
+requirements and assignment due dates. </span><span data-end="503.59" data-start="502.06" class="able-transcript-seekpoint able-transcript-caption">Write these down immediately. </span><span data-end="507" data-start="503.59" class="able-transcript-seekpoint able-transcript-caption">It will help you get an idea of what
+the rest of the term will look like </span><span data-end="509.289" data-start="507" class="able-transcript-seekpoint able-transcript-caption">and how the course will be paced. </span><span data-end="512.229" data-start="509.289" class="able-transcript-seekpoint able-transcript-caption">Above all, it will make sure that
+you don't have any surprises </span><span data-end="514.89" data-start="512.229" class="able-transcript-seekpoint able-transcript-caption">midway through the term.
+You won't want to realize </span><span data-end="518.199" data-start="514.89" class="able-transcript-seekpoint able-transcript-caption">that your first big essay is due
+the day before the midterm, </span><span data-end="520.93" data-start="518.199" class="able-transcript-seekpoint able-transcript-caption">when it's too late to get
+either assignment done well. </span></div>
+
+
+
+<div class="able-transcript-chapter-heading"><span data-end="547.767" data-start="522.933" class="able-transcript-seekpoint">Tipster Tip #8 - Create a calendar</span></div><div class="able-transcript-block"><span data-end="525.38" data-start="523" class="able-transcript-seekpoint able-transcript-caption">Create a calendar
+that you can fill out </span><span data-end="527.33" data-start="525.38" class="able-transcript-seekpoint able-transcript-caption">as soon as you receive the syllabus </span><span data-end="531.56" data-start="527.33" class="able-transcript-seekpoint able-transcript-caption">and that you can update and consult
+periodically throughout the semester. </span><span data-end="535.92" data-start="531.56" class="able-transcript-seekpoint able-transcript-caption">You might want to use Google calendar,
+iCalendar, or another cloud-based system </span><span data-end="539.58" data-start="535.92" class="able-transcript-seekpoint able-transcript-caption">that you can check from any device
+and set up with notifications </span><span data-end="541.56" data-start="539.58" class="able-transcript-seekpoint able-transcript-caption">for when assignments are due, </span><span data-end="543.8" data-start="541.56" class="able-transcript-seekpoint able-transcript-caption">or you might find that the system
+that works best for you </span><span data-end="546.69" data-start="543.8" class="able-transcript-seekpoint able-transcript-caption">is an old-fashioned day planner
+or wall calendar. </span></div>
+
+
+ <div class="able-transcript-chapter-heading"><span data-end="561.5" data-start="547.767" class="able-transcript-seekpoint">Tipster Tip #9 - Break it up!</span></div><div class="able-transcript-block"><span data-end="550.16" data-start="547.89" class="able-transcript-seekpoint able-transcript-caption">If you prefer to break an assignment </span><span data-end="554.56" data-start="550.16" class="able-transcript-seekpoint able-transcript-caption">into manageable pieces and
+schedule them accordingly, do so. </span><span data-end="558" data-start="554.56" class="able-transcript-seekpoint able-transcript-caption">This can be tremendously helpful
+because it will give you milestones </span><span data-end="560.76" data-start="558" class="able-transcript-seekpoint able-transcript-caption">that will allow you to
+monitor your progress incrementally. </span></div>
+
+
+
+<div class="able-transcript-chapter-heading"><span data-end="569.5" data-start="561.5" class="able-transcript-seekpoint">Tipster Tip #10 - Use an alert/alarm</span></div><div class="able-transcript-block"><span data-end="564.94" data-start="561.76" class="able-transcript-seekpoint able-transcript-caption">Use a reminder or alert feature </span><span data-end="569.14" data-start="564.94" class="able-transcript-seekpoint able-transcript-caption">built into an online calendar
+in order to keep yourself on track. </span></div>
+
+<div class="able-transcript-chapter-heading"><span data-end="599" data-start="569.5" class="able-transcript-seekpoint">Conclusion</span></div><span data-end="573.6" data-start="569.54" class="able-transcript-seekpoint able-transcript-caption able-block-temp"><span class="able-unspoken">(Host)</span> Congratulations!
+Now that you have completed this module </span>
+<span data-end="576.86" data-start="573.6" class="able-transcript-seekpoint able-transcript-caption able-block-temp">you should be well on your way
+for organizational success! </span>
+<span data-end="580.68" data-start="576.86" class="able-transcript-seekpoint able-transcript-caption able-block-temp">Because online learning is so flexible,
+you can really tailor the experience </span>
+<span data-end="582.87" data-start="580.68" class="able-transcript-seekpoint able-transcript-caption able-block-temp">to your own personal preferences. </span>
+<span data-end="585.63" data-start="582.87" class="able-transcript-seekpoint able-transcript-caption able-block-temp">Simply find what works,
+and stick to it. </span>
+<span data-end="587.8" data-start="585.63" class="able-transcript-seekpoint able-transcript-caption able-block-temp">And remember, each lesson
+in this series </span>
+<span data-end="590.88" data-start="587.8" class="able-transcript-seekpoint able-transcript-caption able-block-temp">includes a variety
+of instructional aids, </span>
+<span data-end="594.32" data-start="590.88" class="able-transcript-seekpoint able-transcript-caption able-block-temp">activities and additional resources.
+Be sure to check those materials out </span>
+<span data-end="597.26" data-start="594.32" class="able-transcript-seekpoint able-transcript-caption able-block-temp">if you are looking for more ideas
+to help you get organized! </span>
+
+                <!-- end transcript content -->
+                </div><!-- end .able-transcript-container -->
+                </div><!-- end .able-transcript -->
+              </div><!-- end .able-transcript-area-->
+            </div><!-- end #panel-transcript -->
+
+            <!-- Resources -->
+            <div id="panel-resources" class="panel" aria-labelledby="tab-resources" role="tabpanel">
+              <h2 class="visibly-hidden">Resources</h2>
+              <ul>
+                <li><a href="https://www.icloud.com/">iCloud</a></li>
+                <li><a href="https://www.box.com/">Box</a></li>
+                <li><a href="https://www.dropbox.com">Dropbox</a></li>
+                <li><a href="https://www.amazon.com/clouddrive">Amazon Drive</a></li>
+                <li><a href="https://www.google.com/drive/">Google Drive</a></li>
+                <li><a href="https://evernote.com/">Evernote</a></li>
+              </ul>
+            </div>
+
+            <!-- Help -->
+            <div id="panel-help" class="panel" aria-labelledby="tab-help" role="tabpanel">
+              <h2 class="visibly-hidden">Help</h2>
+              <div id="help-iphone">
+                <strong>Note to iPhone Users:</strong>
+                The iPhone plays all videos in its own full-screen video player.
+                Therefore the interactive features of these tutorials don't work.
+                If the narrator invites you to select items or enter content on the video,
+                just ignore those invitations and continue watching the video,
+                or switch to a desktop or laptop computer to play these tutorials
+                in full interactive mode.
+              </div>
+              <div id="help-keyboard">
+                <p>This website can be operated entirely with keyboard.</p>
+                <h2>Keyboard Shortcuts</h2>
+                <ul>
+                  <li>Press the <strong>Tab key</strong> to navigate to tabs and buttons on the media player.</li>
+                  <li>Use <strong>arrow keys</strong> to move forward and backward through the tabs.</li>
+                  <li>When a tab has focus, use the <strong>Tab key</strong> to enter that tab panel and access its content.</li>
+                  <li>On the Transcript tab, press the <strong>Tab key</strong> until the transcript has focus, then use <strong>up/down arrow keys</strong> to scroll through the transcript.</li>
+                  <li>When the video is playing, the transcript automatically scrolls if the <strong>"Auto Scroll" check box</strong> is checked. To disable this feature so you can scroll manually, uncheck the checkbox.</li>
+                  <li>Use <strong>Space</strong> or <strong>Enter</strong> to select a chapter, follow a link, or click a button on the media player.</li>
+                </ul>
+                <p>For help using the media player, click the Preferences button on the player's controller: <span id="icon-preferences-example"><img src="../../../ableplayer/button-icons/white/preferences.png" alt="picture of Preferences button"></span></p>
+              </div>
+            </div>
+
+          </div><!-- #tabs -->
+        </div><!-- end #tabs-wrapper -->
+
+        <div id="content">
+          <div id="video-wrapper">
+            <video id="video1" preload="auto" width="720" height="540"
+              data-transcript-src="panel-transcript"
+              data-root-path="../../../ableplayer"
+              data-chapters-div="panel-menu"
+              data-use-chapters-button="false"
+              data-chapters-title="Menu"
+              data-captions-position="below"
+              data-use-descriptions-button="false"
+              data-allow-fullscreen="false"
+              data-meta-type="selector"
+              data-seekbar-scope="chapter"
+            >
+              <source type="video/mp4" src="../media/organizing.mp4"/>
+              <source type="video/ogg" src="../media/organizing.ogv"/>
+              <track kind="captions" src="../tracks/organizing_captions_en.vtt" srclang="en" label="English captions"/>
+              <track kind="chapters" src="../tracks/organizing_chapters_en.vtt"/>
+              <track kind="descriptions" src="../tracks/organizing_descriptions_en.vtt"/>
+              <track kind="metadata" src="../tracks/organizing_metadata.vtt"/>
+            </video>
+            <!-- metadata content -->
+            <button class="tip-button tip-button-group1" id="tip1" aria-label="First Tip" title="First Tip"></button>
+            <button class="tip-button tip-button-group1" id="tip2" aria-label="Second Tip" title="Second Tip"></button>
+            <button class="tip-button tip-button-group2" id="tip3" aria-label="Third Tip" title="Third Tip"></button>
+            <button class="tip-button tip-button-group2" id="tip4" aria-label="Fourth Tip" title="Fourth Tip"></button>
+            <button class="tip-button tip-button-group2" id="tip5" aria-label="Fifth Tip" title="Fifth Tip"></button>
+            <button class="tip-button tip-button-group2" id="tip6" aria-label="Sixth Tip" title="Sixth Tip"></button>
+            <button class="tip-button tip-button-group2" id="tip7" aria-label="Seventh Tip" title="Seventh Tip"></button>
+            <button class="tip-button tip-button-group3" id="tip8" aria-label="Eighth Tip" title="Eighth Tip"></button>
+            <button class="tip-button tip-button-group3" id="tip9" aria-label="Ninth Tip" title="Ninth Tip"></button>
+            <button class="tip-button tip-button-group3" id="tip10" aria-label="Tenth Tip" title="Tenth Tip"></button>
+          </div><!-- end #video-wrapper -->
+        </div><!-- end #content -->
+
+      </main>
+
+    </div><!-- end #wrapper -->
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5H7M8X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5H7M8X');
+</script>
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-65911246-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+</body>
+</html>

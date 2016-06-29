@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Financial Planning: OEI Online Readiness Tutorials</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../../../styles/story.css" rel="stylesheet" type="text/css">
+
+    <!-- Dependencies for Able Player -->
+    <script src="../../../ableplayer/thirdparty/modernizr.custom.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="../../../ableplayer/thirdparty/js.cookie.js"></script>
+
+    <!-- Able Player CSS -->
+    <link rel="stylesheet" href="../../../ableplayer/build/ableplayer.min.css" type="text/css"/>
+
+    <!-- Able Player JavaScript -->
+    <script src="../../../ableplayer/build/ableplayer.js"></script>
+
+    <!-- Tab Panel JavaScript -->
+    <script src="../../../scripts/tabs.js"></script>
+
+    <!-- CSS for hidden blocks on content in this example -->
+    <style>
+      div#video-wrapper {
+        position: relative;
+        /* width and height will be added dynamically via oei.js */
+      }
+      button.idea-button {
+        display: block;
+        position: absolute;
+        border: thick solid transparent;
+        outline: none !important;
+        background-color: transparent;
+        z-index: 10000;
+        height: 12%;
+        width: 21.5%;
+        top: 73%;
+      }
+      button::-moz-focus-inner {
+        border: 0px solid transparent;
+      }
+      button.idea-button:hover,
+      button.idea-button:focus {
+        border: thick solid #8B3B14;
+        cursor: pointer;
+      }
+      button#good-idea {
+        right: 30.25%;
+      }
+      button#bad-idea {
+        right: 8%;
+      }
+    </style>
+
+    <!-- Custom JavaScript for this module -->
+    <script>
+      var module, chapter, mobile, currentTab, video, player, button;
+      module = 'financial';
+      chapter = null;
+      mobile = null;
+      currentTab = null;
+      $(document).ready(function() {
+        $video = $('#video1');
+        player = new AblePlayer($video);
+        // handle clickable hotspots
+        $('.idea-button').on('click',function() {
+          // both buttons lead to the same result!
+          player.seekToChapter('4');
+          player.playMedia(); // is this necessary???
+        });
+      });
+    </script>
+
+    <!-- Misc. OEI JavaScript -->
+    <script src="../../../scripts/oei.js"></script>
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <header role="banner">
+        <div class="logo"><!-- only visible if printed; otherwise branding provided within the video -->
+          <img src="../../../images/banner-silver.jpg" width="960" height="125" alt="California Community Colleges Online Education Initiative" />
+        </div>
+        <h1>Financial Planning</h1>
+        <div class="module-duration"> - about 5 minutes</div>
+      </header>
+
+      <main role="main">
+
+        <div id="tabs-wrapper">
+
+          <div id="tabs" class="tabpanel">
+            <!-- hamburger menu; not currently shown or used but here if needed -->
+            <button id="mobile-menu" type="button" aria-controls="tablist" aria-expanded="false" aria-haspopup aria-label="Open menu">
+              <img src="../../../images/menu-white.png" role="presentation" alt="">
+            </button>
+            <ul id="tablist" role="tablist">
+              <li id="tab-menu" class="tab selected" aria-controls="panel-menu" aria-selected="true" role="tab" tabindex="0">Menu</li>
+              <li id="tab-transcript" class="tab" aria-controls="panel-transcript" role="tab" aria-selected="false" tabindex="-1">Transcript</li>
+              <li id="tab-resources" class="tab" aria-controls="panel-resources" role="tab" aria-selected="false" tabindex="-1">Resources</li>
+              <li id="tab-help" class="tab" aria-controls="panel-help" role="tab" aria-selected="false" tabindex="-1">Help</li>
+              <!-- Video tab is only visible on narrow screens where tabs and video don't fit side by side -->
+              <li id="tab-video" class="tab" aria-controls="content" role="tab" aria-selected="false" tabindex="-1">Video</li>
+            </ul>
+
+            <!-- Chapters (Menu) -->
+            <div id="panel-menu" class="panel" aria-labelledby="tab-menu" role="tabpanel"></div>
+
+            <!-- Transcript -->
+            <div id="panel-transcript" class="panel" aria-labelledby="tab-transcript" role="tabpanel">
+              <div class="able-transcript-area" tabindex="-1">
+                <div class="able-window-toolbar able-white-controls">
+                </div>
+                <div class="able-transcript">
+                  <div lang="en" class="able-transcript-container">
+                    <h2 class="visibly-hidden">Transcript</h2>
+
+                <!-- begin transcript content -->
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="12" data-end="42.433">About the Money</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="12.12" data-end="16.02">When it comes to college,
+is it all about the money? </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="16.02" data-end="18.39">This is Chris,
+and this is Taylor. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="18.39" data-end="21.45">Like most other college students,
+they have some money concerns </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="21.45" data-end="22.92">related to earning their degree. </span></div>
+
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="22.92" data-end="26.17"><span class="able-unspoken">(Chris)</span> How will I ever pay for college? </span></div>
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="26.17" data-end="31.31"><span class="able-unspoken">(Taylor)</span> How do I finish my degree
+without being saddled with huge debt? </span></div>
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="31.31" data-end="36.59"><span class="able-unspoken">(Narrator)</span> Luckily for Taylor, Chris,
+and every other community college student, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="36.59" data-end="42.26">the Internet is an extremely valuable resource
+for learning about Financial Aid. </span></div>
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="42.433" data-end="68">Quick Test</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="43.26" data-end="47.989">Learning about how Financial Aid works
+can be overwhelming at first, but trust us, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="47.989" data-end="51.35">it's worth investing your
+time and energy in it. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="51.35" data-end="53.07">Here's a quick test. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="53.07" data-end="57.03">You decide whether this statement
+sounds like a good idea or a bad one. </span></div>
+
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="57.03" data-end="60.44"><span class="able-unspoken">(Student)</span> This financial aid
+information is really complicated. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="60.44" data-end="66.19">I've got a job, I'd rather just work
+more hours and pay for it myself. </span></div>
+
+<div class="able-transcript-desc"><span lang="en" class="able-hidden">Audio description: </span><span class="able-transcript-seekpoint" data-start="65.7" data-end="68">Select either Good Idea or Bad Idea</span></div><div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="68" data-end="81.133">Answer</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="68.19" data-end="72.95"><span class="able-unspoken">(Narrator)</span> Bad idea! You've already
+invested in yourself as a student </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="72.95" data-end="75.159">by deciding to go to college. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="75.159" data-end="80.909">Focus on school so you can complete
+your academic goals in a timely manner. </span></div>
+
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="81.133" data-end="99.2">CCC Student</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="81.14" data-end="89.06">Luckily, you are or are about to become a
+California Community College (CCC) student. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="89.06" data-end="93.31">The CCCs have simplified the process
+from beginning to end. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="93.31" data-end="99.129">Please allow us to introduce you
+to icanaffordcollege.com. </span></div>
+
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="99.2" data-end="184.9">ICanAffordCollege.com</span></div><div class="able-transcript-block">
+  <p>
+  <span class="able-transcript-seekpoint able-transcript-caption" data-start="99.829" data-end="104.189">On this website, you can find help
+for each step of the process. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="104.189" data-end="108.84"><strong>Step 1</strong> will answer the question,
+"Am I eligible for financial aid?" </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="108.84" data-end="111.24"><strong>Step 2</strong> will help you get ready to apply. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="111.24" data-end="115.96">Pro tip: the application process
+will be much easier if you gather </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="115.96" data-end="118.939">the necessary information and documents you
+need </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="118.939" data-end="120.88">like your social security card, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="120.88" data-end="123.59">permanent residency card (if you have one), </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="123.59" data-end="128.619">W2 forms and other tax records,
+ahead of time. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="128.619" data-end="131.4"><strong>Step 3</strong> will guide you through
+the application process </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="131.4" data-end="135.85">for The Free Application for
+Federal Student Aid (FAFSA) </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="135.85" data-end="138.75">and a few other common
+California grant opportunities </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="138.75" data-end="142.76">you should investigate
+as you look for money. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="142.76" data-end="145.37"><strong>Step 4</strong> will let you know
+where you can get help </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="145.37" data-end="149.69">at your local community college
+financial aid office. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="149.69" data-end="155.87"><strong>Step 5</strong> will let you know what happens
+once you submit your FAFSA application. </span>
+</p>
+
+<p><span class="able-transcript-seekpoint able-transcript-caption" data-start="155.87" data-end="161.14">And this is really just the beginning
+of how you can use icanaffordcollege.com. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="161.14" data-end="163.54">On this site you'll also find: </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="163.54" data-end="166.9">descriptions of the different types of aid
+available, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="166.9" data-end="169.37">special resources for Veterans, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="169.37" data-end="171.47">information about the Dream Act, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="171.47" data-end="173.43">and more ... </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="173.43" data-end="176.25">Two pages you won't want to miss are: </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="176.25" data-end="178.72">Important Dates/Deadlines page, and </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="178.72" data-end="181.769">Board of Governor's Fee Waiver page. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="181.769" data-end="184.8">So why not start today? </span>
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="184.9" data-end="215.567">Additional Costs</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="185.569" data-end="189.519">After you've figured out what kind
+of financial aid you qualify for, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="189.519" data-end="194.7">keep in mind that there are additional costs
+during your time as a college student. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="194.7" data-end="198.95">Not only is there a wide range of incomes
+among community college students, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="198.95" data-end="202.79">but there is an equally wide
+range of expenses. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="202.79" data-end="208.319">Some students are only supporting themselves,
+while others are also supporting large families. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="208.319" data-end="210.519">Whatever your income and expenses, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="210.519" data-end="215.15">you are in good company among
+other community college students. </span></div>
+
+
+
+
+
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="215.567" data-end="265.7">CashCourse.org</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="216.15" data-end="218.39">After you've learned more about Financial
+Aid </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="218.39" data-end="219.93">and how it can help you, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="219.93" data-end="221.65">you'll want to start thinking about the best
+way </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="221.65" data-end="225.489">to manage your funds and school-related expenses. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="225.489" data-end="229.239">The California Community Colleges
+can help with this too! </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="229.239" data-end="234.959">At www.cashcourse.org, you can register for
+the CCC's </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="234.959" data-end="238.849">free comprehensive money management tool. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="238.849" data-end="242.019">You'll also find videos, quizzes, and financial
+tools </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="242.019" data-end="244.629">that will help you learn the basics of budgeting </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="244.629" data-end="248.64">and how to complete your education
+without running up a huge amount of debt. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="248.64" data-end="253.15">We'll teach you how to manage your funds
+and estimate how much money you may need to </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="253.15" data-end="253.59">earn </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="253.59" data-end="256.26">to support yourself
+during college and beyond. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="256.26" data-end="261.579">The site provides practical financial skills
+without selling any financial products or </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="261.579" data-end="262.42">services </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="262.42" data-end="265.4">&mdash;&mdash;there's no "catch"! </span></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="265.7" data-end="286.4">The Bottom Line</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="266.38" data-end="268.1">The bottom line is this: </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="268.1" data-end="271.55">One of the biggest reasons students don't
+complete their academic goals </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="271.55" data-end="275.04">is that they spend too much
+time and energy at work. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="275.04" data-end="277.86">But if you take advantage of the
+various kinds of financial help </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="277.86" data-end="281.92">that California Community Colleges offer,
+you can make the most of your time </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="281.92" data-end="286.14">as a student and save money
+at the same time. </span></div>
+
+
+
+
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="286.4" data-end="311">Conclusion</span></div>
+<div class="able-transcript-block">
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="287.14" data-end="290.8">In this module we've introduced you
+to a couple of important websites </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="290.8" data-end="294.11">you won't want to miss, but there
+are numerous other resources </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="294.11" data-end="298.03">you'll want to investigate to get
+the most bang for your buck! </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="298.03" data-end="301.61">Be sure to visit the Financial Aid office
+at your local community college </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="301.61" data-end="303.24">for assistance as well. </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="303.24" data-end="307.2">They are experts in this area
+and will have additional information </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="307.2" data-end="310.13">on scholarships and grants
+that you'll want to check out too! </span>
+</div>
+
+                <!-- end transcript content -->
+                </div><!-- end .able-transcript-container -->
+                </div><!-- end .able-transcript -->
+              </div><!-- end .able-transcript-area-->
+            </div><!-- end #panel-transcript -->
+
+            <!-- Resources -->
+            <div id="panel-resources" class="panel" aria-labelledby="tab-resources" role="tabpanel">
+              <h2 class="visibly-hidden">Resources</h2>
+              <ul>
+                <li><a href="http://www.icanaffordcollege.com/">ICanAffordCollege.com</a></li>
+                <li><a href="http://www.cashcourse.org/">CashCourse.org</a></li>
+                <li><a href="https://fafsa.ed.gov/">Free Application for Federal Student Aid</a> (FAFSA)</li>
+              </ul>
+            </div>
+
+            <!-- Help -->
+            <div id="panel-help" class="panel" aria-labelledby="tab-help" role="tabpanel">
+              <h2 class="visibly-hidden">Help</h2>
+              <div id="help-iphone">
+                <strong>Note to iPhone Users:</strong>
+                The iPhone plays all videos in its own full-screen video player.
+                Therefore the interactive features of these tutorials don't work.
+                If the narrator invites you to select items or enter content on the video,
+                just ignore those invitations and continue watching the video,
+                or switch to a desktop or laptop computer to play these tutorials
+                in full interactive mode.
+              </div>
+              <div id="help-keyboard">
+                <p>This website can be operated entirely with keyboard.</p>
+                <h2>Keyboard Shortcuts</h2>
+                <ul>
+                  <li>Press the <strong>Tab key</strong> to navigate to tabs and buttons on the media player.</li>
+                  <li>Use <strong>arrow keys</strong> to move forward and backward through the tabs.</li>
+                  <li>When a tab has focus, use the <strong>Tab key</strong> to enter that tab panel and access its content.</li>
+                  <li>On the Transcript tab, press the <strong>Tab key</strong> until the transcript has focus, then use <strong>up/down arrow keys</strong> to scroll through the transcript.</li>
+                  <li>When the video is playing, the transcript automatically scrolls if the <strong>"Auto Scroll" check box</strong> is checked. To disable this feature so you can scroll manually, uncheck the checkbox.</li>
+                  <li>Use <strong>Space</strong> or <strong>Enter</strong> to select a chapter, follow a link, or click a button on the media player.</li>
+                </ul>
+                <p>For help using the media player, click the Preferences button on the player's controller: <span id="icon-preferences-example"><img src="../../../ableplayer/button-icons/white/preferences.png" alt="picture of Preferences button"></span></p>
+              </div>
+            </div>
+
+          </div><!-- #tabs -->
+        </div><!-- end #tabs-wrapper -->
+
+        <div id="content">
+          <div id="video-wrapper">
+            <video id="video1" preload="auto" width="720" height="540"
+              data-transcript-src="panel-transcript"
+              data-root-path="../../../ableplayer"
+              data-chapters-div="panel-menu"
+              data-use-chapters-button="false"
+              data-chapters-title="Menu"
+              data-captions-position="below"
+              data-use-descriptions-button="false"
+              data-allow-fullscreen="false"
+              data-meta-type="selector"
+              data-seekbar-scope="chapter"
+            >
+              <source type="video/mp4" src="../media/financial.mp4"/>
+              <source type="video/ogg" src="../media/financial.ogv"/>
+              <track kind="captions" src="../tracks/financial_captions_en.vtt" srclang="en" label="English captions"/>
+              <track kind="chapters" src="../tracks/financial_chapters_en.vtt"/>
+              <track kind="descriptions" src="../tracks/financial_descriptions_en.vtt"/>
+              <track kind="metadata" src="../tracks/financial_metadata.vtt"/>
+            </video>
+            <!-- metadata content -->
+            <button class="idea-button" id="good-idea" aria-label="Good idea" title="Good idea"></button>
+            <button class="idea-button" id="bad-idea" aria-label="Bad idea" title="Bad idea"></button>
+          </div><!-- end #video-wrapper -->
+        </div><!-- end #content -->
+
+      </main>
+
+    </div><!-- end #wrapper -->
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5H7M8X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5H7M8X');
+</script>
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-65911246-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+</body>
+</html>

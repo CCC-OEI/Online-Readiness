@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Intro: OEI Online Readiness Tutorials</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../../../styles/story.css" rel="stylesheet" type="text/css">
+
+    <!-- Dependencies for Able Player -->
+    <script src="../../../ableplayer/thirdparty/modernizr.custom.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="../../../ableplayer/thirdparty/js.cookie.js"></script>
+
+    <!-- Able Player CSS -->
+    <link rel="stylesheet" href="../../../ableplayer/build/ableplayer.min.css" type="text/css"/>
+
+    <!-- Able Player JavaScript -->
+    <script src="../../../ableplayer/build/ableplayer.js"></script>
+
+    <!-- Tab Panel JavaScript -->
+    <script src="../../../scripts/tabs.js"></script>
+
+    <!-- CSS for hidden blocks on content in this example -->
+    <style>
+      div#video-wrapper {
+        position: relative;
+        /* width and height will be added dynamically via oei.js */
+      }
+      button.myth-button {
+        display: none;
+        position: absolute;
+        border: none;
+        outline: none !important;
+        background-color: transparent;
+        cursor: pointer;
+        z-index: 10000;
+        height: 8.333%; /* 45px; */
+        width: 28.889%; /* 208px; */
+        left: 5.556%; /* 40px; */
+      }
+      button::-moz-focus-inner {
+        border: 0px solid transparent;
+      }
+      button.myth-button:hover,
+      button.myth-button:focus {
+        border: thick solid #8B3B14;
+      }
+      button#myth1 {
+        top: 23.148%; /* 125px; */
+      }
+      button#myth2 {
+        top: 31.85%; /*  172px; */
+      }
+      button#myth3 {
+        top: 40.556%; /* 219px; */
+      }
+      button#myth4 {
+        top: 49.259%; /* 266px; */
+      }
+      button#myth5 {
+        top: 57.963%; /* 313px; */
+      }
+      button#myth6 {
+        top: 66.667%; /* 360px; */
+      }
+      button#myth7 {
+        top: 75.37%; /*  407px; */
+      }
+      a#cost-calculator {
+        display: none;
+        position: absolute;
+        background-color: transparent;
+        border: thick solid #8b3b14;
+        height: 4.815%; /* 26px; */
+        left:  55.278%; /* 398px; */
+        top: 78.704%; /* 425px; */
+        width: 32.222%; /* 232px; */
+        z-index: 10000;
+      }
+    </style>
+
+    <!-- Custom JavaScript for this module -->
+    <script>
+      var module, chapter, mobile, currentTab, video, player, button;
+      module = 'intro';
+      chapter = null;
+      mobile = null;
+      currentTab = null;
+      $(document).ready(function() {
+        $video = $('#video1');
+        player = new AblePlayer($video);
+        // handle clickable hotspots
+        $('.myth-button').on('click',function() {
+          button = $(this).attr('id');
+          if (button === 'myth1') {
+            player.seekToChapter('5a');
+          }
+          else if (button === 'myth2') {
+            player.seekToChapter('5b');
+          }
+          else if (button === 'myth3') {
+            player.seekToChapter('5c');
+          }
+          else if (button === 'myth4') {
+            player.seekToChapter('5d');
+          }
+          else if (button === 'myth5') {
+            player.seekToChapter('5e');
+          }
+          else if (button === 'myth6') {
+            player.seekToChapter('5f');
+          }
+          else if (button === 'myth7') {
+            player.seekToChapter('5g');
+          }
+          player.playMedia();
+        });
+      });
+    </script>
+
+    <!-- Misc. OEI JavaScript -->
+    <script src="../../../scripts/oei.js"></script>
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <header role="banner">
+        <div class="logo"><!-- only visible if printed; otherwise branding provided within the video -->
+          <img src="../../../images/banner-silver.jpg" width="960" height="125" alt="California Community Colleges Online Education Initiative" />
+        </div>
+        <h1>Introduction to Online Learning</h1>
+        <div class="module-duration"> - about 12 minutes</div>
+      </header>
+
+      <main role="main">
+
+        <div id="tabs-wrapper">
+
+          <div id="tabs" class="tabpanel">
+            <!-- hamburger menu; not currently shown or used but here if needed -->
+            <button id="mobile-menu" type="button" aria-controls="tablist" aria-expanded="false" aria-haspopup aria-label="Open menu">
+              <img src="../../../images/menu-white.png" role="presentation" alt="">
+            </button>
+            <ul id="tablist" role="tablist">
+              <li id="tab-menu" class="tab selected" aria-controls="panel-menu" aria-selected="true" role="tab" tabindex="0">Menu</li>
+              <li id="tab-transcript" class="tab" aria-controls="panel-transcript" role="tab" aria-selected="false" tabindex="-1">Transcript</li>
+              <li id="tab-resources" class="tab" aria-controls="panel-resources" role="tab" aria-selected="false" tabindex="-1">Resources</li>
+              <li id="tab-help" class="tab" aria-controls="panel-help" role="tab" aria-selected="false" tabindex="-1">Help</li>
+              <!-- Video tab is only visible on narrow screens where tabs and video don't fit side by side -->
+              <li id="tab-video" class="tab" aria-controls="content" role="tab" aria-selected="false" tabindex="-1">Video</li>
+            </ul>
+
+            <!-- Chapters (Menu) -->
+            <div id="panel-menu" class="panel" aria-labelledby="tab-menu" role="tabpanel"></div>
+
+            <!-- Transcript -->
+            <div id="panel-transcript" class="panel" aria-labelledby="tab-transcript" role="tabpanel">
+              <div class="able-transcript-area" tabindex="-1">
+                <div class="able-window-toolbar able-white-controls">
+                </div>
+                <div class="able-transcript">
+                  <div lang="en" class="able-transcript-container">
+                    <h2 class="visibly-hidden">Transcript</h2>
+
+                <!-- begin transcript content -->
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="12.6" data-end="39.8">Online vs. Classroom</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="12.67" data-end="15.79">If you're watching this module,
+you've decided to investigate </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="15.79" data-end="20.04">online learning as an alternative
+to a traditional classroom. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="20.04" data-end="22.48">But what will this really mean
+for you as a student? </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="22.48" data-end="25.49">Here we will introduce you
+to the world of online learning. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="25.49" data-end="29.47">We will show you how it works,
+debunk a few common misconceptions </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="29.47" data-end="32.93">about online learning environments,
+and explore some of the differences </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="32.93" data-end="35.39">you will encounter when
+taking online courses </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="35.39" data-end="39.89">rather than in a
+traditional classroom. </span></div>
+
+ <div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="39.8" data-end="95.1">How Does It Work? </span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="39.89" data-end="41.55">Let's start at the beginning. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="41.55" data-end="43.03">In an online course, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="43.03" data-end="46.21">your instruction is delivered
+over the Internet rather than in-person, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="46.21" data-end="49.6">in a traditional classroom.
+Seems obvious enough, right? </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="49.6" data-end="52.46">In fact, think of the course
+management system  <span class="able-unspoken"></span></span><span class="able-transcript-seekpoint able-transcript-caption" data-start="52.46" data-end="55.479">as a virtual classroom. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="55.479" data-end="60.1">The CMS is where your instructor will
+post all of the course materials, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="60.1" data-end="63.5">conduct online discussions
+and perhaps other activities, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="63.5" data-end="64.81">and receive your assignments. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="64.81" data-end="68.97">Additionally, it is where your
+instructor will expect you to </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="68.97" data-end="73.95">read all of the course materials posted there,
+participate in the activities created, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="73.95" data-end="77.74">and use the CMS to
+submit your assignments. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="77.74" data-end="80.17">Accessing the CMS is easy. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="80.17" data-end="82.78">You can log in using any
+internet-capable device: </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="82.78" data-end="86.109">a computer, tablet,
+even your smart phone! </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="86.109" data-end="90.42">This means that you will be able to "go to
+class" whenever and wherever you'd like, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="90.42" data-end="95.159">as long as you have
+an Internet connection. </span></div>
+
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="95.1" data-end="136.3">Debunking Myths</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="95.159" data-end="97.479">Online learning is not new,
+but it is quickly evolving </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="97.479" data-end="101.38">to become a more and more powerful
+tool for teaching and learning. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="101.38" data-end="103.92">That's why we think it's important
+to start our discussion </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="103.92" data-end="108.09">by debunking some of the more common
+myths about online learning. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="108.09" data-end="110.409">These misconceptions might
+already sound familiar, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="110.409" data-end="112.479">or they may surprise you. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="112.479" data-end="116.359">But they have gotten in the way
+of some students </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="114.359" data-end="116.42">who then found it
+difficult or impossible </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="116.42" data-end="119.7">to complete their online
+courses successfully. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="119.7" data-end="122.259">We don't want you to be
+one of these students. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="122.259" data-end="124.429">This is why we've made
+this introductory module. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="124.429" data-end="127.229">We want to give you a clear idea
+of what you can expect </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="127.229" data-end="129.71">from online learning and
+provide you with some tips </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="129.71" data-end="131.66">that will help you
+not only to succeed, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="131.66" data-end="136.39">but to excel,
+in your online course. </span></div>
+
+
+ <div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="136.3" data-end="144.4">Common Myths</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="136.39" data-end="138.87">Let's start by addressing
+the seven most common myths </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="138.87" data-end="141.31">about online learning. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="141.31" data-end="144.42">Select from the seven tabs
+to find out what they are. </span></div>
+
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="144.4" data-end="212.4">Myth #1</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="144.42" data-end="148.87"><span class="able-unspoken"></span> I've heard that
+the online class is way easier </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="148.87" data-end="150.84">than taking the class on campus. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="150.84" data-end="152.04">You don't even have to go to class, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="152.04" data-end="155.18">you just have to hand in
+assignments and you're done. </span></div>
+
+ <div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="155.18" data-end="156.22"><span class="able-unspoken">[ Buzzer sounds]</span></span></div>
+
+
+<div class="able-transcript-block">
+<span class="able-transcript-seekpoint able-transcript-caption" data-start="156.22" data-end="158.459"><span class="able-unspoken"></span> The workload for
+any particular course </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="158.459" data-end="160.92">is the same regardless of
+the way it's delivered. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="160.92" data-end="165.73">And if you really think about it,
+there is more reading in online classes </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="165.73" data-end="167.81">because you have to read
+all of your teacher's instructions </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="167.81" data-end="170.349">rather than hearing
+them in class. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="170.349" data-end="171.83">In an online environment, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="171.83" data-end="174.269">you need to be more
+self-disciplined and motivated </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="174.269" data-end="178.099">because you won't be facing
+the instructor every session. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="178.099" data-end="181.629">The good news is that online classes
+will give you the flexibility </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="181.629" data-end="183.379">to learn when you
+are ready to learn </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="183.379" data-end="186.25">and at times that work
+with your schedule. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="186.25" data-end="189.37">This can be a real plus for
+students with busy lives. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="189.37" data-end="192.709">In an online class you are not
+limited by class times, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="192.709" data-end="194.769">so you don't have to
+worry about conflicts </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="194.769" data-end="196.64">with other classes
+you want to take, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="196.64" data-end="200.36">your work schedule, or
+other time constraints. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="200.36" data-end="201.87">Whether you decide to
+take your classes </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="201.87" data-end="205.12">in a traditional or an
+online setting is up to you. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="205.12" data-end="207.129">One option really isn't
+easier than the other. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="207.129" data-end="208.909">It's all about finding
+the best fit </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="208.909" data-end="211.81">for your life, your time,
+and your habits. </span></div>
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="212.4" data-end="277.1">Myth #2</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="212.48" data-end="214.66"><span class="able-unspoken"></span> If I'm
+taking an online class, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="214.66" data-end="217.24">I can turn in assignments
+whenever I want, right? </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="217.24" data-end="219.34">I'll just get all of the
+assignments from the instructor </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="219.48" data-end="225.24">and blast through it in two weeks
+rather than wasting a whole semester. </span></div>
+
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="227.7" data-end="228.879"><span class="able-unspoken">[ Buzzer sounds]</span></span></div>
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="228.879" data-end="230.209"><span class="able-unspoken"></span> Regardless of </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="230.209" data-end="233.45">what you think you may be able
+to accomplish at your own speed, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="233.45" data-end="236.92">most online courses
+are NOT self-paced. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="236.92" data-end="239.42">Some instructors reveal
+all assignments ahead of time </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="239.42" data-end="243.569">and others may roll out course topics
+and assignments incrementally. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="243.569" data-end="245.9">The most successful students
+will concentrate on their work </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="245.9" data-end="248">at the pace that the
+teacher has laid out. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="248" data-end="250.92">Give yourself time to really
+focus on the course material </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="250.92" data-end="253.92">and put your best effort
+into assignments. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="253.92" data-end="256.93">Don't try to rush though the
+course just to "get it done". </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="256.93" data-end="259.1">The online learning world
+is not much different </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="259.1" data-end="261.5">from traditional campus courses... </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="261.5" data-end="264.42">The more you put into it,
+the more you will get out of it. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="264.42" data-end="266.06">The good news is: </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="266.06" data-end="268.07">Students who successfully
+complete online courses </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="268.07" data-end="271.13">have found that the organizational
+skills they learned and used </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="271.13" data-end="273.97">to complete their online courses
+made them better students </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="273.97" data-end="277.11">in traditional courses
+they took later on. </span></div>
+
+ <div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="277.1" data-end="312.82">Myth #3</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="277.11" data-end="279.11"><span class="able-unspoken"></span> Online courses
+are cheaper </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="279.11" data-end="280.94">than taking classes on campus. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="280.94" data-end="282.88">Unless you're
+taking a class online, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="282.88" data-end="285.44">you're basically wasting
+your time and money. </span></div>
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="285.44" data-end="286.78"><span class="able-unspoken">[ Buzzer sounds]</span></span></div>
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="287.28" data-end="289.1"><span class="able-unspoken"></span> Tuition and fees
+for online courses </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="289.11" data-end="292.57">are typically the same as
+for traditional on-campus classes. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="292.57" data-end="295.82">But there are some "hidden" costs
+in taking a class on campus </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="295.82" data-end="298.07">that you may have
+not considered. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="298.07" data-end="302.1">Let's see if you will be able
+to save money by taking classes online. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="302.1" data-end="305.88">If the cost saving calculator
+estimated that you will save money, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="305.88" data-end="308.97">and if you successfully
+complete the course, well done! </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="308.97" data-end="312.82">Our job here then is to make sure
+that you can make that happen. </span></div>
+
+
+ <div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="312.82" data-end="390.3">Myth #4</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="312.82" data-end="316.11"><span class="able-unspoken"></span> Professors randomly call on
+students for answers in a lecture, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="316.11" data-end="320.86">but in an online class
+I can fly under the radar. </span></div>
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="320.86" data-end="322.82"><span class="able-unspoken">[ Buzzer sounds]</span></span></div>
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="322.82" data-end="325.12"><span class="able-unspoken"></span> Don't be fooled
+by the illusion of anonymity </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="325.12" data-end="327.15">in your virtual classroom. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="327.15" data-end="330.1">Even though you and your instructor
+may not be able to see one another, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="330.1" data-end="333.37">he or she can access reports
+on the quantity and quality </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="333.37" data-end="336.67">of your course participation,
+and believe us, they will. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="336.67" data-end="340.36">They want to know how you're doing,
+and they want to know how they're doing, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="340.36" data-end="344.11">and participation will definitely be
+a key component of any of your classes. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="344.11" data-end="348.31">In fact, sometimes faculty know more
+about their online students </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="348.31" data-end="350.94">than their on-campus students. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="350.94" data-end="351.9">The good news is: </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="352.08" data-end="355.06">Online learning can provide you
+with the opportunity to develop </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="355.07" data-end="357.19">meaningful relationships
+with your professors </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="357.19" data-end="360.31">and with other students
+taking the same course. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="360.31" data-end="363.4">Conversing online can seem
+strange or artificial at first, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="365.4" data-end="368.22">but once they get used to it, most
+people really enjoy online discussions. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="368.22" data-end="371.89">In an online course everyone has
+a chance to provide their input, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="371.89" data-end="374.25">and you have time to craft
+your thoughts before you speak.</span><span class="able-transcript-seekpoint able-transcript-caption" data-start="374.25" data-end="376.68">You're not bounded by the
+end of a class period </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="376.68" data-end="378.86">or a limited discussion time. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="378.86" data-end="381.43">But you'll also need to commit
+to participating effectively </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="381.43" data-end="384.95">and you'll need specific
+strategies to make this happen. </span></div>
+
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="390.3" data-end="454.6">Myth #5</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="390.32" data-end="393.48"><span class="able-unspoken"></span> I spend a lot of time
+talking to my friends on social media </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="393.49" data-end="396.17">and I text them
+more than I talk to them. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="396.17" data-end="398.96">I don't need to learn
+any technical skills </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="398.96" data-end="400.74">to take a class online. </span></div>
+
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="400.74" data-end="402.72"><span class="able-unspoken">[ Buzzer sounds]</span></span></div>
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="402.73" data-end="405.72"><span class="able-unspoken"></span> I don't really know
+my way around a computer, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="405.72" data-end="407.62">but clearly my instructor does. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="407.62" data-end="409.74">I'll just rely on him or her
+to help me figure it out </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="409.74" data-end="411.44">during the course
+of the semester. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="411.44" data-end="416">My online class will teach me
+anything I need to know, right? </span></div>
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="416" data-end="418.44"><span class="able-unspoken">[ Buzzer sounds]</span></span></div>
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="418.45" data-end="420.77"><span class="able-unspoken"></span> Online learning
+generally does not require </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="420.77" data-end="424.3">extensive technical knowledge,
+but you have to understand the basics </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="424.3" data-end="426.25">about your computer,
+the Internet, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="426.25" data-end="430.07">and how to use your school's
+course management system  <span class="able-unspoken"></span>. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="430.07" data-end="432.17">Watch the "Getting
+Tech-Ready" tutorial </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="432.17" data-end="435.1">for an overview of the
+technology you'll be using, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="435.11" data-end="438.58">then be sure to seek out information
+or tutorials provided by your school </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="438.58" data-end="441.93">about their CMS before
+starting your course. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="441.93" data-end="444.83">Take the time to really
+understand your online environment </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="444.83" data-end="447.4">before you get too far
+into the semester. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="447.4" data-end="450.2">You won't want to wait until
+minutes before an assignment is due </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="450.2" data-end="453.53">to learn which buttons you need
+to push in order to submit it. </span></div>
+
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="454.6" data-end="556.5">Myth #6</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="454.62" data-end="457.44"><span class="able-unspoken"></span> Email is basically instant,
+and I know my teacher checks </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="457.44" data-end="459.06">her email all of the time. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="459.06" data-end="462.7">So if I have a last-minute question
+or don't understand an assignment, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="462.7" data-end="465.26">I can just email her and
+she should respond right away. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="465.27" data-end="467.37">She's definitely up at 10 PM, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="467.37" data-end="470.34">and it only takes two minutes
+to respond with an answer. </span></div>
+
+ <div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="470.34" data-end="473.06"><span class="able-unspoken">[ Buzzer sounds]</span></span></div>
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="473.08" data-end="475.54"><span class="able-unspoken"></span> This is a misconception
+that we're sure all instructors </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="475.55" data-end="478.29">would like to be cleared up
+from the outset. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="478.29" data-end="481.62">Most of your instructors provide
+a maximum email turnaround time, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="481.62" data-end="484.72">typically between 24-48 hours. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="484.72" data-end="487.69">As a student, you need to
+plan ahead as much as possible, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="487.69" data-end="489.39">and be sure to have
+an alternate solution </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="489.39" data-end="491.04">if you don't hear back
+from your instructor </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="491.04" data-end="493">before an assignment is due. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="493" data-end="497.48">Remember, your assignments are
+your responsibility, not theirs. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="497.48" data-end="501.64">Some instructors include a "Questions
+About the Course" discussion thread </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="501.64" data-end="505.46">where they encourage students
+to answer one another's questions. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="505.46" data-end="507.53">This could be immensely
+helpful for you, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="507.53" data-end="510.56">and might be a way for you
+to help other students in turn. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="510.56" data-end="514.2">Remember what we said about
+building classroom relationships? </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="514.26" data-end="517.66">Another approach would be to reach out
+to another member of the class </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="517.66" data-end="522">and exchange private emails to support
+each other throughout the semester. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="522" data-end="523.52">Because you're not
+meeting with each other </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="523.529" data-end="525.769">once or more times
+every week, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="525.769" data-end="528.87">it's easy to feel isolated
+in an online course. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="528.87" data-end="532.06">Try some of these tactics
+so you can connect with others. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="532.06" data-end="534.79">You will get a lot more
+out of your classes if you do. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="534.79" data-end="537.399">Building supportive online
+relationships and friendships </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="537.399" data-end="541.43">requires skill and practice.
+The good news is: </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="541.43" data-end="543.91">Students who develop
+good communication skills, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="543.91" data-end="546.779">learn to be assertive, and are
+able to cooperate and collaborate </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="546.779" data-end="549.35">well in a virtual environment
+will find these skills </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="549.35" data-end="553.74">highly transferrable and valued
+in their personal and professional lives </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="553.74" data-end="555.86">long after their
+course is over. </span></div>
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="556.5" data-end="626.2">Myth #7</span></div><div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="556.56" data-end="558.06"><span class="able-unspoken"></span> "If I didn't finish
+my assignment on time, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="558.069" data-end="560.959">I would just tell my instructor that
+I brought the wrong notebook </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="560.959" data-end="564.029">to class or that my
+printer ran out of ink. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="564.029" data-end="565.509">Now I can just say
+my computer crashed, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="565.509" data-end="568.169">or that I deleted my file </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="568.169" data-end="569.76">or I just sent the
+wrong attachment. </span></div>
+
+
+
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="569.76" data-end="572.2"><span class="able-unspoken">[ Buzzer sounds]</span></span></div>
+
+
+<div class="able-transcript-block"><span class="able-transcript-seekpoint able-transcript-caption" data-start="572.2" data-end="574.579"><span class="able-unspoken"></span> Probably none
+of these excuses will work. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="574.579" data-end="577.839">Remember, your instructors have not
+only heard every excuse in the book </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="577.839" data-end="579.529">probably more than once, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="579.529" data-end="582.06">but they are also pretty
+tech savvy themselves. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="582.06" data-end="586.12">They are, after all, teaching
+a college-level online course. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="586.12" data-end="589.389">Make sure you fully understand
+your instructor's expectations </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="589.389" data-end="591.73">and that you comply with them
+in a timely manner, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="591.73" data-end="594.43">and keep an open channel
+of communication with them </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="594.43" data-end="597.399">if you need help
+or have questions. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="597.399" data-end="601.37">Detailed information about your
+instructor's policies and expectations </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="601.37" data-end="604.269">should be included on
+their course syllabus. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="604.269" data-end="608.199">Some instructors also provide
+checklists for all deadlines. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="608.199" data-end="610.22">If your instructor does not,
+it might be helpful </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="610.22" data-end="613">to create your own
+assignment checklist. </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="613" data-end="615.089">The organizational and
+study skills you develop </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="615.089" data-end="618.3">for your first online course
+will put you on the road to success </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="618.3" data-end="621.11">for all your future
+learning experiences, </span><span class="able-transcript-seekpoint able-transcript-caption" data-start="621.11" data-end="626.279">whether they are online or in
+a traditional learning environment. </span></div>
+
+
+<div class="able-transcript-chapter-heading"><span class="able-transcript-seekpoint" data-start="626.2" data-end="644.8">Conclusion</span></div><span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="626.279" data-end="630.199">So now that we've introduced you to
+some of the basics of online learning, </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="630.199" data-end="633.61">let's take the next step in
+your quest for online success. </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="633.61" data-end="637.329">Each lesson in this series includes
+a variety of instructional aids, </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="637.329" data-end="640.48">activities, and resources
+that will help to prepare you </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="640.48" data-end="642.55">as a successful online learner. </span>
+<span class="able-transcript-seekpoint able-transcript-caption able-block-temp" data-start="642.55" data-end="644.889">And the good news is,
+you've already started! </span>
+
+
+                <!-- begin transcript content -->
+                </div><!-- end .able-transcript-container -->
+                </div><!-- end .able-transcript -->
+              </div><!-- end .able-transcript-area-->
+            </div><!-- end #panel-transcript -->
+
+            <!-- Resources -->
+            <div id="panel-resources" class="panel" aria-labelledby="tab-resources" role="tabpanel">
+              <h2 class="visibly-hidden">Resources</h2>
+              <ul>
+                <li><a href="../../../tools/cost-calculator.html">Cost Savings Calculator</a></li>
+              </ul>
+            </div>
+
+            <!-- Help -->
+            <div id="panel-help" class="panel" aria-labelledby="tab-help" role="tabpanel">
+              <h2 class="visibly-hidden">Help</h2>
+              <div id="help-iphone">
+                <strong>Note to iPhone Users:</strong>
+                The iPhone plays all videos in its own full-screen video player.
+                Therefore the interactive features of these tutorials don't work.
+                If the narrator invites you to select items or enter content on the video,
+                just ignore those invitations and continue watching the video,
+                or switch to a desktop or laptop computer to play these tutorials
+                in full interactive mode.
+              </div>
+              <div id="help-keyboard">
+                <p>This website can be operated entirely with keyboard.</p>
+                <h2>Keyboard Shortcuts</h2>
+                <ul>
+                  <li>Press the <strong>Tab key</strong> to navigate to tabs and buttons on the media player.</li>
+                  <li>Use <strong>arrow keys</strong> to move forward and backward through the tabs.</li>
+                  <li>When a tab has focus, use the <strong>Tab key</strong> to enter that tab panel and access its content.</li>
+                  <li>On the Transcript tab, press the <strong>Tab key</strong> until the transcript has focus, then use <strong>up/down arrow keys</strong> to scroll through the transcript.</li>
+                  <li>When the video is playing, the transcript automatically scrolls if the <strong>"Auto Scroll" check box</strong> is checked. To disable this feature so you can scroll manually, uncheck the checkbox.</li>
+                  <li>Use <strong>Space</strong> or <strong>Enter</strong> to select a chapter, follow a link, or click a button on the media player.</li>
+                </ul>
+                <p>For help using the media player, click the Preferences button on the player's controller: <span id="icon-preferences-example"><img src="../../../ableplayer/button-icons/white/preferences.png" alt="picture of Preferences button"></span></p>
+              </div>
+            </div>
+
+          </div><!-- #tabs -->
+        </div><!-- end #tabs-wrapper -->
+
+        <div id="content">
+          <div id="video-wrapper">
+            <video id="video1" preload="auto" width="720" height="540"
+              data-transcript-src="panel-transcript"
+              data-root-path="../../../ableplayer"
+              data-chapters-div="panel-menu"
+              data-use-chapters-button="false"
+              data-chapters-title="Menu"
+              data-captions-position="below"
+              data-use-descriptions-button="false"
+              data-allow-fullscreen="false"
+              data-meta-type="selector"
+              data-seekbar-scope="chapter"
+            >
+              <source type="video/mp4" src="../media/intro.mp4"/>
+              <source type="video/ogg" src="../media/intro.ogv"/>
+              <track kind="captions" src="../tracks/intro_captions_en.vtt" srclang="en" label="English captions"/>
+              <track kind="chapters" src="../tracks/intro_chapters_en.vtt"/>
+              <track kind="descriptions" src="../tracks/intro_descriptions_en.vtt"/>
+              <track kind="metadata" src="../tracks/intro_metadata.vtt"/>
+            </video>
+            <!-- metadata content -->
+            <button class="myth-button" id="myth1" aria-label="First Myth" title="First Myth"></button>
+            <button class="myth-button" id="myth2" aria-label="Second Myth" title="Second Myth"></button>
+            <button class="myth-button" id="myth3" aria-label="Third Myth" title="Third Myth"></button>
+            <button class="myth-button" id="myth4" aria-label="Fourth Myth" title="Fourth Myth"></button>
+            <button class="myth-button" id="myth5" aria-label="Fifth Myth" title="Fifth Myth"></button>
+            <button class="myth-button" id="myth6" aria-label="Sixth Myth" title="Sixth Myth"></button>
+            <button class="myth-button" id="myth7" aria-label="Seventh Myth" title="Seventh Myth"></button>
+            <a id="cost-calculator" aria-label="Go to the Cost Savings Calculator" href="../../tools/cost-calculator.html" target="_blank"></a>
+          </div><!-- end #video-wrapper -->
+        </div><!-- end #content -->
+
+      </main>
+
+    </div><!-- end #wrapper -->
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5H7M8X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5H7M8X');
+</script>
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-65911246-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+</body>
+</html>
