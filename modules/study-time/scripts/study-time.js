@@ -34,9 +34,6 @@
     23 = 4:05.000
     24 = 4:10.000
 
-    "Review" button takes back to Q1 (with Correct/Incorrect banner on each slide)
-    Add HTML "Next" button to all slides (including Scores slides)
-
     "Time management styles" iFrame Preview = 4:15.000
     iFrame (add iFrame as overlay) = 4:33.000
     Add "Next" button to bottom of iframe at 4:37.767
@@ -155,11 +152,9 @@ $(document).on('ready',function() {
       }
       else {
         var nextQuestion = thisQuestion + 1;
-        if (!reviewing) {
-          var thisAnswer = parseInt($('input[name=q' + thisQuestion + ']:checked').first().val());
-          ppAnswers[thisQuestion] = thisAnswer;
-          ppScore += thisAnswer;
-        }
+        var thisAnswer = parseInt($('input[name=q' + thisQuestion + ']:checked').first().val());
+        ppAnswers[thisQuestion] = thisAnswer;
+        ppScore += thisAnswer;
       }
       switch (nextQuestion) {
         case 1:
@@ -247,13 +242,6 @@ $(document).on('ready',function() {
       player.pauseMedia();
       $('.able-big-play-button').hide().attr('aria-hidden','true');
     } // end if not scrolling-next button
-  });
-
-  // handle click on review button
-  $('#review-quiz').on('click',function(event) {
-    reviewing = true;
-    player.seekTo(130);
-    player.pauseMedia();
   });
 
   // handle click on procrastination checkbox

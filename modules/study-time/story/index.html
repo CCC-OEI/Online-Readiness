@@ -323,7 +323,7 @@
 
     <!-- Custom JavaScript for this module -->
     <script>
-      var module, chapter, mobile, currentTab, ppAnswers, ppScore, reviewing,
+      var module, chapter, mobile, currentTab, ppAnswers, ppScore,
         video, player, button, pieSlice;
       module = 'studyTime';
       chapter = null;
@@ -331,7 +331,6 @@
       currentTab = null;
       ppAnswers = [];
       ppScore = 0;
-      reviewing = false;
       pieSlice = 1;
       $(document).ready(function() {
         $video = $('#video1');
@@ -801,7 +800,6 @@ that will work well for your individual style. </span>
             </video>
             <!-- metadata content -->
             <button id="begin-quiz" aria-label="Begin Quiz" title="Begin Quiz"></button>
-            <button id="review-quiz" aria-label="Review Quiz" title="Review Quiz"></button>
             <button id="next-after-quiz">Next</button>
             <a id="cost-calculator" aria-label="Go to the Cost Savings Calculator" href="../../tools/cost-calculator.html" target="_blank"></a>
             <!- Personality Profile form -->
@@ -984,6 +982,9 @@ that will work well for your individual style. </span>
 
 <!-- Time Management Styles scrolling div -->
     <div id="scrolling-div" tabindex="0">
+      <div class="section">
+        <img src="../iframe/iframe-banner.png" alt="" role="presentation">
+      </div>
       <div class="section">
         <div class="logo">
           <h3 class="offscreen">The Early Bird</h3>

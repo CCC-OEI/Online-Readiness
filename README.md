@@ -1,7 +1,7 @@
 # Online Readiness
 This repository contains the source files for the *Online Readiness Tutorials*, a series of interactive multimedia tutorials designed to address the real challenges experienced by online students, new and experienced, while pursuing success in online classes. The tutorials were developed by The Online Education Initiative (OEI) of the California Community College System. For additional information about OEI please visit the OEI website at [ccconlineed.org](http://ccconlineed.org/). Live versions of the tutorials are available on the [Online Readiness website](http://apps.3cmediasolutions.org/oei/). 
 
-## To Download the Tutorials 
+## Downloading the Tutorials 
 
 The downloadable version includes all media and other source files necessary to provide a fully accessible, interactive experience for students. The current release (or any prior releases) can be downloaded from the [Releases](https://github.com/CCC-OEI/Online-Readiness/releases) page in either .zip or tar.gz format. 
 

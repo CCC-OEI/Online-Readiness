@@ -47,10 +47,9 @@ PAUSE
 FOCUS:#q6a
 
 00:02:40.000 --> 00:04:10.000
-#review-quiz
 #next-after-quiz
 PAUSE
-focus:#review-quiz
+focus:#next-after-quiz
 
 00:04:33.000 --> 00:04:40.000
 #scrolling-div
