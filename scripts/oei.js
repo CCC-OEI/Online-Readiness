@@ -41,7 +41,7 @@ $(document).ready(function() {
   }
 
   // if user has been here before, prompt them about continuing where they left off
-  if (hasCookie()) {
+  if (hasCookie(module)) {
     promptUserAtStart(hash,mobile);
   }
 
@@ -274,11 +274,27 @@ function setCookie (cookieValue) {
   Cookies.set('OEI', cookieValue, { expires:90 });
 };
 
-function hasCookie () {
+function hasCookie (module) {
 
-  // returns true if cookie is found; otherwise false
+  // returns true if cookie is found for given module AND user has not checked "Don't Ask"
+  // otherwise returns false
+  if (typeof module !== 'string') {
+    return false;
+  }
   if (Cookies.getJSON('OEI')) {
-    return true;
+    // there is an OEI cookie. Is there data for this module?
+    cookie = Cookies.getJSON('OEI');
+    if (cookie[module].length) {
+      if (!cookie['dontAsk']) {
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
+    else {
+      return false;
+    }
   }
   else {
     return false;
@@ -289,11 +305,9 @@ function getCookie () {
 
   // each array in cookie corresponds with a module
   // values stored in each array are the completed chapter indexes
-  // this could ultimately be used to place a checkmark after each completed module
-  // the last-session array is unique: It preserves the open tab, module name, and chapter index
-  // where user left off (so user can be prompted to resume there)
+  // dontAsk is true if user has checked "Don't ask me again"
   var defaultCookie = {
-    lastChapter: 0,
+    dontAsk: false,
     intro: [],
     tech: [],
     organizing: [],
@@ -388,10 +402,18 @@ function updateCookie (module, oldChapter, newChapter) {
         cookie.financial.push(oldChapter);
         break;
     }
-    cookie.lastChapter = newChapter;
-    cookie.lastModule = module;
     setCookie(cookie);
   };
+
+  function stopAsking () {
+
+    // user has checked the "Don't Ask Again" checkbox
+    // save this preference in cookie
+
+    var cookie = getCookie();
+    cookie['dontAsk'] = true;
+    setCookie(cookie);
+  }
 
   function promptUserAtStart(hash,mobile) {
 
@@ -425,7 +447,22 @@ function updateCookie (module, oldChapter, newChapter) {
       selectTab(defaultTab,mobile);
     });
     $buttonDiv.append($yesButton,$noButton);
-    $promptDiv.append($promptP,$buttonDiv);
+    $dontAskDiv = $('<div>',{
+      'id': 'dont-ask-wrapper'
+    });
+    $dontAskCheckbox = $('<input>',{
+      'type': 'checkbox',
+      'id': 'dont-ask',
+      'value': 'true'
+    }).on('click',function() {
+      stopAsking();
+    });;
+    $dontAskLabel = $('<label>',{
+      'for': 'dont-ask'
+    }).text("Don't ask me again");
+    $dontAskDiv.append($dontAskCheckbox,$dontAskLabel);
+
+    $promptDiv.append($promptP,$buttonDiv,$dontAskDiv);
     $('body').append($promptDiv);
     dialog = new AccessibleDialog($promptDiv, $('#tab-menu'), 'dialog', 'Welcome back!', $promptP, 'Close', '32em');
     dialog.show();

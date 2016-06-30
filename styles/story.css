@@ -298,6 +298,13 @@ div#continue-dialog button {
   font-size: 1.2em;
   margin: 0.15em;
 }
+div#dont-ask-wrapper {
+  margin: 1em;
+  text-align: left;
+}
+div#dont-ask-wrapper label {
+  padding-left: 0.5em;
+}
 
 /*
  *
