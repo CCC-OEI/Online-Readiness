@@ -25,3 +25,15 @@ h2 {
 section#welcome-letter {
   border-bottom: 2px solid #1F295F;
 }
+
+/* modules table */
+table#modules {
+  margin-left: 1em;
+}
+table#modules th,
+table#modules td {
+  background: none;
+  font-weight: normal;
+  border: 1px solid #ddd;
+  padding: 0.5em;
+}
