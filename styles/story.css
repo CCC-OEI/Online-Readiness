@@ -127,6 +127,7 @@ div.panel {
   background-color: #5F5143;
   max-width: 100%;
   min-height: 600px;
+  overflow: scroll;
 }
 ul#tablist li.selected {
   color: #FFF;
@@ -137,6 +138,7 @@ ul#tablist li.selected {
   margin-top: 0;
   height: 1.2em;
 }
+
 
 /*
  * Help
@@ -192,6 +194,10 @@ ul#tablist li.selected {
 div#panel-menu #video1-chapters-heading {
   display: none;
 }
+#tabs div.able-chapters-div ul li {
+  line-height: 2em;
+  height: auto;
+}
 
 /*
  *
@@ -199,7 +205,6 @@ div#panel-menu #video1-chapters-heading {
  * Override Able Player styles
  *
  */
-
 #tabs div.able-transcript {
   color: #000;
   height: 500px;
@@ -209,6 +214,15 @@ div#panel-menu #video1-chapters-heading {
 }
 #tabs div.able-transcript-toolbar div {
   display: none;
+}
+div#tabs-wrapper,
+div#panel-transcript div.able-transcript-area,
+div#panel-transcript div.able-transcript {
+  /* width: 100% !important; */
+  border: none !important;
+}
+div#panel-transcript div.able-transcript-area {
+  height: auto !important;
 }
 #tabs .able-transcript span:hover,
 #tabs .able-transcript span:focus,
@@ -470,6 +484,7 @@ div#dont-ask-wrapper label {
   div#tabs-wrapper,
   div#panel-transcript div.able-transcript-area,
   div#panel-transcript div.able-transcript {
+    background: orange !important;
     height: auto !important;
     width: 100% !important;
     border: none !important;

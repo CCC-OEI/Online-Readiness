@@ -63,6 +63,8 @@ $(document).ready(function() {
 
     // get current state
     windowWidth = $(window).width();
+    windowHeight = $(window).height();
+
     // use #content to get video width
     // querying video width directly is less reliable across browsers
     // #content is reliable, and video spans 100% of its width
@@ -86,12 +88,14 @@ $(document).ready(function() {
     else {
       mobile = false;
     }
+
     if (mobile) {
       // Assist responsive CSS with adjusting CSS sizes and visibility
       var wrapperHeight = windowHeight - $('header').height() - 10;
       var panelHeight = wrapperHeight - 10;
       var transcriptHeight = panelHeight - 5;
       var videoWidth = Math.min($video.attr('width'),windowWidth);
+
       if (currentTab === 'video') {
         // be sure video area is visible
         $('#content').show().attr('aria-hidden', 'false');
@@ -118,9 +122,23 @@ $(document).ready(function() {
     }
     else { // not mobile
       var videoWidth = $video.attr('width');
+
+      // .able contains video player + caption container
+      var ableHeight = $('.able').outerHeight();
       var wrapperWidth = $('#wrapper').width();
+
+      // However, this is not a 100% reliable measure
+      // (Chrome and IE have both been observed reporting smaller-than-life values)
+      // So, must calculate our own value and compare the two
+      var captionsHeight = $('.able-captions-wrapper').outerHeight();
+      var controllerHeight = $('.able-player').outerHeight();
+      var calcHeight = videoHeight + captionsHeight + controllerHeight;
+
+      var videoWrapperHeight = Math.max(ableHeight,calcHeight);
+
       // be sure video area is visible
       $('#content').show().attr('aria-hidden', 'false');
+
       if (windowWidth < defaultWrapperWidth) {
         // this is a very narrow window; wrapper is no longer wide enough
         // need to resize #wrapper so it fits within window
@@ -140,11 +158,16 @@ $(document).ready(function() {
 
       // now calculate available width and height for #tabs-wrapper
       var tabsWrapperWidth = wrapperWidth - videoWidth - 45;
-      var tabsWrapperHeight = $('.able-wrapper').outerHeight();
-      // substract estimated height of #tablist
-      var panelHeight = tabsWrapperHeight - 20;
+
+      // make tabs wrapper the same height as video wrapper
+      var tabsWrapperHeight = videoWrapperHeight;
+      // substract height of #tablist (assessed by getting outer height of a single menu item)
+      var tabHeight = $('li#tab-menu').outerHeight();
+      var panelHeight = tabsWrapperHeight - tabHeight;
+
       // subtract height of window toolbar, plus leave some cushion at bottom
-      var transcriptHeight = panelHeight - 80;
+      var transcriptToolbarHeight = $('.able-window-toolbar').outerHeight();
+      var transcriptHeight = panelHeight - transcriptToolbarHeight - 20;
       $('#tabs-wrapper').css({
         'width': tabsWrapperWidth + 'px',
         'height': tabsWrapperHeight + 'px'
