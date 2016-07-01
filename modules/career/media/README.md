@@ -1,0 +1,2 @@
+# Where are the media files? 
+Adding media files to this repository on GitHub would make it too large and unwieldy. Therefore the media files can be downloaded separately from the OEI website at [Online Readiness home page](http://apps.3cmediasolutions.org/oei/). Download the media files using the *Download* link for the specific module(s) you're interested in. Then unzip the file's contents, and copy all four media files into the *media* directory for that module. 
