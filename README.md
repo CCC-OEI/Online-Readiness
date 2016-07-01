@@ -20,7 +20,7 @@ Unzip the downloaded file and copy all four media files into the *media* folder 
 
 ## About the Media Player 
 
-The Online Readiness application was build using [Able Player](https://ableplayer.github.io/ableplayer), a standards-based, fully-accessible, open-source, cross-browser HTML5 media player.  
+The Online Readiness application was built using [Able Player](https://ableplayer.github.io/ableplayer), a standards-based, fully-accessible, open-source, cross-browser HTML5 media player.  
 
 ## License 
 
