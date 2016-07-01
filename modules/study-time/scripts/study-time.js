@@ -154,7 +154,6 @@ $(document).on('ready',function() {
         var nextQuestion = thisQuestion + 1;
         var thisAnswer = parseInt($('input[name=q' + thisQuestion + ']:checked').first().val());
         ppAnswers[thisQuestion] = thisAnswer;
-        ppScore += thisAnswer;
       }
       switch (nextQuestion) {
         case 1:
@@ -176,6 +175,10 @@ $(document).on('ready',function() {
           player.seekTo(155);
           break;
         case 7:
+          var ppScore = 0;
+          for (var i=1; i<ppAnswers.length; i++) {
+            ppScore += ppAnswers[i];
+          }
           // there is no question 7!
           // route user to results page based on final score
           switch (ppScore) {
