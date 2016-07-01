@@ -36,6 +36,26 @@
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6) !important;
         outline: 0 none !important;
   		}
+
+  		/* table */
+  		table#questions {
+    		max-width: 100%;
+  		}
+  		table#questions th,
+  		table#questions td {
+    		font-size: 1em;
+    		padding: 0.75em;
+  		}
+  		table#questions input {
+  		}
+  		table#questions input[type="checkbox"] {
+    		width: 2.5em;
+    		height: 2.5em;
+  		}
+  		table#questions select {
+    		font-size: 1em;
+  		}
+
       /* original style */
 			body.printing {
   			background: #FFF;
@@ -138,7 +158,20 @@
       $(document).on('ready',function() {
 
 				var table = $('#results tbody');
-				var colors = { "Green": "#7cdb74", "Bold blue": "#aae2ff", "Blue": "#a4bdfc", "Turquoise": "#86ecef", "Light Green": "#d0f9cc", "Bold Green": "#70ff63", "Yellow": "#fbd75b", "Orange": "#ffddbf", "Red": "#ffdddd", "Bold Red": "#f9a4a4", "Purple": "#dbadff", "Gray": "#e1e1e1" };
+				var colors = {
+  				"Green": "#7cdb74",
+  				"Bold blue": "#aae2ff",
+  				"Blue": "#a4bdfc",
+  				"Turquoise": "#86ecef",
+  				"Light Green": "#d0f9cc",
+  				"Bold Green": "#70ff63",
+  				"Yellow": "#fbd75b",
+  				"Orange": "#ffddbf",
+  				"Red": "#ffdddd",
+  				"Bold Red": "#f9a4a4",
+  				"Purple": "#dbadff",
+  				"Gray": "#e1e1e1"
+  		  };
 				var time = ["7:00 AM", "7:30 AM", "8:00 AM", "8:30 AM", "9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM", "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", "2:00 PM", "2:30 PM", "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM", "5:00 PM", "5:30 PM", "6:00 PM", "6:30 PM", "7:00 PM", "7:30 PM", "8:00 PM", "8:30 PM", "9:00 PM", "9:30 PM", "10:00 PM"];
 				var rowCount = 0;
 				var data;
@@ -187,34 +220,148 @@
 					return false;
 				}
 
-				function createColorPicker(id, example) {
-					var colorPick = '<select id="' + id + '"' + (example ? ' disabled' : '') + '>';
+				function createColorPicker(rowCount, example) {
 
-					for(name in colors) {
-						colorPick += '<option value="' + colors[name] + '"' + (name === "Blue" ? ' selected' : '') + '>' + name + '</option>';
+  				var $colorPicker = $('<select>', {
+    				'id': 'row-' + rowCount + '-color'
+  				});
+  				if (example) {
+    				$colorPicker.prop('disabled',true);
+  				}
+					for (name in colors) {
+  					var $option = $('<option>',{
+    					'value': colors[name]
+  					}).text(name);
+  					if (name === 'Blue') {
+    					$option.prop('selected',true);
+  					}
+  					$colorPicker.append($option);
 					}
-
-					return colorPick + '</select>';
+					return $colorPicker;
 				}
 
-				function createTimeDropdown(id, example, startOrEnd) {
-					var select = '<select id="' + id + '"' + (example ? ' disabled' : '') + '><option value=""></option>';
+				function createTimeDropdown(rowCount, example, startOrEnd) {
+
+  				var $select = $('<select>', {
+    				'id': 'row-' + rowCount + '-' + startOrEnd,
+    				'aria-label': startOrEnd + ' time, Row ' + rowCount
+  				});
+  				if (example) {
+    				$select.prop('disabled',true);
+  				}
+
+  				var $blankOption = $('<option>',{
+    				'value': ''
+  				});
+  				$select.append($blankOption);
 
 					for (ind in time) {
-						var ex = '';
+  					var $option = $('<option>',{
+    					'value': ind
+  					}).text(time[ind]);
 						if (example && (startOrEnd === "start" && ind === 9) || (startOrEnd === "end" && ind === 12)) {
-							ex = ' selected'
-						}
-						select += '<option value="' + ind + '">' + time[ind] + '</option>';
-					}
-
-					return select + '</select>';
+    					$option.prop('selected',true);
+  					}
+  					$select.append($option);
+  				}
+  				return $select;
 				}
 
-				function createRow(example) {
-					$('#questions').append('<tr' + (example ? ' class="disabled-text"' : '') + '><td><input type="text" id="row-' + rowCount + '-course"' + (example ? ' value="SCI 101" disabled' : '') + ' /></td><td class="ctr"><input type="checkbox" value="1" name="row-' + rowCount + '-day[]" id="row-' + rowCount + '-mon"' + (example ? ' disabled' : '') + ' /><label for="row-' + rowCount + '-mon" class="hide">Row ' + rowCount + ' checkbox for Monday</label></td><td class="ctr"><input type="checkbox" name="row-' + rowCount + '-day[]" value="2" id="row-' + rowCount + '-tue"' + (example ? ' disabled checked' : '') + ' /><label for="row-' + rowCount + '-tue" class="hide">Row ' + rowCount + ' checkbox for Tuesday</label></td><td class="ctr"><input type="checkbox" name="row-' + rowCount + '-day[]" value="3" id="row-' + rowCount + '-wed"' + (example ? ' disabled' : '') + ' /><label for="row-' + rowCount + '-wed" class="hide">Row ' + rowCount + ' checkbox for Wednesday</label></td><td class="ctr"><input type="checkbox" name="row-' + rowCount + '-day[]" value="4" id="row-' + rowCount + '-thu"' + (example ? ' disabled checked' : '') + ' /><label for="row-' + rowCount + '-thu" class="hide">Row ' + rowCount + ' checkbox for Thursday</label></td><td class="ctr"><input type="checkbox" name="row-' + rowCount + '-day[]" value="5" id="row-' + rowCount + '-fri"' + (example ? ' disabled' : '') + ' /><label for="row-' + rowCount + '-fri" class="hide">Row ' + rowCount + ' checkbox for Friday</label></td><td>' + createTimeDropdown('row-' + rowCount + '-start', example, "start") + '</td><td>' + createTimeDropdown('row-' + rowCount + '-end', example, "end") + '</td><td class="ctr">' + createColorPicker('row-' + rowCount + '-color', example) + '</td></tr>');
+				function createRow(example, viaButtonClick) {
+
+  				var $newRow = $('<tr>');
+  				if (example) {
+            $newRow.addClass('disabled-text');
+  				}
+  				var $td2 = $('<td>');
+  				var $td3 = $('<td>');
+  				var $td4 = $('<td>');
+  				var $td5 = $('<td>');
+  				var $td6 = $('<td>');
+  				var $td7 = $('<td>');
+  				var $td8 = $('<td>');
+  				var $td9 = $('<td>');
+
+  				var $td1 = $('<td>');
+  				var $courseInput = $('<input>', {
+            'type': 'text',
+            'id': 'row-' + rowCount + '-course',
+            'aria-label': 'Course name or ID, Row ' + rowCount,
+  				});
+  				if (example) {
+    				$courseInput.attr('value','SCI 101').prop('disabled',true);
+  				}
+  				else {
+    				$courseInput.attr('value','');
+  				}
+  				$td1.append($courseInput);
+  				$newRow.append($td1);
+
+  				// create checkbox for each day of the week
+  				for (var i=1; i<=5; i++) {
+    				var $td = $('<td>',{
+      				'class': 'ctr'
+    				});
+    				var day;
+    				var dayAbbr;
+    				if (i == 1) {
+      				day = 'Monday',
+      				dayAbbr = 'mon'
+      		  }
+    				else if (i == 2) {
+      				day = 'Tuesday',
+      				dayAbbr = 'tue'
+      		  }
+    				else if (i == 3) {
+      				day = 'Wednesday',
+      				dayAbbr = 'wed'
+      		  }
+    				else if (i == 4) {
+      				day = 'Thursday',
+      				dayAbbr = 'thu'
+      		  }
+    				else if (i == 5) {
+      				day = 'Friday',
+      				dayAbbr = 'fri'
+      		  }
+    				var $checkbox = $('<input>',{
+      				'type': 'checkbox',
+      				'name': 'row-' + rowCount + '-day[]',
+      				'id': 'row-' + rowCount + '-' + dayAbbr,
+      				'value': i,
+      				'aria-label': day + ', Row ' + rowCount
+    				});
+    				if (example) {
+      				$checkbox.prop('disabled',true);
+      				if (dayAbbr == 'tue' || dayAbbr == 'thu') {
+        				$checkbox.prop('checked',true);
+              }
+    				}
+    				$td.append($checkbox);
+    				$newRow.append($td);
+  				}
+
+          $startTimeTd = $('<td>');
+  				$startTimeTd.append(createTimeDropdown(rowCount, example, 'start'));
+          $endTimeTd = $('<td>');
+  				$endTimeTd.append(createTimeDropdown(rowCount, example, 'end'));
+  				$newRow.append($startTimeTd, $endTimeTd);
+
+          $colorPickerTd = $('<td>',{
+            'class': 'ctr'
+          })
+          $colorPickerTd.append(createColorPicker(rowCount, example));
+          $newRow.append($colorPickerTd);
+
+          $('#questions').append($newRow);
+
 					$('#row-' + rowCount + '-color').simplecolorpicker({ picker: true });
 					rowCount++;
+
+					if (viaButtonClick) {
+  					// place focus in the first newly created field
+  					$courseInput.focus();
+					}
 				}
 
 				function drawSchedule() {
@@ -331,7 +478,7 @@
 				});
 
 				$('#addrow').click(function() {
-					createRow();
+					createRow(false,true); // second param = viaButtonClick
 				});
 
 			});
@@ -364,7 +511,7 @@
 					</div>
 
 					<div class="print-hide">
-						<div id="errors"></div>
+						<div id="errors" role="alert"></div>
 
 						<div id="questions-container">
 							<table id="questions" class="simple">
