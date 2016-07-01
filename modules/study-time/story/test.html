@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<title>Video Test</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>
+      var video, seekable;
+      $(document).ready(function() {
+        video = $('#video1')[0];
+        $('button').on('click',function() {
+          var whichButton = $(this).attr('id');
+          var target;
+          if (whichButton == 'funky') {
+            target = 255;
+          }
+          else if (whichButton == 'post-funky') {
+            target = 256;
+          }
+          seekable = video.seekable;
+          if (seekable.length > 0 && target >= seekable.start(0) && target <= seekable.end(0)) {
+            video.currentTime = target;
+          }
+          else {
+            console.log('video is not seekable to ' + target);
+          }
+        });
+      });
+
+</script>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+  }
+  h1 {
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+  button {
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 0 0.25em 1em;
+  }
+  button:hover,
+  button:focus {
+    cursor: pointer;
+    background-color: #0C0;
+  }
+</style>
+<h1>Funky Frame Test</h1>
+<p>Choose a target frame:</p>
+<div id="buttons">
+  <button id="funky">Funky</button>
+  <button id="post-funky">Post-funky</button>
+</div>
+
+<video id="video1" preload="auto" width="720" height="540" controls>
+  <source type="video/mp4" src="../media/study-time.mp4"/>
+</video>
